@@ -1,5 +1,9 @@
 # Polymarket conflict-market collector
 
+[![collect-books](https://github.com/jonawalb/conflict-market-data/actions/workflows/collect-books.yml/badge.svg)](https://github.com/jonawalb/conflict-market-data/actions/workflows/collect-books.yml)
+[![collect-hot](https://github.com/jonawalb/conflict-market-data/actions/workflows/collect-hot.yml/badge.svg)](https://github.com/jonawalb/conflict-market-data/actions/workflows/collect-hot.yml)
+[![tests](https://github.com/jonawalb/conflict-market-data/actions/workflows/tests.yml/badge.svg)](https://github.com/jonawalb/conflict-market-data/actions/workflows/tests.yml)
+
 Continuously archives geopolitical prediction-market data from Polymarket that
 **the platform stops serving once a contract resolves**. Runs unattended on
 GitHub Actions; no server, no API keys, no paid services.
@@ -46,6 +50,13 @@ Runners have no persistent disk, so each run rebuilds just enough state from the
 repository — the registry and a per-market high-water mark — collects into a
 throwaway database, and commits a compressed increment. The full database is
 never committed.
+
+Verified working from GitHub-hosted runners on 2026-08-05: a book run covered
+385 markets in 114s and a hot run pulled 50,074 trades from 15 markets in 85s,
+with no rate limiting or IP blocking from the Polymarket endpoints. That was the
+main open risk in running this from shared cloud IPs rather than a residential
+connection; it is not a risk that has been retired permanently, so if collection
+starts failing, check for 429s in the workflow logs first.
 
 ```
 data/
