@@ -23,6 +23,22 @@ fi
 echo $$ > "$DATA_DIR/.collector.pid"
 trap 'rm -f "$DATA_DIR/.collector.pid"' EXIT
 
+# Keep the runtime clone current. Without this the launchd agents keep running
+# whatever code was cloned, silently diverging from the repository. Only pulls
+# when the tree is clean, so local edits are never clobbered.
+if [ "${BOW_AUTO_UPDATE:-1}" = "1" ] && [ -d "$HERE/.git" ]; then
+    if [ -z "$(git -C "$HERE" status --porcelain 2>/dev/null)" ]; then
+        BEFORE=$(git -C "$HERE" rev-parse --short HEAD 2>/dev/null || echo none)
+        if git -C "$HERE" pull --ff-only --quiet 2>>"$DATA_DIR/scheduler.log"; then
+            AFTER=$(git -C "$HERE" rev-parse --short HEAD 2>/dev/null || echo none)
+            [ "$BEFORE" != "$AFTER" ] && \
+                echo "$(date -u +%FT%TZ) updated $BEFORE -> $AFTER" >> "$DATA_DIR/scheduler.log"
+        fi
+    else
+        echo "$(date -u +%FT%TZ) skip update: working tree dirty" >> "$DATA_DIR/scheduler.log"
+    fi
+fi
+
 echo "$(date -u +%FT%TZ) start mode=$MODE" >> "$DATA_DIR/scheduler.log"
 "$PYTHON" "$HERE/bow_collect.py" "$MODE" >> "$DATA_DIR/scheduler.log" 2>&1
 STATUS=$?

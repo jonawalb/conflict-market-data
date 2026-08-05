@@ -55,6 +55,11 @@ EXCLUDE_PATTERNS: Tuple[str, ...] = (
     r"rail|transit|teachers?|nurses?|port|picket|wage|contract talks)\b)",
     r"\bstrike\s+(?:end|ends|ended|vote|authorization)\b",
     r"\b(?:mlb|nba|nfl|nhl|ncaa|ufc|boxing|esports|premier league)\b",
+    # Esports titles are a live false-positive source: "Counter-Strike" carries
+    # "strike", and team names supply the rest ("Nuclear TigeRES vs CYBERSHOKE").
+    r"\b(?:counter[- ]?strike|cs ?2|cs:?go|dota|valorant|league of legends|"
+    r"overwatch|rainbow six|call of duty|apex legends|starcraft|rocket league)\b",
+    r"\bvs\.?\s+\w+.*\b(?:bo[135]|map \d|round \d)\b",
     r"\b(?:price|trade|tariff|bidding|culture|meme|format|streaming)\s+war\b",
     r"\bstar wars\b", r"\bnuclear (?:power plant|energy|reactor)\b",
     r"\bcall of duty\b", r"\bworld war (?:i|ii|1|2)\b(?!.*\b(?:begin|start)\b)",

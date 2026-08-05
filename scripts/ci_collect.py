@@ -160,6 +160,12 @@ def main() -> int:
     parser.add_argument("--max-runtime", type=int, default=3000,
                         help="seconds before the run stops cleanly and commits")
     parser.add_argument("--shard", default=None, help="i/N to split markets across runs")
+    parser.add_argument("--top", type=int, default=0,
+                        help="only the N highest-volume tracked markets. Used by the "
+                             "hot-markets workflow: during a live crisis a single "
+                             "market can exceed the ~10k trade cap between full runs, "
+                             "losing the middle of the tape in exactly the window that "
+                             "matters most.")
     parser.add_argument("--store-raw-books", action="store_true",
                         help="keep full order book JSON (large; off by default in CI)")
     args = parser.parse_args()
@@ -192,6 +198,11 @@ def main() -> int:
 
     seed_db(conn, registry)
     markets = db.tracked_markets(conn)
+
+    if args.top:
+        # tracked_markets() already returns rows ordered by volume descending.
+        markets = markets[: args.top]
+        logger.info("top %d markets by volume", len(markets))
 
     index, total = parse_shard(args.shard)
     if total > 1:

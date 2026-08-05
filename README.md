@@ -37,6 +37,7 @@ running is an hour permanently lost.
 | Workflow | Schedule | Purpose |
 |---|---|---|
 | `collect-books` | hourly | Order book snapshots — the irrecoverable data |
+| `collect-hot`   | hourly | Full collection on the top-volume markets, so the ~10k trade cap never binds during a crisis |
 | `collect-full`  | 4×/day, sharded | Prices and the trade tape |
 | `refresh-registry` | daily | Rediscover and reclassify the market universe |
 | `tests` | on push | Classifier and round-trip regression tests |
@@ -76,6 +77,19 @@ SELECT question, end_date, volume_num FROM markets
 WHERE escalation = 1 AND question LIKE '%strike Iran%' ORDER BY end_date;
 ```
 
+## Auditing what was actually captured
+
+```bash
+python3 scripts/coverage_report.py --days 7
+```
+
+Scheduled jobs do not run on time — Actions delays or drops cron runs under
+load, laptops sleep, networks fail. The result is an irregularly sampled
+series, which matters because order book depth enters downstream estimation as
+a covariate. This reports observed sampling intervals, worst gaps per market,
+and how close the busiest markets are to the trade cap, so ragged sampling can
+be stated as a measured property rather than an unexamined assumption.
+
 ## Running locally
 
 ```bash
@@ -88,6 +102,21 @@ python3 test_classify.py && python3 test_roundtrip.py
 Local runs store the database at `~/Library/Application Support/BettingOnWar/`
 (override with `BOW_DATA_DIR`) — deliberately outside any cloud-synced folder,
 since SQLite in WAL mode on a syncing volume can corrupt.
+
+Anything collected locally exists only on that machine until exported:
+
+```bash
+python3 scripts/export_local.py --skip-raw-books   # SQLite -> increments
+```
+
+**Do not run the launchd agents from a checkout in `~/Desktop`, `~/Documents`,
+or `~/Downloads`.** macOS TCC denies launchd access to those directories and
+every run dies with `Operation not permitted` — visibly only in the agent's
+stderr file, so it looks like nothing is happening at all. `deploy/install-launchd.sh`
+installs against whatever directory it is run from; clone somewhere unprotected
+(`~/Library/Application Support/BettingOnWar/collector` works) and install from
+there. `run_collect.sh` fast-forwards that clone before each run, so it tracks
+the repository instead of silently drifting.
 
 The optional launchd agents in `deploy/` run the same collector on a Mac. They
 are redundant with the GitHub Actions workflows; use one or the other unless you
@@ -113,7 +142,8 @@ Document these in any analysis that uses the data.
 - **Trade cap.** Markets turning over more than ~10,000 trades between runs lose the middle of their tape. The `runs` table records coverage so this is auditable rather than invisible.
 - **`escalation` is a candidate flag, not a validated panel.** It is regex over question and event title, tested against 21 cases including real false positives ("Warnock" matching `war`; airline strikes matching `strike`). Hand-validate before analysis and report precision.
 - **Wallets are pseudonymous, not anonymous.** A `proxyWallet` is stable across markets and time. Treat any linkage work as a human-subjects question first.
-- **Scheduled workflows can be disabled.** GitHub disables them after 60 days without repository activity, and commits from the Actions token do not reliably reset that timer. If collection goes quiet, check the Actions tab first.
+- **Scheduled workflows can be disabled.** GitHub disables them after 60 days without repository activity, and commits from the Actions token do not reliably reset that timer. Push a manual commit monthly, or run the workflows from a personal access token instead of `GITHUB_TOKEN`. This fails silently — if collection goes quiet, check the Actions tab first.
+- **Cron is not punctual.** Scheduled runs are routinely late by 10-60 minutes and are sometimes dropped. Treat the series as irregularly sampled and quantify it with `scripts/coverage_report.py`.
 - **Selection into listing.** These markets exist only where someone expected trading volume, so quiet crises are invisible. This bounds what any measure built on them can claim.
 
 ## Layout
@@ -125,6 +155,9 @@ scripts/
   ci_collect.py     stateless CI entry point
   rebuild_db.py     increments -> SQLite
   ladder_check.py   contract-ladder viability report
+  coverage_report.py  observed sampling cadence and gap audit
+  export_local.py   local SQLite -> repository increments
+  consolidate.py    bundle old months into a Release when the repo grows
 test_classify.py    classifier + book summariser regression tests
 test_roundtrip.py   export -> rebuild losslessness and idempotence
 deploy/             optional macOS launchd agents

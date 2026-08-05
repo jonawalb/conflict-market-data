@@ -35,6 +35,11 @@ CASES = [
     ("Air Canada strike before September?", False),
     ("Will there be a trade war with China?", False),
     ("Star Wars box office over $500M?", False),
+    # Esports: found live in the panel via "strike" + "Nuclear" in a team name.
+    ("Counter-Strike: Nuclear TigeRES vs CYBERSHOKE", False),
+    ("CS2: Team Falcon vs Natus Vincere (BO3)", False),
+    ("Will Team Liquid win the Valorant Champions final?", False),
+    ("Call of Duty League: Atlanta vs Toronto", False),
     ("Will a new nuclear power plant open in 2026?", False),
     # Unrelated.
     ("Nvidia earnings beat?", False),
