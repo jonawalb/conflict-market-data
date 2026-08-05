@@ -1,0 +1,72 @@
+name: collect-full
+
+# Prices and the wallet-level trade tape. Sharded so each run stays well inside
+# the job timeout: shard i of N takes every Nth market, and the four scheduled
+# runs plus rotation cover the whole registry daily.
+
+on:
+  schedule:
+    - cron: "23 1,7,13,19 * * *"
+  workflow_dispatch:
+    inputs:
+      shard:
+        description: 'Shard as "i/N" (e.g. 0/4). Blank means all markets.'
+        default: ""
+        required: false
+      max_runtime:
+        description: "Seconds before the run stops and commits"
+        default: "3000"
+        required: false
+
+concurrency:
+  group: collector
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pick shard from the clock
+        id: shard
+        run: |
+          if [ -n "${{ github.event.inputs.shard }}" ]; then
+            echo "value=${{ github.event.inputs.shard }}" >> "$GITHUB_OUTPUT"
+          else
+            # 01h->0, 07h->1, 13h->2, 19h->3
+            H=$(date -u +%H); echo "value=$(( (10#$H - 1) / 6 % 4 ))/4" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Collect prices and trades
+        run: |
+          python3 scripts/ci_collect.py \
+            --mode full \
+            --shard "${{ steps.shard.outputs.value }}" \
+            --max-runtime "${{ github.event.inputs.max_runtime || 3000 }}"
+
+      - name: Commit increment
+        run: |
+          git config user.name  "bow-collector[bot]"
+          git config user.email "bow-collector@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "nothing new to commit"
+            exit 0
+          fi
+          git commit -m "data(full): shard ${{ steps.shard.outputs.value }} $(date -u +%Y-%m-%dT%H:%MZ)"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && \
+            git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            echo "push attempt $attempt failed; retrying"
+            sleep $((attempt * 5))
+          done
+          exit 1

@@ -1,0 +1,57 @@
+name: collect-books
+
+# Order book depth is the one thing no endpoint ever serves retrospectively.
+# This runs often and cheaply; everything else can be backfilled, this cannot.
+
+on:
+  schedule:
+    - cron: "7 * * * *"        # hourly at :07 (off the hour to dodge peak queueing)
+  workflow_dispatch:
+    inputs:
+      max_runtime:
+        description: "Seconds before the run stops and commits"
+        default: "1500"
+        required: false
+
+concurrency:
+  group: collector          # never let two collectors race on the same branch
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect order books
+        run: |
+          python3 scripts/ci_collect.py \
+            --mode book \
+            --max-runtime "${{ github.event.inputs.max_runtime || 1500 }}"
+
+      - name: Commit increment
+        run: |
+          git config user.name  "bow-collector[bot]"
+          git config user.email "bow-collector@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "nothing new to commit"
+            exit 0
+          fi
+          git commit -m "data(books): $(date -u +%Y-%m-%dT%H:%MZ)"
+          # The scheduled full run may have pushed while we collected.
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && \
+            git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            echo "push attempt $attempt failed; retrying"
+            sleep $((attempt * 5))
+          done
+          exit 1

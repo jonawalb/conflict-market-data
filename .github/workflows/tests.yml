@@ -1,0 +1,26 @@
+name: tests
+
+on:
+  push:
+    paths: ["bow/**", "scripts/**", "*.py", ".github/workflows/tests.yml"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Classifier and book-summariser regression tests
+        run: python3 test_classify.py
+      - name: Round-trip test (export to increment, rebuild, compare)
+        run: python3 test_roundtrip.py
+      - name: Import check
+        run: |
+          python3 -c "import bow, bow.api, bow.db, bow.collect, bow.discover; print('imports OK')"
+          python3 scripts/ci_collect.py --help > /dev/null
+          python3 scripts/rebuild_db.py --help > /dev/null

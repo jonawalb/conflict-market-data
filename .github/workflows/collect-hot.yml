@@ -1,0 +1,60 @@
+name: collect-hot
+
+# The trade tape caps at ~10,000 most recent trades per market. Four full runs a
+# day is comfortable at normal volume, but a live flashpoint can turn over ten
+# times that, and the middle of the tape would be lost in precisely the window
+# the research cares about. This runs the full collection against only the
+# highest-volume markets, often enough that the cap never binds.
+
+on:
+  schedule:
+    - cron: "37 * * * *"        # hourly, offset from the book job
+  workflow_dispatch:
+    inputs:
+      top:
+        description: "How many top-volume markets to cover"
+        default: "20"
+        required: false
+
+concurrency:
+  group: collector
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect hot markets
+        run: |
+          python3 scripts/ci_collect.py \
+            --mode full \
+            --top "${{ github.event.inputs.top || 20 }}" \
+            --max-runtime 1500
+
+      - name: Commit increment
+        run: |
+          git config user.name  "bow-collector[bot]"
+          git config user.email "bow-collector@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "nothing new to commit"
+            exit 0
+          fi
+          git commit -m "data(hot): $(date -u +%Y-%m-%dT%H:%MZ)"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && \
+            git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            echo "push attempt $attempt failed; retrying"
+            sleep $((attempt * 5))
+          done
+          exit 1
