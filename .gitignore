@@ -1,0 +1,28 @@
+# The analysis database is NEVER committed. It is hundreds of megabytes and
+# grows continuously; rebuild it from data/increments/ instead:
+#   python3 scripts/rebuild_db.py
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.db
+
+# Logs and run state
+*.log
+.collector.pid
+.collector.lock
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
