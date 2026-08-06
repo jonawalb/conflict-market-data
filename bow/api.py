@@ -47,7 +47,10 @@ class PolymarketClient:
                 if exc.code in (400, 404):
                     raise ApiError(f"{exc.code} on {url}") from exc
                 logger.debug("HTTP %s on %s (attempt %d)", exc.code, url, attempt + 1)
-            except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+            except (OSError, json.JSONDecodeError) as exc:
+                # OSError covers URLError, TimeoutError, and — the one that
+                # actually killed a scheduled run — ConnectionResetError, which
+                # is raised mid-read and is not a URLError subclass.
                 last_error = exc
                 logger.debug("transient error on %s: %s", url, exc)
             time.sleep(self._cfg.retry_backoff * (attempt + 1))

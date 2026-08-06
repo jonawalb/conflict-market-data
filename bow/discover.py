@@ -98,7 +98,9 @@ def discover(client: PolymarketClient, cfg: Config) -> List[Dict[str, Any]]:
     for query in SEARCH_QUERIES:
         try:
             events = client.search_events(query)
-        except ApiError as exc:
+        except Exception as exc:
+            # Discovery runs ~35 queries; one bad response must not cost the
+            # whole run. A scheduled run died here on a ConnectionResetError.
             logger.warning("search failed for %r: %s", query, exc)
             continue
         for event in events:
@@ -111,7 +113,7 @@ def discover(client: PolymarketClient, cfg: Config) -> List[Dict[str, Any]]:
     for offset in (0, 500, 1000):
         try:
             events = client.open_events(limit=500, offset=offset)
-        except ApiError as exc:
+        except Exception as exc:
             logger.warning("open-events scan failed at offset %d: %s", offset, exc)
             break
         if not events:
