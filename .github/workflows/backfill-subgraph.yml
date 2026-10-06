@@ -16,7 +16,7 @@ on:
         default: "0"
         required: false
       source:
-        description: "subgraph (pull) or api (pull-api)"
+        description: "subgraph (pull), api (pull-api) or prices (prices-history)"
         default: "subgraph"
         required: false
       shard_list:
@@ -69,7 +69,7 @@ jobs:
           path: out
       - name: Pull tapes
         run: |
-          cmd=pull; [ "${{ github.event.inputs.source }}" = "api" ] && cmd=pull-api
+          case "${{ github.event.inputs.source }}" in api) cmd=pull-api ;; prices) cmd=prices ;; *) cmd=pull ;; esac
           python3 scripts/backfill_subgraph.py "$cmd" --meta out/meta.jsonl --out out \
             --shard ${{ matrix.shard }} \
             --shards ${{ strategy.job-total }}
@@ -80,6 +80,8 @@ jobs:
           path: |
             out/tapes/
             out/tapes_api/
+            out/prices/
+            out/prices_stats_*.jsonl
             out/pull_stats_*.jsonl
             out/pull_api_stats_*.jsonl
             out/meta.jsonl

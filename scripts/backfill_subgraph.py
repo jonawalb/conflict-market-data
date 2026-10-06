@@ -11,6 +11,8 @@ frame of contract URLs). Two phases:
 
   resolve  slug -> market id, condition id, YES/NO token ids via Gamma
   pull     every OrderFilled event touching each token, one gzip CSV per market
+  prices   CLOB prices-history per token: fidelity 60 (hourly), falling back to 720 (12h)
+           when Polymarket has thinned the series; records which fidelity survived
   pull-api fallback: the data-api trade tape (complete only below ~10,000 trades;
            `capped` in the stats marks markets that hit the limit)
 
@@ -39,6 +41,8 @@ SUBGRAPH = ("https://api.goldsky.com/api/public/project_cl6mb8i9h0003e201j6li0di
             "/subgraphs/orderbook-subgraph/0.0.1/gn")
 GAMMA = "https://gamma-api.polymarket.com"
 DATA_API = "https://data-api.polymarket.com"
+CLOB = "https://clob.polymarket.com"
+FIDELITIES = (60, 720)
 API_CAP = 10000  # data-api stops paging near this offset; a tape that reaches it is truncated
 EXCHANGES = {
     "0x4bfb41d5b3570defd03c39a9a4d8de6bd8b8982e",  # CTF Exchange
@@ -278,6 +282,49 @@ def cmd_pull_api(args: argparse.Namespace) -> None:
             logger.info("[%d/%d] %s %s", i, len(mine), rec["market_id"], stats)
 
 
+# ---------------------------------------------------------------- prices
+
+def pull_prices(rec: Dict[str, Any], out: Path) -> Dict[str, Any]:
+    stats = {"market_id": rec["market_id"], "frame_row": rec["frame_row"]}
+    path = out / "prices" / f"{rec['market_id']}.csv.gz"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with gzip.open(path, "wt", newline="") as fh:
+        w = csv.writer(fh)
+        w.writerow(["market_id", "outcome", "fidelity", "t", "p"])
+        for outcome, token in rec["tokens"].items():
+            hist, used = [], None
+            for fid in FIDELITIES:
+                url = f"{CLOB}/prices-history?market={token}&interval=max&fidelity={fid}"
+                hist = (_request(urllib.request.Request(url, headers=HEADERS)) or {}).get("history") or []
+                time.sleep(0.2)
+                if hist:
+                    used = fid
+                    break
+            stats[f"{outcome}_points"], stats[f"{outcome}_fidelity"] = len(hist), used
+            w.writerows([rec["market_id"], outcome, used, pt["t"], pt["p"]] for pt in hist)
+    return stats
+
+
+def cmd_prices(args: argparse.Namespace) -> None:
+    out = Path(args.out)
+    with open(args.meta) as fh:
+        recs = [json.loads(line) for line in fh]
+    recs = [r for r in recs if r.get("market_id") and r.get("tokens")]
+    recs.sort(key=lambda r: -(r.get("volume") or 0))
+    mine = recs[args.shard::args.shards]
+    logger.info("prices shard %d/%d: %d markets", args.shard, args.shards, len(mine))
+    with open(out / f"prices_stats_{args.shard}.jsonl", "w") as fh:
+        for i, rec in enumerate(mine, 1):
+            try:
+                stats = pull_prices(rec, out)
+            except RuntimeError as exc:
+                logger.error("prices failed for %s: %s", rec["market_id"], exc)
+                stats = {"market_id": rec["market_id"], "frame_row": rec["frame_row"], "error": str(exc)}
+            fh.write(json.dumps(stats) + "\n")
+            fh.flush()
+            logger.info("[%d/%d] %s", i, len(mine), stats)
+
+
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", stream=sys.stdout)
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
@@ -296,8 +343,13 @@ def main() -> None:
     a.add_argument("--out", required=True)
     a.add_argument("--shard", type=int, default=0)
     a.add_argument("--shards", type=int, default=1)
+    c = sub.add_parser("prices")
+    c.add_argument("--meta", required=True)
+    c.add_argument("--out", required=True)
+    c.add_argument("--shard", type=int, default=0)
+    c.add_argument("--shards", type=int, default=1)
     args = ap.parse_args()
-    {"resolve": cmd_resolve, "pull": cmd_pull, "pull-api": cmd_pull_api}[args.cmd](args)
+    {"resolve": cmd_resolve, "pull": cmd_pull, "pull-api": cmd_pull_api, "prices": cmd_prices}[args.cmd](args)
 
 
 if __name__ == "__main__":
