@@ -42,6 +42,7 @@ EXCHANGES = {
 }
 USDC = 10 ** 6
 PAGE = 1000
+PACE = 0.5  # seconds between subgraph pages; the public endpoint rate-limits
 HEADERS = {"Content-Type": "application/json", "User-Agent": "Mozilla/5.0 Chrome/126"}
 TRADE_COLS = ["trade_key", "market_id", "ts", "price", "size", "side", "outcome", "wallet", "counterparty",
               "tx_hash"]
@@ -49,13 +50,18 @@ TRADE_COLS = ["trade_key", "market_id", "ts", "price", "size", "side", "outcome"
 logger = logging.getLogger("backfill_subgraph")
 
 
-def _request(req: urllib.request.Request, tries: int = 6) -> Any:
+def _request(req: urllib.request.Request, tries: int = 10) -> Any:
     for attempt in range(tries):
         try:
             with urllib.request.urlopen(req, timeout=60) as resp:
                 return json.load(resp)
+        except urllib.error.HTTPError as exc:
+            body = exc.read()[:300].decode(errors="replace")
+            wait = int(exc.headers.get("Retry-After") or min(2 ** attempt * 3, 180))
+            logger.warning("HTTP %s (%s); retry in %ss", exc.code, body.strip(), wait)
+            time.sleep(wait)
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
-            wait = 2 ** attempt
+            wait = min(2 ** attempt * 3, 180)
             logger.warning("request failed (%s); retry in %ss", exc, wait)
             time.sleep(wait)
     raise RuntimeError(f"giving up on {req.full_url}")
@@ -129,6 +135,7 @@ def fills_for_token(token: str, side_field: str) -> Iterator[Dict[str, Any]]:
              "where: {%s: \"%s\", id_gt: \"%s\"}) { id transactionHash timestamp maker taker "
              "makerAssetId takerAssetId makerAmountFilled takerAmountFilled } }") % (PAGE, side_field, token, last)
         page = graphql(q)["orderFilledEvents"]
+        time.sleep(PACE)
         yield from page
         if len(page) < PAGE:
             return

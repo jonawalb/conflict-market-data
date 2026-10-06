@@ -15,6 +15,10 @@ on:
         description: "Resolve only the first N rows (0 = all)"
         default: "0"
         required: false
+      shard_list:
+        description: "Comma-separated shard indices to run (parallel jobs)"
+        default: "0"
+        required: false
 
 concurrency:
   group: backfill-subgraph
@@ -49,7 +53,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        shard: [0, 1, 2, 3, 4, 5]
+        shard: ${{ fromJSON(format('[{0}]', github.event.inputs.shard_list)) }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -62,7 +66,8 @@ jobs:
       - name: Pull tapes
         run: |
           python3 scripts/backfill_subgraph.py pull --meta out/meta.jsonl --out out \
-            --shard ${{ matrix.shard }} --shards 6
+            --shard ${{ matrix.shard }} \
+            --shards ${{ strategy.job-total }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
