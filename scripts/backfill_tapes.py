@@ -261,7 +261,7 @@ def diag2(rec: Dict[str, Any], out: Path) -> Dict[str, Any]:
                                                       "volumeClob", "volumeNum", "createdAt", "closedTime",
                                                       "fpmmLive", "ammType")}}
     try:
-        first = get(q(DATA_API, "v2/trades", market=rec["condition_id"], limit=500))
+        first = get(q(DATA_API, "v2/trades", condition=rec["condition_id"], limit=500))
     except ClientError as exc:
         stats["v2"] = f"error: {exc}"
         return stats
@@ -271,7 +271,7 @@ def diag2(rec: Dict[str, Any], out: Path) -> Dict[str, Any]:
     stats["v2_first_row"] = rows[0] if rows else None
     pages = 1
     while cursor and pages < 400:
-        nxt = get(q(DATA_API, "v2/trades", market=rec["condition_id"], limit=500, cursor=cursor))
+        nxt = get(q(DATA_API, "v2/trades", condition=rec["condition_id"], limit=500, cursor=cursor))
         page = nxt.get("data", nxt.get("trades", []))
         if not page:
             break
