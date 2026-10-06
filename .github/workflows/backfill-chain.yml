@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "amm (FPMM markets, per market) or clob (OrderFilled block-range scan)"
+        description: "amm (FPMM markets), clob (OrderFilled block-range scan) or probe (receipt check)"
         default: "amm"
         required: true
       ids:
@@ -45,7 +45,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        shard: ${{ fromJSON(format('[{0}]', github.event.inputs.mode == 'amm' && '0' || github.event.inputs.shard_list)) }}
+        shard: ${{ fromJSON(format('[{0}]', github.event.inputs.mode != 'clob' && '0' || github.event.inputs.shard_list)) }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -55,7 +55,10 @@ jobs:
       - name: Recover
         run: |
           mkdir -p out
-          if [ "${{ github.event.inputs.mode }}" = "amm" ]; then
+          if [ "${{ github.event.inputs.mode }}" = "probe" ]; then
+            python3 scripts/backfill_chain.py probe --meta "${{ github.event.inputs.meta }}" \
+              --ids "${{ github.event.inputs.ids }}" --out out
+          elif [ "${{ github.event.inputs.mode }}" = "amm" ]; then
             python3 scripts/backfill_chain.py amm --meta "${{ github.event.inputs.meta }}" \
               --ids "${{ github.event.inputs.ids }}" --out out
           else

@@ -234,11 +234,39 @@ def cmd_clob(args: argparse.Namespace) -> None:
     logger.info("%s", stats)
 
 
+# ---------------------------------------------------------------- probe
+
+V2_CUTOVER = 1777374000  # 2026-04-28 11:00 UTC, CLOB V2 cutover (approximate)
+
+
+def cmd_probe(args: argparse.Namespace) -> None:
+    """Which contracts emit fills, and with which event topics, before and after V2 (from receipts)."""
+    from backfill_tapes import DATA_API
+    client = PolygonClient()
+    tally: Counter = Counter()
+    samples: Dict[str, Any] = {}
+    for rec in load(args.meta, args.ids):
+        trades = get(q(DATA_API, "trades", market=rec["condition_id"], limit=500, offset=0))
+        pre = [t for t in trades if int(t["timestamp"]) < V2_CUTOVER][:4]
+        post = [t for t in trades if int(t["timestamp"]) >= V2_CUTOVER][:4]
+        for era, group in (("pre", pre), ("post", post)):
+            for t in group:
+                rc = client.call("eth_getTransactionReceipt", [t["transactionHash"]])
+                for lg in (rc or {}).get("logs", []):
+                    key = f"{era} {lg['address'].lower()} {lg['topics'][0] if lg.get('topics') else None} " \
+                          f"ntopics={len(lg.get('topics', []))} datawords={(len(lg['data']) - 2) // 64}"
+                    tally[key] += 1
+                    samples.setdefault(key, {"tx": t["transactionHash"], "api_trade": t, "log": lg})
+    for k, v in tally.most_common():
+        logger.info("%5d  %s", v, k)
+    (Path(args.out) / "probe.json").write_text(json.dumps(samples, indent=1))
+
+
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", stream=sys.stdout)
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
-    for name in ("amm", "clob"):
+    for name in ("amm", "clob", "probe"):
         p = sub.add_parser(name)
         p.add_argument("--meta", required=True)
         p.add_argument("--ids", required=True)
@@ -250,7 +278,7 @@ def main() -> None:
     c.add_argument("--shards", type=int, default=1)
     c.add_argument("--chunk", type=int, default=2000)
     args = ap.parse_args()
-    (cmd_amm if args.cmd == "amm" else cmd_clob)(args)
+    {"amm": cmd_amm, "clob": cmd_clob, "probe": cmd_probe}[args.cmd](args)
 
 
 if __name__ == "__main__":
