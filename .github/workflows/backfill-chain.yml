@@ -1,0 +1,72 @@
+name: backfill-chain
+
+# Research backfill: recover trades the data-api no longer serves, from Polygon
+# event logs (scripts/backfill_chain.py). Output goes to workflow artifacts.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "amm (FPMM markets, per market) or clob (OrderFilled block-range scan)"
+        default: "amm"
+        required: true
+      ids:
+        description: "CSV of market_id to recover"
+        default: "data/backfill_v6/chain_legacy_ids.csv"
+        required: true
+      meta:
+        description: "meta.jsonl with token ids for those markets"
+        default: "data/backfill_v6/meta_chain.jsonl"
+        required: true
+      from_date:
+        description: "clob: scan start (YYYY-MM-DD, UTC)"
+        default: "2023-02-01"
+        required: false
+      to_date:
+        description: "clob: scan end (YYYY-MM-DD, UTC)"
+        default: "2024-01-03"
+        required: false
+      shard_list:
+        description: "clob: comma-separated shard indices"
+        default: "0"
+        required: false
+
+concurrency:
+  group: backfill-chain-${{ github.event.inputs.mode }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(format('[{0}]', github.event.inputs.mode == 'amm' && '0' || github.event.inputs.shard_list)) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pycryptodome
+      - name: Recover
+        run: |
+          mkdir -p out
+          if [ "${{ github.event.inputs.mode }}" = "amm" ]; then
+            python3 scripts/backfill_chain.py amm --meta "${{ github.event.inputs.meta }}" \
+              --ids "${{ github.event.inputs.ids }}" --out out
+          else
+            python3 scripts/backfill_chain.py clob --meta "${{ github.event.inputs.meta }}" \
+              --ids "${{ github.event.inputs.ids }}" --out out \
+              --from-date "${{ github.event.inputs.from_date }}" --to-date "${{ github.event.inputs.to_date }}" \
+              --shard ${{ matrix.shard }} --shards ${{ strategy.job-total }}
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: chain-${{ github.event.inputs.mode }}-${{ matrix.shard }}
+          path: out/
+          if-no-files-found: warn
