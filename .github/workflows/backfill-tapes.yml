@@ -1,0 +1,78 @@
+name: backfill-tapes
+
+# Research backfill: complete trade tapes and price histories for a list of
+# markets (scripts/backfill_tapes.py). Output goes to workflow artifacts, not
+# the repository, so the repository stays small.
+
+on:
+  workflow_dispatch:
+    inputs:
+      frame:
+        description: "Contract list CSV (frame_row, slug, event_slug[, expand])"
+        default: "data/backfill_v6/probe.csv"
+        required: true
+      shard_list:
+        description: "Comma-separated shard indices (one parallel job each)"
+        default: "0"
+        required: false
+
+concurrency:
+  group: backfill-tapes
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Resolve slugs to markets
+        run: python3 scripts/backfill_tapes.py resolve --frame "${{ github.event.inputs.frame }}" --out out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: meta
+          path: |
+            out/meta.jsonl
+            out/unresolved.csv
+
+  pull:
+    needs: resolve
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(format('[{0}]', github.event.inputs.shard_list)) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          name: meta
+          path: out
+      - name: Trade tapes
+        run: |
+          python3 scripts/backfill_tapes.py trades --meta out/meta.jsonl --out out \
+            --shard ${{ matrix.shard }} --shards ${{ strategy.job-total }}
+      - name: Price histories
+        if: always()
+        run: |
+          python3 scripts/backfill_tapes.py prices --meta out/meta.jsonl --out out \
+            --shard ${{ matrix.shard }} --shards ${{ strategy.job-total }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shard-${{ matrix.shard }}
+          path: |
+            out/trades/
+            out/prices/
+            out/*_stats_*.jsonl
+          if-no-files-found: warn
