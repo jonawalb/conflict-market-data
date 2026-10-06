@@ -11,6 +11,8 @@ frame of contract URLs). Two phases:
 
   resolve  slug -> market id, condition id, YES/NO token ids via Gamma
   pull     every OrderFilled event touching each token, one gzip CSV per market
+  pull-api fallback: the data-api trade tape (complete only below ~10,000 trades;
+           `capped` in the stats marks markets that hit the limit)
 
 Only maker-side fills are written as trades. A matched order also emits one
 OrderFilled for the taker order with the exchange contract as `taker`; that event
@@ -36,6 +38,8 @@ from typing import Any, Dict, Iterator, List, Optional
 SUBGRAPH = ("https://api.goldsky.com/api/public/project_cl6mb8i9h0003e201j6li0diw"
             "/subgraphs/orderbook-subgraph/0.0.1/gn")
 GAMMA = "https://gamma-api.polymarket.com"
+DATA_API = "https://data-api.polymarket.com"
+API_CAP = 10000  # data-api stops paging near this offset; a tape that reaches it is truncated
 EXCHANGES = {
     "0x4bfb41d5b3570defd03c39a9a4d8de6bd8b8982e",  # CTF Exchange
     "0xc5d563a36ae78145c45a50134d48a1215220f80a",  # NegRisk CTF Exchange
@@ -212,6 +216,68 @@ def cmd_pull(args: argparse.Namespace) -> None:
             logger.info("[%d/%d] %s %s", i, len(mine), rec["market_id"], stats)
 
 
+# ---------------------------------------------------------------- pull-api
+
+def pull_market_api(rec: Dict[str, Any], out: Path) -> Dict[str, Any]:
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+    from bow.db import trade_key  # same key the live collector uses, so tapes join on it
+
+    stats = {"market_id": rec["market_id"], "frame_row": rec["frame_row"], "n_trades": 0, "notional": 0.0,
+             "capped": False, "first_ts": None, "last_ts": None}
+    path = out / "tapes_api" / f"{rec['market_id']}.csv.gz"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    seen = set()
+    with gzip.open(path, "wt", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=TRADE_COLS)
+        w.writeheader()
+        offset = 0
+        while True:
+            url = f"{DATA_API}/trades?market={rec['condition_id']}&limit=500&offset={offset}"
+            page = _request(urllib.request.Request(url, headers=HEADERS))
+            if not isinstance(page, list) or not page:
+                break
+            for t in page:
+                key = trade_key(t)
+                if key in seen:
+                    continue
+                seen.add(key)
+                row = {"trade_key": key, "market_id": rec["market_id"], "ts": int(t["timestamp"]),
+                       "price": float(t["price"]), "size": float(t["size"]), "side": t.get("side"),
+                       "outcome": t.get("outcome"), "wallet": t.get("proxyWallet"), "counterparty": "",
+                       "tx_hash": t.get("transactionHash")}
+                w.writerow(row)
+                stats["n_trades"] += 1
+                stats["notional"] += row["price"] * row["size"]
+                stats["first_ts"] = min(filter(None, [stats["first_ts"], row["ts"]]))
+                stats["last_ts"] = max(filter(None, [stats["last_ts"], row["ts"]]))
+            offset += len(page)
+            if offset >= API_CAP:
+                stats["capped"] = True
+                break
+            time.sleep(0.2)
+    return stats
+
+
+def cmd_pull_api(args: argparse.Namespace) -> None:
+    out = Path(args.out)
+    with open(args.meta) as fh:
+        recs = [json.loads(line) for line in fh]
+    recs = [r for r in recs if r.get("market_id") and r.get("condition_id")]
+    recs.sort(key=lambda r: -(r.get("volume") or 0))
+    mine = recs[args.shard::args.shards]
+    logger.info("api shard %d/%d: %d markets", args.shard, args.shards, len(mine))
+    with open(out / f"pull_api_stats_{args.shard}.jsonl", "w") as fh:
+        for i, rec in enumerate(mine, 1):
+            try:
+                stats = pull_market_api(rec, out)
+            except (RuntimeError, KeyError, ValueError) as exc:
+                logger.error("api pull failed for %s: %s", rec["market_id"], exc)
+                stats = {"market_id": rec["market_id"], "frame_row": rec["frame_row"], "error": str(exc)}
+            fh.write(json.dumps(stats) + "\n")
+            fh.flush()
+            logger.info("[%d/%d] %s %s", i, len(mine), rec["market_id"], stats)
+
+
 def main() -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", stream=sys.stdout)
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
@@ -225,8 +291,13 @@ def main() -> None:
     p.add_argument("--out", required=True)
     p.add_argument("--shard", type=int, default=0)
     p.add_argument("--shards", type=int, default=1)
+    a = sub.add_parser("pull-api")
+    a.add_argument("--meta", required=True)
+    a.add_argument("--out", required=True)
+    a.add_argument("--shard", type=int, default=0)
+    a.add_argument("--shards", type=int, default=1)
     args = ap.parse_args()
-    {"resolve": cmd_resolve, "pull": cmd_pull}[args.cmd](args)
+    {"resolve": cmd_resolve, "pull": cmd_pull, "pull-api": cmd_pull_api}[args.cmd](args)
 
 
 if __name__ == "__main__":

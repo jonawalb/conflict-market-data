@@ -15,13 +15,17 @@ on:
         description: "Resolve only the first N rows (0 = all)"
         default: "0"
         required: false
+      source:
+        description: "subgraph (pull) or api (pull-api)"
+        default: "subgraph"
+        required: false
       shard_list:
         description: "Comma-separated shard indices to run (parallel jobs)"
         default: "0"
         required: false
 
 concurrency:
-  group: backfill-subgraph
+  group: backfill-${{ github.event.inputs.source }}
   cancel-in-progress: false
 
 permissions:
@@ -65,7 +69,8 @@ jobs:
           path: out
       - name: Pull tapes
         run: |
-          python3 scripts/backfill_subgraph.py pull --meta out/meta.jsonl --out out \
+          cmd=pull; [ "${{ github.event.inputs.source }}" = "api" ] && cmd=pull-api
+          python3 scripts/backfill_subgraph.py "$cmd" --meta out/meta.jsonl --out out \
             --shard ${{ matrix.shard }} \
             --shards ${{ strategy.job-total }}
       - uses: actions/upload-artifact@v4
@@ -74,5 +79,8 @@ jobs:
           name: tapes-${{ matrix.shard }}
           path: |
             out/tapes/
+            out/tapes_api/
             out/pull_stats_*.jsonl
+            out/pull_api_stats_*.jsonl
+            out/meta.jsonl
           if-no-files-found: warn
