@@ -267,8 +267,10 @@ def diag2(rec: Dict[str, Any], out: Path) -> Dict[str, Any]:
         return stats
     stats["v2_shape"] = (sorted(first.keys()) if isinstance(first, dict) else f"list[{len(first)}]")
     rows = first.get("data", first.get("trades", [])) if isinstance(first, dict) else first
-    cursor = first.get("next_cursor") if isinstance(first, dict) else None
-    stats["v2_first_row"] = rows[0] if rows else None
+    pag = first.get("pagination") or {} if isinstance(first, dict) else {}
+    stats["v2_pagination"] = pag
+    cursor = first.get("next_cursor") or pag.get("next_cursor") or pag.get("nextCursor") or pag.get("cursor")
+    stats["v2_first_row"] = None
     pages = 1
     while cursor and pages < 400:
         nxt = get(q(DATA_API, "v2/trades", condition=rec["condition_id"], limit=500, cursor=cursor))
@@ -276,7 +278,9 @@ def diag2(rec: Dict[str, Any], out: Path) -> Dict[str, Any]:
         if not page:
             break
         rows += page
-        cursor, pages = nxt.get("next_cursor"), pages + 1
+        npag = nxt.get("pagination") or {}
+        cursor = nxt.get("next_cursor") or npag.get("next_cursor") or npag.get("nextCursor") or npag.get("cursor")
+        pages += 1
     stats["v2_n"], stats["v2_pages"] = len(rows), pages
     stats["v2_shares"] = round(sum(float(r.get("size", 0)) for r in rows), 2)
     return stats
