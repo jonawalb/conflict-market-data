@@ -20,6 +20,10 @@ Checks that fail loudly rather than write a wrong tape:
     start/end and the windowing would silently duplicate or drop trades);
   * the newest trades from an unwindowed request must all appear in the windowed
     tape (otherwise the window bounds are in the wrong units or too narrow).
+Completeness: Gamma's `volumeNum` is taker SHARE volume, so a complete taker tape's
+summed `size` equals it (verified to the cent on nine markets, 2026-10-06). Each pull
+records shares/volume as `share_ratio`; `complete` requires >= 0.999. Ratios above 1
+occur when Gamma stops counting fills near resolution; those fills are real.
 
     python3 scripts/backfill_tapes.py resolve --frame data/backfill_v6/contracts_all.csv --out out
     python3 scripts/backfill_tapes.py trades --meta out/meta.jsonl --out out --shard 0 --shards 4
@@ -199,6 +203,10 @@ def pull_trades(rec: Dict[str, Any], out: Path) -> Dict[str, Any]:
     stats.update(n_trades=len(ordered), n_raw=len(raw), notional=round(sum(r["price"] * r["size"] for r in ordered), 2),
                  first_ts=ordered[0]["ts"] if ordered else None, last_ts=ordered[-1]["ts"] if ordered else None,
                  newest_check=len(newest))
+    shares = sum(r["size"] for r in ordered)
+    vol = float(rec.get("volume") or 0)
+    stats["share_ratio"] = round(shares / vol, 6) if vol else None
+    stats["complete"] = bool(vol == 0 and not ordered) or bool(vol and shares / vol >= 0.999)
     return stats
 
 
