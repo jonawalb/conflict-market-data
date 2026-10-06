@@ -253,6 +253,35 @@ def diag(rec: Dict[str, Any], out: Path) -> Dict[str, Any]:
     return stats
 
 
+def diag2(rec: Dict[str, Any], out: Path) -> Dict[str, Any]:
+    """Gamma market-maker fields plus the shape and share total of /v2/trades."""
+    m = get(q(GAMMA, f"markets/{rec['market_id']}"))
+    stats: Dict[str, Any] = {"market_id": rec["market_id"],
+                             **{k: m.get(k) for k in ("marketMakerAddress", "enableOrderBook", "volumeAmm",
+                                                      "volumeClob", "volumeNum", "createdAt", "closedTime",
+                                                      "fpmmLive", "ammType")}}
+    try:
+        first = get(q(DATA_API, "v2/trades", market=rec["condition_id"], limit=500))
+    except ClientError as exc:
+        stats["v2"] = f"error: {exc}"
+        return stats
+    stats["v2_shape"] = (sorted(first.keys()) if isinstance(first, dict) else f"list[{len(first)}]")
+    rows = first.get("data", first.get("trades", [])) if isinstance(first, dict) else first
+    cursor = first.get("next_cursor") if isinstance(first, dict) else None
+    stats["v2_first_row"] = rows[0] if rows else None
+    pages = 1
+    while cursor and pages < 400:
+        nxt = get(q(DATA_API, "v2/trades", market=rec["condition_id"], limit=500, cursor=cursor))
+        page = nxt.get("data", nxt.get("trades", []))
+        if not page:
+            break
+        rows += page
+        cursor, pages = nxt.get("next_cursor"), pages + 1
+    stats["v2_n"], stats["v2_pages"] = len(rows), pages
+    stats["v2_shares"] = round(sum(float(r.get("size", 0)) for r in rows), 2)
+    return stats
+
+
 # ---------------------------------------------------------------- driver
 
 def run_shard(args: argparse.Namespace, fn, label: str) -> None:
@@ -283,7 +312,7 @@ def main() -> None:
     r = sub.add_parser("resolve")
     r.add_argument("--frame", required=True)
     r.add_argument("--out", required=True)
-    for name in ("trades", "prices", "diag"):
+    for name in ("trades", "prices", "diag", "diag2"):
         p = sub.add_parser(name)
         p.add_argument("--meta", required=True)
         p.add_argument("--out", required=True)
@@ -293,7 +322,7 @@ def main() -> None:
     if args.cmd == "resolve":
         cmd_resolve(args)
     else:
-        run_shard(args, {"trades": pull_trades, "prices": pull_prices, "diag": diag}[args.cmd], args.cmd)
+        run_shard(args, {"trades": pull_trades, "prices": pull_prices, "diag": diag, "diag2": diag2}[args.cmd], args.cmd)
 
 
 if __name__ == "__main__":

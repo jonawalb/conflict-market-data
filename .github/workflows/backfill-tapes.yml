@@ -12,7 +12,7 @@ on:
         default: "data/backfill_v6/probe.csv"
         required: true
       mode:
-        description: "full (trades + prices) or diag (tape-vs-volume diagnostic)"
+        description: "full (trades + prices) or diag (source diagnostic)"
         default: "full"
         required: false
       shard_list:
@@ -65,7 +65,7 @@ jobs:
       - name: Diagnostic
         if: github.event.inputs.mode == 'diag'
         run: |
-          python3 scripts/backfill_tapes.py diag --meta out/meta.jsonl --out out \
+          python3 scripts/backfill_tapes.py diag2 --meta out/meta.jsonl --out out \
             --shard ${{ matrix.shard }} --shards ${{ strategy.job-total }}
       - name: Trade tapes
         if: github.event.inputs.mode != 'diag'
