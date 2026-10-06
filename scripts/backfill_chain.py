@@ -57,7 +57,36 @@ def topic(signature: str) -> str:
 assert topic("OrderFilled(bytes32,address,address,uint256,uint256,uint256,uint256,uint256)") == ORDER_FILLED
 FPMM_BUY = topic("FPMMBuy(address,uint256,uint256,uint256,uint256)")
 FPMM_SELL = topic("FPMMSell(address,uint256,uint256,uint256,uint256)")
-EXCHANGE_SET = {e.lower() for e in EXCHANGES}
+# CLOB V2 (cutover 2026-04-28). The CTF exchange address and the OrderFilled topic were read
+# from receipts of trades the data-api reports (probe mode, 2026-10-06); the NegRisk pair is
+# Polymarket's published V2 deployment. Data words: side (0 BUY, 1 SELL, from the maker's
+# side), tokenId, makerAmountFilled, takerAmountFilled, fee, then two fields not used here.
+EXCHANGES_V2 = (
+    "0xe111180000d2663c0091e4f400237545b87b996b",  # V2 CTF Exchange
+    "0xe2222d279d744050d28e00520010520000310f59",  # V2 NegRisk Exchange A
+    "0xe2222d002000ba0053cef3375333610f64600036",  # V2 NegRisk Exchange B
+)
+ORDER_FILLED_V2 = "0xd543adfd945773f1a62f74f0ee55a5e3b9b1a28262980ba90b1a89f2ea84d8ee"
+EXCHANGE_SET = {e.lower() for e in EXCHANGES + EXCHANGES_V2}
+
+
+def decode_v2(log: Dict[str, Any]) -> Any:
+    words = [int(log["data"][2 + i:2 + i + 64], 16) for i in range(0, len(log["data"]) - 2, 64)]
+    if len(words) < 5 or len(log.get("topics", [])) < 4:
+        return None
+    side, token, maker_amt, taker_amt = words[:4]
+    if side == 0:
+        cash, shares, label = maker_amt, taker_amt, "BUY"
+    elif side == 1:
+        cash, shares, label = taker_amt, maker_amt, "SELL"
+    else:
+        return None
+    if shares == 0:
+        return None
+    return {"token_id": str(token), "price": cash / shares, "size": shares / USDC_DECIMALS, "side": label,
+            "wallet": "0x" + log["topics"][2][-40:], "counterparty": "0x" + log["topics"][3][-40:],
+            "tx_hash": log["transactionHash"], "block": int(log["blockNumber"], 16),
+            "log_index": int(log.get("logIndex", "0x0"), 16)}
 COLS = ["market_id", "ts", "price", "size", "side", "outcome", "wallet", "counterparty", "tx_hash", "block",
         "log_index", "source", "usdc", "fee"]
 
@@ -189,6 +218,8 @@ def cmd_clob(args: argparse.Namespace) -> None:
             token_map[str(tok)] = (rec["market_id"], outcome)
     t_from = int(dt.datetime.fromisoformat(args.from_date).replace(tzinfo=dt.timezone.utc).timestamp())
     t_to = int(dt.datetime.fromisoformat(args.to_date).replace(tzinfo=dt.timezone.utc).timestamp())
+    if t_to <= t_from:
+        raise ValueError("to-date must be after from-date")
     span = (t_to - t_from) / args.shards
     s_from, s_to = int(t_from + args.shard * span), int(t_from + (args.shard + 1) * span)
     a = client.block_at_time(s_from, tolerance=5)
@@ -205,6 +236,9 @@ def cmd_clob(args: argparse.Namespace) -> None:
             logs = []
             for ex in EXCHANGES:
                 logs.extend(get_logs(client, ex, start, end, chunk=end - start + 1, topics=[ORDER_FILLED]))
+            if args.v2:
+                for ex in EXCHANGES_V2:
+                    logs.extend(get_logs(client, ex, start, end, chunk=end - start + 1, topics=[ORDER_FILLED_V2]))
         except ChainError:
             if chunk <= 50:
                 raise
@@ -212,7 +246,7 @@ def cmd_clob(args: argparse.Namespace) -> None:
             continue
         n_logs += len(logs)
         for lg in logs:
-            tr = decode_order_filled(lg)
+            tr = decode_v2(lg) if lg["topics"][0] == ORDER_FILLED_V2 else decode_order_filled(lg)
             if not tr or tr["token_id"] not in token_map:
                 continue
             if tr["counterparty"].lower() in EXCHANGE_SET:
@@ -222,7 +256,8 @@ def cmd_clob(args: argparse.Namespace) -> None:
             rows.append({"market_id": mid, "ts": times(tr["block"]), "price": tr["price"], "size": tr["size"],
                          "side": tr["side"], "outcome": outcome, "wallet": tr["wallet"],
                          "counterparty": tr["counterparty"], "tx_hash": tr["tx_hash"], "block": tr["block"],
-                         "log_index": tr["log_index"], "source": "orderfilled", "usdc": tr["price"] * tr["size"],
+                         "log_index": tr["log_index"],
+                         "source": "orderfilled_v2" if lg["topics"][0] == ORDER_FILLED_V2 else "orderfilled", "usdc": tr["price"] * tr["size"],
                          "fee": ""})
         start = end + 1
         if chunk < args.chunk:
@@ -277,6 +312,7 @@ def main() -> None:
     c.add_argument("--shard", type=int, default=0)
     c.add_argument("--shards", type=int, default=1)
     c.add_argument("--chunk", type=int, default=2000)
+    c.add_argument("--v2", action="store_true", help="also scan the CLOB V2 exchanges")
     args = ap.parse_args()
     {"amm": cmd_amm, "clob": cmd_clob, "probe": cmd_probe}[args.cmd](args)
 
