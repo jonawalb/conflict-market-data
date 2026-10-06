@@ -138,6 +138,9 @@ def cmd_resolve(args: argparse.Namespace) -> None:
 
 # ---------------------------------------------------------------- trades
 
+TAKER_ONLY = "true"  # data-api default: one row per match (the taker's side); "false" adds maker rows
+
+
 def window_trades(cid: str, a: int, b: int) -> Optional[List[Dict[str, Any]]]:
     """All trades with a <= ts <= b, or None when the window exceeds the offset budget."""
     got: List[Dict[str, Any]] = []
@@ -145,7 +148,8 @@ def window_trades(cid: str, a: int, b: int) -> Optional[List[Dict[str, Any]]]:
     while True:
         if offset >= OFFSET_CAP:
             return None
-        page = get(q(DATA_API, "trades", market=cid, start=a, end=b, limit=PAGE, offset=offset))
+        page = get(q(DATA_API, "trades", market=cid, start=a, end=b, limit=PAGE, offset=offset,
+                      takerOnly=TAKER_ONLY))
         if not page:
             return got
         bad = [t["timestamp"] for t in page if not a <= int(t["timestamp"]) <= b]
@@ -173,7 +177,7 @@ def pull_trades(rec: Dict[str, Any], out: Path) -> Dict[str, Any]:
     cid, now = rec["condition_id"], int(time.time())
     stats: Dict[str, Any] = {"market_id": rec["market_id"], "windows": 0}
     raw = all_trades(cid, EPOCH_START, now, stats)
-    newest = get(q(DATA_API, "trades", market=cid, limit=PAGE, offset=0))
+    newest = get(q(DATA_API, "trades", market=cid, limit=PAGE, offset=0, takerOnly=TAKER_ONLY))
     rows: Dict[str, Dict[str, Any]] = {}
     for t in raw:
         k = trade_key(t)
@@ -220,6 +224,27 @@ def pull_prices(rec: Dict[str, Any], out: Path) -> Dict[str, Any]:
     return stats
 
 
+# ---------------------------------------------------------------- diag
+
+def diag(rec: Dict[str, Any], out: Path) -> Dict[str, Any]:
+    """Taker-only vs all-sides tape totals, against Gamma's volume fields."""
+    global TAKER_ONLY
+    m = get(q(GAMMA, f"markets/{rec['market_id']}"))
+    stats: Dict[str, Any] = {"market_id": rec["market_id"],
+                             **{k: m.get(k) for k in ("volumeNum", "volumeClob", "volumeAmm", "volume")}}
+    for flag in ("true", "false"):
+        TAKER_ONLY = flag
+        sub: Dict[str, Any] = {"windows": 0}
+        rows = all_trades(rec["condition_id"], EPOCH_START, int(time.time()), sub)
+        keys = {trade_key(t) for t in rows}
+        stats[f"taker_{flag}"] = {"n": len(rows), "unique": len(keys), "windows": sub["windows"],
+                                  "notional": round(sum(float(t["price"]) * float(t["size"]) for t in rows), 2),
+                                  "shares": round(sum(float(t["size"]) for t in rows), 2),
+                                  "first_ts": min((int(t["timestamp"]) for t in rows), default=None)}
+    TAKER_ONLY = "true"
+    return stats
+
+
 # ---------------------------------------------------------------- driver
 
 def run_shard(args: argparse.Namespace, fn, label: str) -> None:
@@ -250,7 +275,7 @@ def main() -> None:
     r = sub.add_parser("resolve")
     r.add_argument("--frame", required=True)
     r.add_argument("--out", required=True)
-    for name in ("trades", "prices"):
+    for name in ("trades", "prices", "diag"):
         p = sub.add_parser(name)
         p.add_argument("--meta", required=True)
         p.add_argument("--out", required=True)
@@ -260,7 +285,7 @@ def main() -> None:
     if args.cmd == "resolve":
         cmd_resolve(args)
     else:
-        run_shard(args, {"trades": pull_trades, "prices": pull_prices}[args.cmd], args.cmd)
+        run_shard(args, {"trades": pull_trades, "prices": pull_prices, "diag": diag}[args.cmd], args.cmd)
 
 
 if __name__ == "__main__":

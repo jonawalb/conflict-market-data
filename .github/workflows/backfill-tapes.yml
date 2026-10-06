@@ -11,6 +11,10 @@ on:
         description: "Contract list CSV (frame_row, slug, event_slug[, expand])"
         default: "data/backfill_v6/probe.csv"
         required: true
+      mode:
+        description: "full (trades + prices) or diag (tape-vs-volume diagnostic)"
+        default: "full"
+        required: false
       shard_list:
         description: "Comma-separated shard indices (one parallel job each)"
         default: "0"
@@ -58,12 +62,18 @@ jobs:
         with:
           name: meta
           path: out
+      - name: Diagnostic
+        if: github.event.inputs.mode == 'diag'
+        run: |
+          python3 scripts/backfill_tapes.py diag --meta out/meta.jsonl --out out \
+            --shard ${{ matrix.shard }} --shards ${{ strategy.job-total }}
       - name: Trade tapes
+        if: github.event.inputs.mode != 'diag'
         run: |
           python3 scripts/backfill_tapes.py trades --meta out/meta.jsonl --out out \
             --shard ${{ matrix.shard }} --shards ${{ strategy.job-total }}
       - name: Price histories
-        if: always()
+        if: always() && github.event.inputs.mode != 'diag'
         run: |
           python3 scripts/backfill_tapes.py prices --meta out/meta.jsonl --out out \
             --shard ${{ matrix.shard }} --shards ${{ strategy.job-total }}
