@@ -1,0 +1,73 @@
+name: backfill-subgraph
+
+# One-off research backfill: full trade tapes for a list of closed markets, pulled
+# from the public orderbook subgraph (scripts/backfill_subgraph.py). Results are
+# uploaded as workflow artifacts, not committed, so the repository stays small.
+
+on:
+  workflow_dispatch:
+    inputs:
+      frame:
+        description: "Contract list CSV (frame_row, slug, event_slug)"
+        default: "data/backfill_v6/probe.csv"
+        required: true
+      limit:
+        description: "Resolve only the first N rows (0 = all)"
+        default: "0"
+        required: false
+
+concurrency:
+  group: backfill-subgraph
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Resolve slugs to token ids
+        run: |
+          python3 scripts/backfill_subgraph.py resolve \
+            --frame "${{ github.event.inputs.frame }}" --out out \
+            --limit "${{ github.event.inputs.limit }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: meta
+          path: out/meta.jsonl
+
+  pull:
+    needs: resolve
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          name: meta
+          path: out
+      - name: Pull tapes
+        run: |
+          python3 scripts/backfill_subgraph.py pull --meta out/meta.jsonl --out out \
+            --shard ${{ matrix.shard }} --shards 6
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tapes-${{ matrix.shard }}
+          path: |
+            out/tapes/
+            out/pull_stats_*.jsonl
+          if-no-files-found: warn

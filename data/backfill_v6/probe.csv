@@ -1,0 +1,5 @@
+frame_row,slug,event_slug,resolution,volume,type,primary
+483,russian-strike-on-a-nato-member-by-december-31,russian-strike-on-a-nato-member-by-october-31,NO,28747.979319,strike_escalation,False
+568,will-russia-test-a-nuclear-weapon-by-december-31-2025,russia-nuclear-test-by,NO,46946.965228,nuclear,False
+1082,russia-x-ukraine-ceasefire-by-may-31-2026,russia-x-ukraine-ceasefire-by-may-31-2026,YES,141250712.6807031,ceasefire_peace,True
+14,will-russia-have-its-unsc-permanent-member-status-stripped-by-april-30-2022,will-russia-have-its-unsc-permanent-member-status-stripped-by-april-30-2022,NO,14358.96,other,False
