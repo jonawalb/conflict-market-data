@@ -46,23 +46,32 @@ META = re.compile(r"polymarket|odds of|% chance|probability", re.I)
 
 
 def events_on(day: dt.date, closed: Optional[bool]) -> Iterator[Dict[str, Any]]:
+    """Every event whose start date is `day`, via /events/keyset (offset paging is capped).
+
+    The response is {events, next_cursor}; the request parameter that advances is
+    `after_cursor` (verified 2026-10-07: next_cursor/cursor/after return page one again).
+    """
     a, b = day.isoformat() + "T00:00:00Z", (day + dt.timedelta(days=1)).isoformat() + "T00:00:00Z"
-    offset, seen = 0, set()
+    params: Dict[str, Any] = dict(limit=PAGE, start_date_min=a, start_date_max=b)
+    if closed is not None:
+        params["closed"] = str(closed).lower()
+    seen: set = set()
+    cursor = None
     while True:
-        params = dict(limit=PAGE, offset=offset, start_date_min=a, start_date_max=b, order="id", ascending="true")
-        if closed is not None:
-            params["closed"] = str(closed).lower()
-        page = get(q(GAMMA, "events", **params))
-        if not page:
+        page = get(q(GAMMA, "events/keyset", **params, **({"after_cursor": cursor} if cursor else {})))
+        events = page.get("events") or []
+        if not events:
             return
-        ids = {e.get("id") for e in page}
-        if ids <= seen:  # the API ignored the offset: stop rather than loop forever
-            raise RuntimeError(f"offset {offset} returned only already-seen events on {day}")
+        ids = {e.get("id") for e in events}
+        if ids <= seen:  # the cursor did not advance: stop rather than loop forever
+            raise RuntimeError(f"keyset cursor repeated a page on {day}")
         seen |= ids
-        yield from page
-        offset += len(page)  # page until empty: a short page is not proof of the end
-        if offset > 50000:
-            raise RuntimeError(f"more than 50,000 events listed for {day}; refusing to continue")
+        yield from events
+        cursor = page.get("next_cursor")
+        if not cursor:
+            return
+        if len(seen) > 100000:
+            raise RuntimeError(f"more than 100,000 events listed for {day}; refusing to continue")
 
 
 def label(m: Dict[str, Any]) -> str:
