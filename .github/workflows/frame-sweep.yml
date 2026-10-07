@@ -1,0 +1,63 @@
+name: frame-sweep
+
+# Research frame: sweep every Polymarket event by start date and keep one theater's
+# markets (scripts/frame_sweep.py). Output goes to workflow artifacts.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "probe or sweep"
+        default: "probe"
+        required: true
+      theater:
+        description: "theater key in frame_sweep.THEATERS"
+        default: "iran_israel"
+        required: false
+      day:
+        description: "probe: day to list (YYYY-MM-DD)"
+        default: "2026-06-15"
+        required: false
+      from_date:
+        description: "sweep: first start date"
+        default: "2022-01-01"
+        required: false
+      to_date:
+        description: "sweep: last start date"
+        default: "2026-10-07"
+        required: false
+      shard_list:
+        description: "sweep: comma-separated shard indices"
+        default: "0"
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(format('[{0}]', github.event.inputs.mode == 'probe' && '0' || github.event.inputs.shard_list)) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run
+        run: |
+          if [ "${{ github.event.inputs.mode }}" = "probe" ]; then
+            python3 scripts/frame_sweep.py probe --day "${{ github.event.inputs.day }}"
+          else
+            python3 scripts/frame_sweep.py sweep --theater "${{ github.event.inputs.theater }}" \
+              --from "${{ github.event.inputs.from_date }}" --to "${{ github.event.inputs.to_date }}" \
+              --out out --shard ${{ matrix.shard }} --shards ${{ strategy.job-total }}
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always() && github.event.inputs.mode == 'sweep'
+        with:
+          name: frame-${{ matrix.shard }}
+          path: out/
