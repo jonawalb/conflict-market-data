@@ -46,6 +46,22 @@ THEATERS["israel_gaza"] = {
     "partner": r"(?!)", "gaza": r"(?!)",
 }
 
+# Power screen 2026-10-07 (no prices): candidate theaters for a further confirmatory test, each disjoint
+# from russia_ukraine, iran_israel and israel_gaza via 'exclude'.
+_PRIOR = (r"\b(ukrain|russia|zelensk|putin|kyiv|moscow|iran|tehran|israel|netanyahu|idf|hezbollah|lebanon|houthi"
+          r"|yemen|syria|hamas|gaza|hostage|rafah|west bank)")
+for _name, _inc in {
+    "venezuela": r"\b(venezuela|maduro|caracas)",
+    "india_pakistan": r"\b(pakistan|kashmir|sindoor)",
+    "north_korea": r"\b(north korea|pyongyang|kim jong|dprk)",
+    "china_maritime": r"\b(taiwan|philippines|south china sea|scarborough|senkaku|second thomas)|china x japan",
+    "thailand_cambodia": r"\b(cambodia)|thailand x",
+    "caucasus": r"\b(armenia|azerbaijan|karabakh)",
+    "africa": r"\b(sudan|rsf|congo|m23|ethiopia|eritrea|somalia|sahel|mali|niger\b|rwanda)",
+    "mexico_cartels": r"\b(cartel|cartels)|strike mexico|military action in mexico|invade mexico",
+}.items():
+    THEATERS[_name] = {"include": _inc, "exclude": _PRIOR, "partner": r"(?!)", "gaza": r"(?!)"}
+
 # Validation only: the research assistant's 20 Russia-Ukraine terms, to check the sweep's recall
 # against the RA's hand-built frame. Its exclusions are not the RA's, so compare before exclusions.
 THEATERS["russia_ukraine_validation"] = {
@@ -159,13 +175,14 @@ def cmd_probe(args: argparse.Namespace) -> None:
 
 
 def cmd_sweep(args: argparse.Namespace) -> None:
-    th = THEATERS[args.theater]
-    inc = re.compile(th["include"], re.I)
+    names = args.theater.split(",")
+    ths = {n: THEATERS[n] for n in names}
+    incs = {n: re.compile(t["include"], re.I) for n, t in ths.items()}
     d0, d1 = dt.date.fromisoformat(args.from_), dt.date.fromisoformat(args.to)
     days = [d0 + dt.timedelta(days=i) for i in range((d1 - d0).days + 1)][args.shard::args.shards]
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
-    kept, excl, n_events, n_markets, failed = [], [], 0, 0, []
+    kept, excl, n_events, n_markets, failed = {n: [] for n in names}, {n: [] for n in names}, 0, 0, []
     for i, day in enumerate(days, 1):
         try:
             evs = list(events_on(day, None))
@@ -176,7 +193,8 @@ def cmd_sweep(args: argparse.Namespace) -> None:
         for ev in evs:
             for m in ev.get("markets") or []:
                 n_markets += 1
-                if not inc.search(m.get("question") or ""):
+                hits = [n for n in names if incs[n].search(m.get("question") or "")]
+                if not hits:
                     continue
                 rec = {"market_id": str(m.get("id")), "question": m.get("question"), "slug": m.get("slug"),
                        "event_slug": ev.get("slug"), "event_title": ev.get("title"), "condition_id": m.get("conditionId"),
@@ -185,18 +203,23 @@ def cmd_sweep(args: argparse.Namespace) -> None:
                        "end": m.get("endDate"), "closed_time": m.get("closedTime"), "neg_risk": m.get("negRisk"),
                        "enable_order_book": m.get("enableOrderBook"), "outcomes": m.get("outcomes"),
                        "tokens": m.get("clobTokenIds"), "event_start_day": day.isoformat()}
-                reason = classify(ev, m, th)
-                (excl if reason else kept).append({**rec, "reason": reason} if reason else rec)
+                for n in hits:
+                    reason = classify(ev, m, ths[n])
+                    (excl[n] if reason else kept[n]).append({**rec, "reason": reason} if reason else rec)
         if i % 25 == 0:
-            logger.info("%d/%d days; %d events, %d markets, %d kept, %d excluded", i, len(days), n_events, n_markets,
-                        len(kept), len(excl))
+            logger.info("%d/%d days; %d events, %d markets, kept %s", i, len(days), n_events, n_markets,
+                        {n: len(v) for n, v in kept.items()})
         time.sleep(0.05)
-    for name, rows in (("kept", kept), ("excluded", excl)):
-        with gzip.open(out / f"{name}_{args.shard:02d}.jsonl.gz", "wt") as fh:
-            for r in rows:
-                fh.write(json.dumps(r) + "\n")
-    stats = {"shard": args.shard, "days": len(days), "events": n_events, "markets": n_markets, "kept": len(kept),
-             "excluded": len(excl), "failed_days": failed}
+    for n in names:
+        sub = out if len(names) == 1 else out / n
+        sub.mkdir(parents=True, exist_ok=True)
+        for name, rows in (("kept", kept[n]), ("excluded", excl[n])):
+            with gzip.open(sub / f"{name}_{args.shard:02d}.jsonl.gz", "wt") as fh:
+                for r in rows:
+                    fh.write(json.dumps(r) + "\n")
+    stats = {"shard": args.shard, "days": len(days), "events": n_events, "markets": n_markets,
+             "kept": {n: len(v) for n, v in kept.items()}, "excluded": {n: len(v) for n, v in excl.items()},
+             "failed_days": failed}
     (out / f"sweep_stats_{args.shard:02d}.json").write_text(json.dumps(stats))
     logger.info("%s", stats)
     if failed:
@@ -212,7 +235,7 @@ def main() -> None:
     k = sub.add_parser("keyset-probe")
     k.add_argument("--day", required=True)
     s = sub.add_parser("sweep")
-    s.add_argument("--theater", required=True, choices=sorted(THEATERS))
+    s.add_argument("--theater", required=True, help="one key of THEATERS, or several comma-separated")
     s.add_argument("--from", dest="from_", required=True)
     s.add_argument("--to", required=True)
     s.add_argument("--out", required=True)
