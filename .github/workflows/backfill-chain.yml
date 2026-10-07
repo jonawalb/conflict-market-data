@@ -34,6 +34,10 @@ on:
         description: "clob: blocks per eth_getLogs request"
         default: "2000"
         required: false
+      total_shards:
+        description: "clob: total shard count the range is split into (blank = number of jobs); set it when rerunning a subset"
+        default: ""
+        required: false
       shard_list:
         description: "clob: comma-separated shard indices"
         default: "0"
@@ -72,7 +76,7 @@ jobs:
             python3 scripts/backfill_chain.py clob --meta "${{ github.event.inputs.meta }}" \
               --ids "${{ github.event.inputs.ids }}" --out out \
               --from-date "${{ github.event.inputs.from_date }}" --to-date "${{ github.event.inputs.to_date }}" \
-              --shard ${{ matrix.shard }} --shards ${{ strategy.job-total }} \
+              --shard ${{ matrix.shard }} --shards ${{ github.event.inputs.total_shards || strategy.job-total }} \
               --chunk "${{ github.event.inputs.chunk }}" \
               $( [ "${{ github.event.inputs.v2 }}" = "true" ] && echo --v2 )
           fi
