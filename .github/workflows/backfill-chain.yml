@@ -39,9 +39,8 @@ on:
         default: "0"
         required: false
 
-concurrency:
-  group: backfill-chain-${{ github.event.inputs.mode }}
-  cancel-in-progress: false
+# No concurrency group: runs are independent and only write artifacts, and a group would let a
+# newly queued run cancel an older pending one.
 
 permissions:
   contents: read
