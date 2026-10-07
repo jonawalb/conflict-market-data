@@ -371,13 +371,20 @@ def chain_rows(rows: List[Dict[str, str]]) -> List[Tuple]:
     return out
 
 
-def price_rows(rows: List[Dict[str, str]]) -> List[Tuple]:
-    return [(r["token"], r["market_id"], int(r["t"]), float(r["p"]), int(float(r["fidelity"])))
-            for r in rows if r.get("t") and r.get("p") and r.get("fidelity")]
+def price_rows(rows: List[Dict[str, str]], tokens: Dict[Tuple[str, str], str]) -> List[Tuple]:
+    """The first RU pull (tapes/prices) has no token column; its outcome maps to one via meta."""
+    out = []
+    for r in rows:
+        token = r.get("token") or tokens.get((r["market_id"], r.get("outcome")))
+        if token and r.get("t") and r.get("p") and r.get("fidelity"):
+            out.append((token, r["market_id"], int(r["t"]), float(r["p"]), int(float(r["fidelity"]))))
+    return out
 
 
 def import_tapes(conn: sqlite3.Connection, qp: Path, meta: Dict, force: bool) -> Dict[str, Any]:
     cond = {mid: r.get("condition_id") for recs in meta.values() for mid, r in recs.items()}
+    tokens = {(mid, outcome): tok for recs in meta.values() for mid, r in recs.items()
+              for outcome, tok in (r.get("tokens") or {}).items()}
     totals: Dict[str, Dict[str, int]] = defaultdict(lambda: defaultdict(int))
     jobs: List[Tuple[Path, str, str]] = []  # (file, theater, kind hint)
     for name, theater in TAPE_SETS.items():
@@ -396,7 +403,7 @@ def import_tapes(conn: sqlite3.Connection, qp: Path, meta: Dict, force: bool) ->
             continue
         cols, rows = read_csv_gz(path)
         if hint == "prices":
-            kind, source, sql, tuples = "prices", "clob", PRICES_SQL, price_rows(rows)
+            kind, source, sql, tuples = "prices", "clob", PRICES_SQL, price_rows(rows, tokens)
         elif hint == "chain" or "source" in cols:
             kind, source, sql, tuples = "chain", "chain", CHAIN_SQL, chain_rows(rows)
         else:
