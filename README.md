@@ -61,6 +61,7 @@ starts failing, check for 429s in the workflow logs first.
 ```
 data/
   registry/markets.json.gz   poll list (byte-stable; only commits on real change)
+  registry/include.csv       market ids tracked whatever the classifier says
   state/high_water.json      newest timestamp already captured, per market
   increments/YYYY/MM/*.jsonl.gz   append-only observations
 ```
@@ -88,6 +89,32 @@ SELECT question, end_date, volume_num FROM markets
 WHERE escalation = 1 AND question LIKE '%strike Iran%' ORDER BY end_date;
 ```
 
+### Tracking contracts the classifier misses
+
+`data/registry/include.csv` lists market ids (plus theater, source and question,
+for reading) that the daily registry refresh keeps and tracks while they are
+open, plus the grace window, even when the keyword sweep never finds them or the
+escalation filter rejects them. Ids discovery did not return are fetched from
+Gamma by id. Edit the list, not the generated registry; the next
+`refresh-registry` run picks it up. The current list holds the open contracts of
+the QP-lambda v6 frames (`scripts/import_qp_v6.py include` regenerates it).
+
+### Research backfills
+
+`scripts/import_qp_v6.py import --qp <QP-lambda/v6/data>` loads the v6 backfill
+(complete data-api tapes, Polygon fills, price histories, frames and the RA
+contract lists) into a local database. The tapes are ~1.3 GB and stay out of git,
+so after a fresh `rebuild_db.py` the import has to be run again; it is
+idempotent and skips files it has already loaded. It adds local-only tables that
+increments never carry:
+
+| Table | Holds |
+|---|---|
+| `chain_trades` | fills recovered from Polygon logs, keyed `tx_hash:log_index`. Maker fills (or FPMM trades), so they are kept out of `trades`, which holds data-api taker records only; adding the two double counts volume |
+| `market_frames` | one row per frame / RA spreadsheet row, with that source's resolution label and the full row as JSON (`source` = `qp_v6`, `qp_v6_sweep`, `RA`) |
+| `tape_imports` | provenance per imported file: path, sha256, kind, source, row and insert counts |
+| `replayed_increments` | increments already merged by `rebuild_db.py --incremental` |
+
 ## Auditing what was actually captured
 
 ```bash
@@ -113,6 +140,11 @@ python3 test_classify.py && python3 test_roundtrip.py
 Local runs store the database at `~/Library/Application Support/BettingOnWar/`
 (override with `BOW_DATA_DIR`) — deliberately outside any cloud-synced folder,
 since SQLite in WAL mode on a syncing volume can corrupt.
+
+`run_collect.sh` also merges the increments GitHub Actions has committed
+(`rebuild_db.py --incremental`) into the local database before each run, so it
+stays current even when this machine collects nothing itself. Only increments not
+yet replayed are read; set `BOW_SYNC_INCREMENTS=0` to skip the step.
 
 Anything collected locally exists only on that machine until exported:
 
@@ -164,13 +196,15 @@ bow/                package: config, api, db, discover, collect
 bow_collect.py      local CLI
 scripts/
   ci_collect.py     stateless CI entry point
-  rebuild_db.py     increments -> SQLite
+  rebuild_db.py     increments -> SQLite (--incremental: merge only new ones)
+  import_qp_v6.py   QP-lambda v6 backfill -> local SQLite; include-list generator
   ladder_check.py   contract-ladder viability report
   coverage_report.py  observed sampling cadence and gap audit
   export_local.py   local SQLite -> repository increments
   consolidate.py    bundle old months into a Release when the repo grows
 test_classify.py    classifier + book summariser regression tests
 test_roundtrip.py   export -> rebuild losslessness and idempotence
+test_include.py     registry include list
 deploy/             optional macOS launchd agents
 .github/workflows/  scheduled collection
 ```

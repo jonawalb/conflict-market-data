@@ -18,6 +18,7 @@ Usage:
 """
 
 import argparse
+import csv
 import datetime as dt
 import gzip
 import json
@@ -36,12 +37,13 @@ from bow import db
 from bow.api import PolymarketClient
 from bow.collect import collect_market
 from bow.config import Config
-from bow.discover import discover
+from bow.discover import apply_includes, discover
 
 logger = logging.getLogger("ci")
 
 DATA = REPO / "data"
 REGISTRY = DATA / "registry" / "markets.json.gz"
+INCLUDE = DATA / "registry" / "include.csv"
 STATE = DATA / "state" / "high_water.json"
 INCREMENTS = DATA / "increments"
 
@@ -54,8 +56,16 @@ TABLES = ("markets", "prices", "trades", "books", "runs")
 REGISTRY_FIELDS = (
     "market_id", "condition_id", "slug", "question", "event_title", "category",
     "start_date", "end_date", "created_at", "closed", "active",
-    "token_yes", "token_no", "escalation", "tracked",
+    "token_yes", "token_no", "escalation", "tracked", "included",
 )
+
+
+def load_include_ids() -> List[str]:
+    """Market ids to track regardless of the classifier (first column of include.csv)."""
+    if not INCLUDE.exists():
+        return []
+    with open(INCLUDE, newline="") as handle:
+        return [row["market_id"] for row in csv.DictReader(handle) if row.get("market_id")]
 
 
 def load_registry() -> List[Dict[str, Any]]:
@@ -74,14 +84,14 @@ def load_registry() -> List[Dict[str, Any]]:
 def save_registry(rows: List[Dict[str, Any]]) -> None:
     """Persist the poll list.
 
-    Only escalation markets are kept: the other ~9,000 discovered markets are
+    Only escalation and included markets are kept: the other ~9,000 discovered markets are
     never polled, and carrying them would add ~1.5 MB of git churn per refresh.
     mtime is pinned to 0 so an unchanged registry serialises to identical bytes
     and produces no commit at all.
     """
     REGISTRY.parent.mkdir(parents=True, exist_ok=True)
     keep = [{k: r.get(k) for k in REGISTRY_FIELDS}
-            for r in rows if r.get("escalation")]
+            for r in rows if r.get("escalation") or r.get("included")]
     keep.sort(key=lambda r: str(r["market_id"]))
     payload = json.dumps(keep, separators=(",", ":"), sort_keys=True).encode()
     with open(REGISTRY, "wb") as raw:
@@ -190,6 +200,7 @@ def main() -> int:
 
     if args.mode == "discover" or not registry:
         registry = discover(client, cfg)
+        registry = apply_includes(client, cfg, registry, load_include_ids())
         save_registry(registry)
         logger.info("registry refreshed: %d markets", len(registry))
         if args.mode == "discover":

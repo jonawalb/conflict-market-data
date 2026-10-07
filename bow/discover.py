@@ -132,3 +132,42 @@ def discover(client: PolymarketClient, cfg: Config) -> List[Dict[str, Any]]:
         len(rows), escalation, tracked,
     )
     return rows
+
+
+def apply_includes(
+    client: PolymarketClient, cfg: Config, rows: List[Dict[str, Any]], include_ids: List[str],
+) -> List[Dict[str, Any]]:
+    """Force-track markets named in data/registry/include.csv.
+
+    Research frames hold contracts the keyword sweep misses or the escalation
+    filter rejects. An included market is kept in the registry and tracked while
+    open (plus the grace window), whatever the classifier says; `escalation` keeps
+    the classifier's verdict. Markets discovery did not see are fetched by id.
+    """
+    by_id = {r["market_id"]: r for r in rows}
+    fetched = failed = 0
+    for market_id in include_ids:
+        row = by_id.get(market_id)
+        if row is None:
+            try:
+                market = client.market_by_id(market_id)
+            except Exception as exc:
+                logger.warning("include: fetch failed for %s: %s", market_id, exc)
+                market = None
+            if not market:
+                failed += 1
+                continue
+            events = market.get("events") or [{}]
+            row = _to_row(market, events[0], cfg)
+            if row is None:
+                failed += 1
+                continue
+            by_id[market_id] = row
+            fetched += 1
+        row["included"] = 1
+        still = _is_still_tracked({"closed": row["closed"], "endDate": row["end_date"]}, cfg.grace_days)
+        row["tracked"] = 1 if still else 0
+    logger.info("include list: %d ids, %d fetched by id, %d not found, %d tracked",
+                len(include_ids), fetched, failed,
+                sum(1 for i in include_ids if by_id.get(i, {}).get("tracked")))
+    return list(by_id.values())

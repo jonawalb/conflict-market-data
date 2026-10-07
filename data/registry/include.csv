@@ -1,0 +1,1438 @@
+market_id,theater,source,question
+560317,russia_ukraine,qp_v6/tapes_full,"Putin out as President of Russia by December 31, 2026?"
+567621,china_taiwan,qp_v6/tapes_full,Will China invade Taiwan by end of 2026?
+567688,iran_israel,qp_v6/sweep_iran,Netanyahu out by end of 2026?
+567689,russia_ukraine,qp_v6/tapes_full,Zelenskyy out as Ukraine president by end of 2026?
+585582,iran_israel,qp_v6/sweep_iran,arch Will Israel strike Syria on Monday September 15?
+663583,iran_israel,qp_v6/sweep_iran,Will the Iranian regime fall before 2027?
+665218,iran_israel,qp_v6/sweep_iran,Israel and Saudi Arabia normalize relations before 2027?
+665224,russia_ukraine,qp_v6/tapes_full,Ukraine signs peace deal with Russia before 2027?
+665243,russia_ukraine,qp_v6/tapes_full,NATO article 5 before 2027?
+665260,iran_israel,qp_v6/sweep_iran,Will Donald Trump visit Israel in 2026?
+665268,russia_ukraine,qp_v6/tapes_full,Will Donald Trump visit Russia in 2026?
+665269,russia_ukraine,qp_v6/tapes_full,Will Donald Trump visit Ukraine in 2026?
+665275,russia_ukraine,qp_v6/tapes_full,Will Donald Trump visit Belarus in 2026?
+665353,russia_ukraine,qp_v6/tapes_full,Ukraine agrees not to join NATO before 2027? 
+665373,russia_ukraine,qp_v6/tapes_full,U.S. recognizes Russian sovereignty over Crimea before 2027? 
+665374,iran_israel,qp_v6/sweep_iran,Will the U.S. invade Iran before 2027?
+665410,russia_ukraine,qp_v6/tapes_full,Will Ukraine agree to give up the rest of Donbas before 2027?
+665414,iran_israel,qp_v6/sweep_iran,Israel and Lebanon normalize relations before 2027?
+665472,iran_israel,qp_v6/sweep_iran,Will Syria join the Abraham Accords before 2027?
+665473,iran_israel,qp_v6/sweep_iran,Will Lebanon join the Abraham Accords before 2027?
+665480,russia_ukraine,qp_v6/tapes_full,Will US withdraw from NATO before 2027?
+665484,iran_israel,qp_v6/sweep_iran,Israel x Turkey military clash before 2027?
+665485,israel_gaza,qp_v6/sweep_gaza,U.S. forces in Gaza before 2027?
+665495,russia_ukraine,qp_v6/tapes_full,Ukraine joins NATO before 2027?
+665515,iran_israel,qp_v6/sweep_iran,Will Israel annex West Bank territory before 2027?
+665521,iran_israel,qp_v6/sweep_iran,Iran nuclear test before 2027?
+665727,iran_israel,qp_v6/sweep_iran,Will Iran withdraw from the NPT before 2027?
+665738,iran_israel,qp_v6/sweep_iran,"Ahmed al-Sharaa out as leader of Syria by December 31, 2026?"
+666608,russia_ukraine,qp_v6/tapes_full,Will Trump meet with Vladimir Putin in 2026?
+666611,russia_ukraine,qp_v6/tapes_full,Will Trump meet with Aleksandr Lukashenko in 2026?
+666828,iran_israel,qp_v6/sweep_iran,"U.S. agrees to a new trade deal with ""Israel"" before 2027?"
+677273,iran_israel,qp_v6/sweep_iran,"Israel and Syria normalize relations by December 31, 2026?"
+677315,iran_israel,qp_v6/sweep_iran,"Israel and Indonesia normalize relations by December 31, 2026?"
+677358,russia_ukraine,qp_v6/tapes_full,"Ukraine election held by December 31, 2026?"
+677367,china_taiwan,qp_v6/tapes_full,China coup attempt before 2027?
+677375,russia_ukraine,qp_v6/tapes_full,Will Russia rejoin the G7 before 2027?
+677396,iran_israel,qp_v6/sweep_iran,Iran Nuke before 2027?
+677403,russia_ukraine,qp_v6/tapes_full,US recognizes Russian sovereignty over Ukraine before 2027?
+677404,china_taiwan,qp_v6/tapes_full,"China x India military clash by December 31, 2026?"
+677407,china_taiwan,qp_v6/tapes_full,China x Taiwan military clash before 2027?
+678747,iran_israel,qp_v6/sweep_iran,Will Israel strike 4 countries in 2026?
+678748,iran_israel,qp_v6/sweep_iran,Will Israel strike 5 countries in 2026?
+678749,iran_israel,qp_v6/sweep_iran,Will Israel strike 6 countries in 2026?
+678750,iran_israel,qp_v6/sweep_iran,Will Israel strike 7 countries in 2026?
+678751,iran_israel,qp_v6/sweep_iran,Will Israel strike 8 countries in 2026?
+678752,iran_israel,qp_v6/sweep_iran,Will Israel strike 9 countries in 2026?
+678753,iran_israel,qp_v6/sweep_iran,Will Israel strike 10 countries in 2026?
+678754,iran_israel,qp_v6/sweep_iran,Will Israel strike 11 countries in 2026?
+678755,iran_israel,qp_v6/sweep_iran,Will Israel strike 12 countries in 2026?
+678756,iran_israel,qp_v6/sweep_iran,Will Israel strike 13 countries in 2026?
+678757,iran_israel,qp_v6/sweep_iran,Will Israel strike 14 countries in 2026?
+678758,iran_israel,qp_v6/sweep_iran,Will Israel strike 15 or more countries in 2026?
+681144,russia_ukraine,qp_v6/tapes_full,Will Ukraine agree to cede territory to Russia before 2027?
+682705,iran_israel,qp_v6/sweep_iran,Will Benjamin Netanyahu be the next Prime Minister of Israel?
+682706,iran_israel,qp_v6/sweep_iran,Will Naftali Bennett be the next Prime Minister of Israel?
+682707,iran_israel,qp_v6/sweep_iran,Will Yair Lapid be the next Prime Minister of Israel?
+682708,iran_israel,qp_v6/sweep_iran,Will Gadi Eizenkot be the next Prime Minister of Israel?
+682709,iran_israel,qp_v6/sweep_iran,Will Benny Gantz be the next Prime Minister of Israel?
+682710,iran_israel,qp_v6/sweep_iran,Will Avigdor Lieberman be the next Prime Minister of Israel?
+682711,iran_israel,qp_v6/sweep_iran,Will Yossi Cohen be the next Prime Minister of Israel?
+682712,iran_israel,qp_v6/sweep_iran,Will Yair Golan be the next Prime Minister of Israel?
+682713,iran_israel,qp_v6/sweep_iran,Will Itamar Ben Gvir be the next Prime Minister of Israel?
+682714,iran_israel,qp_v6/sweep_iran,Will Gideon Sa’ar be the next Prime Minister of Israel?
+682715,iran_israel,qp_v6/sweep_iran,Will Yariv Levin be the next Prime Minister of Israel?
+682716,iran_israel,qp_v6/sweep_iran,Will Moshe Feiglin be the next Prime Minister of Israel?
+682717,iran_israel,qp_v6/sweep_iran,Will Ayelet Shaked be the next Prime Minister of Israel?
+682718,iran_israel,qp_v6/sweep_iran,Will Yoaz Hendel be the next Prime Minister of Israel?
+682719,iran_israel,qp_v6/sweep_iran,Will Israel Katz be the next Prime Minister of Israel?
+682720,iran_israel,qp_v6/sweep_iran,Will Nir Barkat be the next Prime Minister of Israel?
+682721,iran_israel,qp_v6/sweep_iran,Will Amir Ohana be the next Prime Minister of Israel?
+682722,iran_israel,qp_v6/sweep_iran,Will Gilad Erdan be the next Prime Minister of Israel?
+682723,iran_israel,qp_v6/sweep_iran,Will Ofer Winter be the next Prime Minister of Israel?
+682724,iran_israel,qp_v6/sweep_iran,Will Person H be the next Prime Minister of Israel?
+682725,iran_israel,qp_v6/sweep_iran,Will Person I be the next Prime Minister of Israel?
+682726,iran_israel,qp_v6/sweep_iran,Will Person J be the next Prime Minister of Israel?
+682727,iran_israel,qp_v6/sweep_iran,Will Person K be the next Prime Minister of Israel?
+682728,iran_israel,qp_v6/sweep_iran,Will Person L be the next Prime Minister of Israel?
+682729,iran_israel,qp_v6/sweep_iran,Will Person M be the next Prime Minister of Israel?
+682730,iran_israel,qp_v6/sweep_iran,Will Person N be the next Prime Minister of Israel?
+682731,iran_israel,qp_v6/sweep_iran,Will Person O be the next Prime Minister of Israel?
+682732,iran_israel,qp_v6/sweep_iran,Will another person be the next Prime Minister of Israel?
+687642,china_taiwan,qp_v6/tapes_full,China x Japan military clash before 2027?
+693519,russia_ukraine,qp_v6/tapes_full,Ukraine agrees to limit size of armed forces before 2027?
+788929,iran_israel,qp_v6/sweep_iran,"Israel strikes Iran by June 30, 2026?"
+790373,iran_israel,qp_v6/sweep_iran,"Israel strikes Iran by March 31, 2026?"
+897227,iran_israel,qp_v6/sweep_iran,Will Donald Trump visit Syria in 2026?
+950123,russia_ukraine,qp_v6/tapes_full,"Trump, Putin, and Zelensky seen together before 2027?"
+950145,russia_ukraine,qp_v6/tapes_full,"Trump, Putin, and Zelensky meet together before 2027?"
+957645,israel_gaza,qp_v6/sweep_gaza,Israel x Hamas Ceasefire Phase II by February 28?
+994804,iran_israel,qp_v6/sweep_iran,US strike on Syria by January 31?
+1007579,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Sumy by March 31, 2027?"
+1059730,russia_ukraine,qp_v6/tapes_full,Ukraine peace referendum passed before 2027?
+1090488,israel_gaza,qp_v6/sweep_gaza,Israel x Hamas ceasefire cancelled by January 31?
+1090496,russia_ukraine,qp_v6/tapes_full,"NATO x Russia military clash by December 31, 2026?"
+1090513,iran_israel,qp_v6/sweep_iran,Will Saudi Arabia strike Yemen by January 9?
+1115288,iran_israel,qp_v6/sweep_iran,US recognizes Reza Pahlavi as leader of Iran in 2026?
+1124642,iran_israel,qp_v6/sweep_iran,Will Hezbollah win the most seats in the 2026 Lebanese parliamentary election?
+1124654,iran_israel,qp_v6/sweep_iran,Will Arab Socialist Ba'ath Party in Lebanon win the most seats in the 2026 Lebanese parliamentary election?
+1124797,russia_ukraine,qp_v6/tapes_full,NATO dissolves before 2027?
+1124829,russia_ukraine,qp_v6/tapes_full,EU/NATO country announces peacekeeping force in Ukraine by December 31?
+1124834,russia_ukraine,qp_v6/tapes_full,"US x Russia military clash by December 31, 2026?"
+1139924,iran_israel,qp_v6/sweep_iran,"Will US or Israel strike Iran by January 13, 2026?"
+1139925,iran_israel,qp_v6/sweep_iran,"Will US or Israel strike Iran by January 14, 2026?"
+1139926,iran_israel,qp_v6/sweep_iran,"Will US or Israel strike Iran by January 15, 2026?"
+1170144,iran_israel,qp_v6/sweep_iran,"Will the US officially declare war on Iran by December 31, 2026?"
+1179940,china_taiwan,qp_v6/tapes_full,US x China Military clash before 2027?
+1179977,iran_israel,qp_v6/sweep_iran,arch Will Iran close the Strait of Hormuz by June 30?
+1184343,russia_ukraine,qp_v6/tapes_full,Will NATO countries clash with each other before 2027?
+1194695,russia_ukraine,qp_v6/tapes_full,Will Russia invade another country in 2026?
+1198646,iran_israel,qp_v6/sweep_iran,"Israel x Iran ceasefire broken by January 31, 2026?"
+1198647,iran_israel,qp_v6/sweep_iran,"Israel x Iran ceasefire broken by Februray 28, 2026?"
+1198771,iran_israel,qp_v6/sweep_iran,arch Will Iran close the Strait of Hormuz by March 31?
+1280207,iran_israel,qp_v6/sweep_iran,Israeli parliament dissolved by February 28?
+1301527,russia_ukraine,qp_v6/tapes_full,Will Zelenskyy talk to Putin by December 31?
+1323083,iran_israel,qp_v6/sweep_iran,Will Hezbollah disarm by December 31?
+1323364,russia_ukraine,qp_v6/tapes_full,"Ukraine recognizes Russian sovereignty over its territory by December 31, 2026?"
+1394086,iran_israel,qp_v6/sweep_iran,Will Reza Pahlavi enter Iran by December 31?
+1397270,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Lyman by December 31, 2026?"
+1397281,russia_ukraine,qp_v6/tapes_full,"Will Russia capture all of Kostyantynivka by December 31, 2026?"
+1397291,russia_ukraine,qp_v6/tapes_full,"Will Russia capture all of Lyman by December 31, 2026?"
+1437338,israel_gaza,qp_v6/sweep_gaza,"Will Israel strike Gaza on March 10, 2026?"
+1437339,israel_gaza,qp_v6/sweep_gaza,"Will Israel strike Gaza on March 11, 2026?"
+1437340,israel_gaza,qp_v6/sweep_gaza,"Will Israel strike Gaza on March 12, 2026?"
+1437341,israel_gaza,qp_v6/sweep_gaza,"Will Israel strike Gaza on March 13, 2026?"
+1437342,israel_gaza,qp_v6/sweep_gaza,"Will Israel strike Gaza on March 14, 2026?"
+1437343,israel_gaza,qp_v6/sweep_gaza,"Will Israel strike Gaza on March 15, 2026?"
+1437344,israel_gaza,qp_v6/sweep_gaza,"Will Israel strike Gaza on March 16, 2026?"
+1437345,israel_gaza,qp_v6/sweep_gaza,"Will Israel strike Gaza on March 17, 2026?"
+1437352,israel_gaza,qp_v6/sweep_gaza,"Will Israel strike Gaza on March 24, 2026?"
+1437356,israel_gaza,qp_v6/sweep_gaza,"Will Israel strike Gaza on March 28, 2026?"
+1437735,iran_israel,qp_v6/sweep_iran,"US strikes Iran by March 14, 2026?"
+1469734,iran_israel,qp_v6/sweep_iran,Will there be no Head of State in Iran end of 2026?
+1469735,iran_israel,qp_v6/sweep_iran,Will Muhammad Mirbaqiri be head of state in Iran end of 2026?
+1469736,iran_israel,qp_v6/sweep_iran,Will Sadegh Larijani be head of state in Iran end of 2026?
+1469737,iran_israel,qp_v6/sweep_iran,Will Mojtaba Khamenei be head of state in Iran end of 2026?
+1469738,iran_israel,qp_v6/sweep_iran,Will Hassan Khomeini be head of state in Iran end of 2026?
+1469739,iran_israel,qp_v6/sweep_iran,Will Reza Pahlavi be head of state in Iran end of 2026?
+1469740,iran_israel,qp_v6/sweep_iran,Will Hassan Shariatmadari be head of state in Iran end of 2026?
+1469741,iran_israel,qp_v6/sweep_iran,Will Maryam Rajavi be head of state in Iran end of 2026?
+1469742,iran_israel,qp_v6/sweep_iran,Will Massoud Rajavi be head of state in Iran end of 2026?
+1469743,iran_israel,qp_v6/sweep_iran,Will Seyed Hossein Mousavian be head of state in Iran end of 2026?
+1469744,iran_israel,qp_v6/sweep_iran,Will Reza Pirzadeh be head of state in Iran end of 2026?
+1469745,iran_israel,qp_v6/sweep_iran,Will Navid Shomali be head of state in Iran end of 2026?
+1469746,iran_israel,qp_v6/sweep_iran,Will Mustafa Hijri be head of state in Iran end of 2026?
+1469747,iran_israel,qp_v6/sweep_iran,Will Ali Motahari be head of state in Iran end of 2026?
+1469748,iran_israel,qp_v6/sweep_iran,Will Gholam-Ali Haddad-Adel be head of state in Iran end of 2026?
+1469749,iran_israel,qp_v6/sweep_iran,Will Mostafa Pourmohammadi be head of state in Iran end of 2026?
+1469750,iran_israel,qp_v6/sweep_iran,Will Sadegh Mahsouli be head of state in Iran end of 2026?
+1469751,iran_israel,qp_v6/sweep_iran,Will Masoud Pezeshkian be head of state in Iran end of 2026?
+1469752,iran_israel,qp_v6/sweep_iran,Will Saeed Jalili be head of state in Iran end of 2026?
+1469753,iran_israel,qp_v6/sweep_iran,Will Hassan Rouhani be head of state in Iran end of 2026?
+1469754,iran_israel,qp_v6/sweep_iran,Will Mahmoud Ahmadinejad be head of state in Iran end of 2026?
+1469755,iran_israel,qp_v6/sweep_iran,Will Mohammad Khatami be head of state in Iran end of 2026?
+1469756,iran_israel,qp_v6/sweep_iran,Will Other be head of state in Iran end of 2026?
+1469758,iran_israel,qp_v6/sweep_iran,Will Alireza Arafi be head of state in Iran end of 2026?
+1469760,iran_israel,qp_v6/sweep_iran,Will Abbas Araghchi be head of state in Iran end of 2026?
+1469761,iran_israel,qp_v6/sweep_iran,Will Ahmad Vahidi be head of state in Iran end of 2026?
+1469762,iran_israel,qp_v6/sweep_iran,Will Mohsen Araki be head of state in Iran end of 2026?
+1469763,iran_israel,qp_v6/sweep_iran,Will Nasir Hosseini be head of state in Iran end of 2026?
+1469764,iran_israel,qp_v6/sweep_iran,Will Ahmad Hosseini Khorasani be head of state in Iran end of 2026?
+1469765,iran_israel,qp_v6/sweep_iran,Will Ali Asghar Hejazi be head of state in Iran end of 2026?
+1469766,iran_israel,qp_v6/sweep_iran,Will Mohammad-Bagher Ghalibaf be head of state in Iran end of 2026?
+1469767,iran_israel,qp_v6/sweep_iran,Will o be head of state in Iran end of 2026?
+1469768,iran_israel,qp_v6/sweep_iran,Will p be head of state in Iran end of 2026?
+1469769,iran_israel,qp_v6/sweep_iran,Will q be head of state in Iran end of 2026?
+1469770,iran_israel,qp_v6/sweep_iran,Will r be head of state in Iran end of 2026?
+1469771,iran_israel,qp_v6/sweep_iran,Will s be head of state in Iran end of 2026?
+1469772,iran_israel,qp_v6/sweep_iran,Will t be head of state in Iran end of 2026?
+1469773,iran_israel,qp_v6/sweep_iran,Will u be head of state in Iran end of 2026?
+1469774,iran_israel,qp_v6/sweep_iran,Will v be head of state in Iran end of 2026?
+1469775,iran_israel,qp_v6/sweep_iran,Will w be head of state in Iran end of 2026?
+1469776,iran_israel,qp_v6/sweep_iran,Will x be head of state in Iran end of 2026?
+1469777,iran_israel,qp_v6/sweep_iran,Will y be head of state in Iran end of 2026?
+1469778,iran_israel,qp_v6/sweep_iran,Will z be head of state in Iran end of 2026?
+1469779,iran_israel,qp_v6/sweep_iran,Will aa be head of state in Iran end of 2026?
+1469780,iran_israel,qp_v6/sweep_iran,Will ab be head of state in Iran end of 2026?
+1469781,iran_israel,qp_v6/sweep_iran,Will ac be head of state in Iran end of 2026?
+1469782,iran_israel,qp_v6/sweep_iran,Will ad be head of state in Iran end of 2026?
+1469783,iran_israel,qp_v6/sweep_iran,Will ae be head of state in Iran end of 2026?
+1469784,iran_israel,qp_v6/sweep_iran,Will af be head of state in Iran end of 2026?
+1469785,iran_israel,qp_v6/sweep_iran,Will ag be head of state in Iran end of 2026?
+1469786,iran_israel,qp_v6/sweep_iran,Will ah be head of state in Iran end of 2026?
+1469787,iran_israel,qp_v6/sweep_iran,Will ai be head of state in Iran end of 2026?
+1469788,iran_israel,qp_v6/sweep_iran,Will aj be head of state in Iran end of 2026?
+1469789,iran_israel,qp_v6/sweep_iran,Will ak be head of state in Iran end of 2026?
+1469790,iran_israel,qp_v6/sweep_iran,Will al be head of state in Iran end of 2026?
+1469791,iran_israel,qp_v6/sweep_iran,Will am be head of state in Iran end of 2026?
+1469792,iran_israel,qp_v6/sweep_iran,Will an be head of state in Iran end of 2026?
+1469793,iran_israel,qp_v6/sweep_iran,Will ao be head of state in Iran end of 2026?
+1469794,iran_israel,qp_v6/sweep_iran,Will ap be head of state in Iran end of 2026?
+1469795,iran_israel,qp_v6/sweep_iran,Will aq be head of state in Iran end of 2026?
+1469796,iran_israel,qp_v6/sweep_iran,Will ar be head of state in Iran end of 2026?
+1469797,iran_israel,qp_v6/sweep_iran,Will as be head of state in Iran end of 2026?
+1469798,iran_israel,qp_v6/sweep_iran,Will at be head of state in Iran end of 2026?
+1469799,iran_israel,qp_v6/sweep_iran,Will au be head of state in Iran end of 2026?
+1469800,iran_israel,qp_v6/sweep_iran,Will av be head of state in Iran end of 2026?
+1469801,iran_israel,qp_v6/sweep_iran,Will aw be head of state in Iran end of 2026?
+1469802,iran_israel,qp_v6/sweep_iran,Will ax be head of state in Iran end of 2026?
+1469803,iran_israel,qp_v6/sweep_iran,Will ay be head of state in Iran end of 2026?
+1469804,iran_israel,qp_v6/sweep_iran,Will az be head of state in Iran end of 2026?
+1469805,iran_israel,qp_v6/sweep_iran,Will ba be head of state in Iran end of 2026?
+1469806,iran_israel,qp_v6/sweep_iran,Will bb be head of state in Iran end of 2026?
+1469807,iran_israel,qp_v6/sweep_iran,Will bc be head of state in Iran end of 2026?
+1469808,iran_israel,qp_v6/sweep_iran,Will bd be head of state in Iran end of 2026?
+1469809,iran_israel,qp_v6/sweep_iran,Will be be head of state in Iran end of 2026?
+1469810,iran_israel,qp_v6/sweep_iran,Will bf be head of state in Iran end of 2026?
+1469811,iran_israel,qp_v6/sweep_iran,Will bg be head of state in Iran end of 2026?
+1469812,iran_israel,qp_v6/sweep_iran,Will bh be head of state in Iran end of 2026?
+1469813,iran_israel,qp_v6/sweep_iran,Will bi be head of state in Iran end of 2026?
+1469814,iran_israel,qp_v6/sweep_iran,Will bj be head of state in Iran end of 2026?
+1469815,iran_israel,qp_v6/sweep_iran,Will bk be head of state in Iran end of 2026?
+1469816,iran_israel,qp_v6/sweep_iran,Will bl be head of state in Iran end of 2026?
+1469817,iran_israel,qp_v6/sweep_iran,Will bm be head of state in Iran end of 2026?
+1469818,iran_israel,qp_v6/sweep_iran,Will bn be head of state in Iran end of 2026?
+1469819,iran_israel,qp_v6/sweep_iran,Will bo be head of state in Iran end of 2026?
+1469820,iran_israel,qp_v6/sweep_iran,Will bp be head of state in Iran end of 2026?
+1469821,iran_israel,qp_v6/sweep_iran,Will bq be head of state in Iran end of 2026?
+1469822,iran_israel,qp_v6/sweep_iran,Will br be head of state in Iran end of 2026?
+1469823,iran_israel,qp_v6/sweep_iran,Will bs be head of state in Iran end of 2026?
+1469824,iran_israel,qp_v6/sweep_iran,Will bt be head of state in Iran end of 2026?
+1469825,iran_israel,qp_v6/sweep_iran,Will bu be head of state in Iran end of 2026?
+1469826,iran_israel,qp_v6/sweep_iran,Will bv be head of state in Iran end of 2026?
+1469827,iran_israel,qp_v6/sweep_iran,Will bw be head of state in Iran end of 2026?
+1469828,iran_israel,qp_v6/sweep_iran,Will bx be head of state in Iran end of 2026?
+1469829,iran_israel,qp_v6/sweep_iran,Will by be head of state in Iran end of 2026?
+1469830,iran_israel,qp_v6/sweep_iran,Will bz be head of state in Iran end of 2026?
+1469831,iran_israel,qp_v6/sweep_iran,Will ca be head of state in Iran end of 2026?
+1469832,iran_israel,qp_v6/sweep_iran,Will cb be head of state in Iran end of 2026?
+1469833,iran_israel,qp_v6/sweep_iran,Will cc be head of state in Iran end of 2026?
+1469834,iran_israel,qp_v6/sweep_iran,Will cd be head of state in Iran end of 2026?
+1469835,iran_israel,qp_v6/sweep_iran,Will ce be head of state in Iran end of 2026?
+1469836,iran_israel,qp_v6/sweep_iran,Will cf be head of state in Iran end of 2026?
+1469837,iran_israel,qp_v6/sweep_iran,Will cg be head of state in Iran end of 2026?
+1469838,iran_israel,qp_v6/sweep_iran,Will ch be head of state in Iran end of 2026?
+1469839,iran_israel,qp_v6/sweep_iran,Will ci be head of state in Iran end of 2026?
+1469840,iran_israel,qp_v6/sweep_iran,Will cj be head of state in Iran end of 2026?
+1469841,iran_israel,qp_v6/sweep_iran,Will ck be head of state in Iran end of 2026?
+1469842,iran_israel,qp_v6/sweep_iran,Will cl be head of state in Iran end of 2026?
+1469843,iran_israel,qp_v6/sweep_iran,Will cm be head of state in Iran end of 2026?
+1469844,iran_israel,qp_v6/sweep_iran,Will cn be head of state in Iran end of 2026?
+1469845,iran_israel,qp_v6/sweep_iran,Will co be head of state in Iran end of 2026?
+1469846,iran_israel,qp_v6/sweep_iran,Will cp be head of state in Iran end of 2026?
+1469847,iran_israel,qp_v6/sweep_iran,Will cq be head of state in Iran end of 2026?
+1469848,iran_israel,qp_v6/sweep_iran,Will cr be head of state in Iran end of 2026?
+1469849,iran_israel,qp_v6/sweep_iran,Will cs be head of state in Iran end of 2026?
+1469850,iran_israel,qp_v6/sweep_iran,Will ct be head of state in Iran end of 2026?
+1469851,iran_israel,qp_v6/sweep_iran,Will cu be head of state in Iran end of 2026?
+1469852,iran_israel,qp_v6/sweep_iran,Will cv be head of state in Iran end of 2026?
+1469853,iran_israel,qp_v6/sweep_iran,Will cw be head of state in Iran end of 2026?
+1469854,iran_israel,qp_v6/sweep_iran,Will cx be head of state in Iran end of 2026?
+1469855,iran_israel,qp_v6/sweep_iran,Will cy be head of state in Iran end of 2026?
+1469856,iran_israel,qp_v6/sweep_iran,Will cz be head of state in Iran end of 2026?
+1472548,iran_israel,qp_v6/sweep_iran,Will Reza Pahlavi lead Iran in 2026?
+1477848,iran_israel,qp_v6/sweep_iran,Will the US reopen its embassy in Iran in 2026?
+1486683,iran_israel,qp_v6/sweep_iran,"Will Israel strike Greater Beirut on March 10, 2026?"
+1486686,iran_israel,qp_v6/sweep_iran,"Will Israel strike Greater Beirut on March 13, 2026?"
+1486688,iran_israel,qp_v6/sweep_iran,"Will Israel strike Greater Beirut on March 15, 2026?"
+1486689,iran_israel,qp_v6/sweep_iran,"Will Israel strike Greater Beirut on March 16, 2026?"
+1507880,iran_israel,qp_v6/sweep_iran,"Will US or Israel strike Iran on March 11, 2026?"
+1507884,iran_israel,qp_v6/sweep_iran,"Will US or Israel strike Iran on March 12, 2026?"
+1507885,iran_israel,qp_v6/sweep_iran,"Will US or Israel strike Iran on March 13, 2026?"
+1507886,iran_israel,qp_v6/sweep_iran,"Will US or Israel strike Iran on March 14, 2026?"
+1508916,iran_israel,qp_v6/sweep_iran,Will Israel reopen its embassy in Iran in 2026?
+1535973,iran_israel,qp_v6/sweep_iran,Iran leadership change by December 31?
+1633103,iran_israel,qp_v6/sweep_iran,Will Iran legalize gay marriage?
+1633611,china_taiwan,qp_v6/tapes_full,"Will China invade Taiwan by December 31, 2027?"
+1642010,israel_gaza,qp_v6/sweep_gaza,Will Israel launch a major ground offensive in Gaza by December 31?
+1651336,iran_israel,qp_v6/sweep_iran,Joseph Aoun out as President of Lebanon by December 31?
+1705173,iran_israel,qp_v6/sweep_iran,"Will Israel take military action in Lebanon on April 12, 2026?"
+1705175,iran_israel,qp_v6/sweep_iran,"Will Israel take military action in Lebanon on April 14, 2026?"
+1705178,iran_israel,qp_v6/sweep_iran,"Will Israel take military action in Lebanon on April 15, 2026?"
+1705181,iran_israel,qp_v6/sweep_iran,"Will Israel take military action in Lebanon on April 16, 2026?"
+1705183,iran_israel,qp_v6/sweep_iran,"Will Israel take military action in Lebanon on April 17, 2026?"
+1705186,iran_israel,qp_v6/sweep_iran,"Will Israel take military action in Lebanon on April 18, 2026?"
+1705188,iran_israel,qp_v6/sweep_iran,"Will Israel take military action in Lebanon on April 19, 2026?"
+1705190,iran_israel,qp_v6/sweep_iran,"Will Israel take military action in Lebanon on April 20, 2026?"
+1705192,iran_israel,qp_v6/sweep_iran,"Will Israel take military action in Lebanon on April 21, 2026?"
+1705196,iran_israel,qp_v6/sweep_iran,"Will Israel take military action in Lebanon on April 23, 2026?"
+1705197,iran_israel,qp_v6/sweep_iran,"Will Israel take military action in Lebanon on April 24, 2026?"
+1705198,iran_israel,qp_v6/sweep_iran,"Will Israel take military action in Lebanon on April 25, 2026?"
+1705200,iran_israel,qp_v6/sweep_iran,"Will Israel take military action in Lebanon on April 27, 2026?"
+1705202,iran_israel,qp_v6/sweep_iran,"Will Israel take military action in Lebanon on April 29, 2026?"
+1705203,iran_israel,qp_v6/sweep_iran,"Will Israel take military action in Lebanon on April 30, 2026?"
+1705311,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 11, 2026?"
+1705312,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 12, 2026?"
+1705313,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 13, 2026?"
+1705314,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 14, 2026?"
+1705315,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 15, 2026?"
+1705316,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 16, 2026?"
+1705317,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 17, 2026?"
+1705318,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 18, 2026?"
+1705319,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 19, 2026?"
+1705320,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 20, 2026?"
+1705321,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 21, 2026?"
+1705322,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 22, 2026?"
+1705323,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 23, 2026?"
+1705324,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 24, 2026?"
+1705325,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 25, 2026?"
+1705326,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 26, 2026?"
+1705327,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 27, 2026?"
+1705328,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 28, 2026?"
+1705329,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 29, 2026?"
+1705330,israel_gaza,qp_v6/sweep_gaza,"Will Israel take military action in Gaza on April 30, 2026?"
+1705400,iran_israel,qp_v6/sweep_iran,"Will Israel conduct military action in Greater Beirut on April 11, 2026?"
+1705410,iran_israel,qp_v6/sweep_iran,"Will Israel conduct military action in Greater Beirut on April 21, 2026?"
+1705411,iran_israel,qp_v6/sweep_iran,"Will Israel conduct military action in Greater Beirut on April 22, 2026?"
+1705412,iran_israel,qp_v6/sweep_iran,"Will Israel conduct military action in Greater Beirut on April 23, 2026?"
+1705413,iran_israel,qp_v6/sweep_iran,"Will Israel conduct military action in Greater Beirut on April 24, 2026?"
+1705414,iran_israel,qp_v6/sweep_iran,"Will Israel conduct military action in Greater Beirut on April 25, 2026?"
+1705415,iran_israel,qp_v6/sweep_iran,"Will Israel conduct military action in Greater Beirut on April 26, 2026?"
+1705416,iran_israel,qp_v6/sweep_iran,"Will Israel conduct military action in Greater Beirut on April 27, 2026?"
+1705417,iran_israel,qp_v6/sweep_iran,"Will Israel conduct military action in Greater Beirut on April 28, 2026?"
+1705418,iran_israel,qp_v6/sweep_iran,"Will Israel conduct military action in Greater Beirut on April 29, 2026?"
+1705419,iran_israel,qp_v6/sweep_iran,"Will Israel conduct military action in Greater Beirut on April 30, 2026?"
+1705753,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 12, 2026?"
+1705754,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 13, 2026?"
+1705755,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 14, 2026?"
+1705756,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 15, 2026?"
+1705757,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 16, 2026?"
+1705763,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 17, 2026?"
+1705768,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 18, 2026?"
+1705772,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 19, 2026?"
+1705777,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 20, 2026?"
+1705783,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 21, 2026?"
+1705784,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 22, 2026?"
+1705785,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 23, 2026?"
+1705786,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 24, 2026?"
+1705787,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 25, 2026?"
+1705788,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 26, 2026?"
+1705789,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 27, 2026?"
+1705790,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 28, 2026?"
+1705791,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 29, 2026?"
+1705792,iran_israel,qp_v6/sweep_iran,"Will Hezbollah conduct military action against Israel on April 30, 2026?"
+1705844,iran_israel,qp_v6/sweep_iran,"Will Iran successfully target shipping on April 18, 2026?"
+1705846,iran_israel,qp_v6/sweep_iran,"Will Iran successfully target shipping on April 20, 2026?"
+1705847,iran_israel,qp_v6/sweep_iran,"Will Iran successfully target shipping on April 21, 2026?"
+1705849,iran_israel,qp_v6/sweep_iran,"Will Iran successfully target shipping on April 23, 2026?"
+1705850,iran_israel,qp_v6/sweep_iran,"Will Iran successfully target shipping on April 24, 2026?"
+1705852,iran_israel,qp_v6/sweep_iran,"Will Iran successfully target shipping on April 26, 2026?"
+1731346,iran_israel,qp_v6/sweep_iran,"Iran agrees to surrender enriched uranium stockpile by December 31, 2026?"
+1796138,iran_israel,qp_v6/sweep_iran, Iran agrees to end enrichment of uranium by December 31?
+1796381,russia_ukraine,qp_v6/tapes_full,Will Russia test a nuclear weapon by December 31 2026?
+1797603,iran_israel,qp_v6/sweep_iran,Will any country expel an Israeli ambassador by December 31?
+1807912,russia_ukraine,qp_v6/tapes_full,"Will any country leave NATO by December 31, 2026?"
+1811266,china_taiwan,qp_v6/tapes_full,"Will China invade Taiwan by June 30, 2027?"
+1918981,russia_ukraine,qp_v6/tapes_full,Ukraine peace referendum scheduled by December 31?
+1939065,iran_israel,qp_v6/sweep_iran,Will Israel annex any territory by December 31?
+1986520,iran_israel,qp_v6/sweep_iran,Will Israel make Eric Adams a citizen?
+1994023,iran_israel,qp_v6/sweep_iran,"Will Saudi Arabia send warships through the Strait of Hormuz by April 30, 2026?"
+1994024,iran_israel,qp_v6/sweep_iran,"Will the United Arab Emirates send warships through the Strait of Hormuz by April 30, 2026?"
+1994025,iran_israel,qp_v6/sweep_iran,"Will Bahrain send warships through the Strait of Hormuz by April 30, 2026?"
+1994026,iran_israel,qp_v6/sweep_iran,"Will Qatar send warships through the Strait of Hormuz by April 30, 2026?"
+1994027,iran_israel,qp_v6/sweep_iran,"Will Kuwait send warships through the Strait of Hormuz by April 30, 2026?"
+1994028,iran_israel,qp_v6/sweep_iran,"Will Oman send warships through the Strait of Hormuz by April 30, 2026?"
+2002700,iran_israel,qp_v6/sweep_iran,Will Donald Trump visit Lebanon in 2026?
+2006983,iran_israel,qp_v6/sweep_iran,US obtains Iranian enriched uranium by December 31?
+2036726,iran_israel,qp_v6/sweep_iran,Nawaf Salam out as Lebanon PM in 2026?
+2100981,iran_israel,qp_v6/sweep_iran,Will Likud win the most seats in the 2026 Israeli legislative election?
+2100982,iran_israel,qp_v6/sweep_iran,Will Together win the most seats in the 2026 Israeli legislative election?
+2100983,iran_israel,qp_v6/sweep_iran,Will Shas win the most seats in the 2026 Israeli legislative election?
+2100984,iran_israel,qp_v6/sweep_iran,Will Yashar win the most seats in the 2026 Israeli legislative election?
+2100985,iran_israel,qp_v6/sweep_iran,Will The Democrats win the most seats in the 2026 Israeli legislative election?
+2100986,iran_israel,qp_v6/sweep_iran,Will Otzma Yehudit win the most seats in the 2026 Israeli legislative election?
+2100987,iran_israel,qp_v6/sweep_iran,Will Party A win the most seats in the 2026 Israeli legislative election?
+2100988,iran_israel,qp_v6/sweep_iran,Will Party B win the most seats in the 2026 Israeli legislative election?
+2100989,iran_israel,qp_v6/sweep_iran,Will Party C win the most seats in the 2026 Israeli legislative election?
+2100990,iran_israel,qp_v6/sweep_iran,Will Party D win the most seats in the 2026 Israeli legislative election?
+2100991,iran_israel,qp_v6/sweep_iran,Will Party E win the most seats in the 2026 Israeli legislative election?
+2100992,iran_israel,qp_v6/sweep_iran,Will Party F win the most seats in the 2026 Israeli legislative election?
+2100993,iran_israel,qp_v6/sweep_iran,Will Party G win the most seats in the 2026 Israeli legislative election?
+2100994,iran_israel,qp_v6/sweep_iran,Will Party H win the most seats in the 2026 Israeli legislative election?
+2100995,iran_israel,qp_v6/sweep_iran,Will Party I win the most seats in the 2026 Israeli legislative election?
+2100996,iran_israel,qp_v6/sweep_iran,Will Party J win the most seats in the 2026 Israeli legislative election?
+2100997,iran_israel,qp_v6/sweep_iran,Will Party K win the most seats in the 2026 Israeli legislative election?
+2100998,iran_israel,qp_v6/sweep_iran,Will Party L win the most seats in the 2026 Israeli legislative election?
+2100999,iran_israel,qp_v6/sweep_iran,Will Party M win the most seats in the 2026 Israeli legislative election?
+2101000,iran_israel,qp_v6/sweep_iran,Will Party N win the most seats in the 2026 Israeli legislative election?
+2101001,iran_israel,qp_v6/sweep_iran,Will Party O win the most seats in the 2026 Israeli legislative election?
+2101002,iran_israel,qp_v6/sweep_iran,Will Party P win the most seats in the 2026 Israeli legislative election?
+2101003,iran_israel,qp_v6/sweep_iran,Will Party Q win the most seats in the 2026 Israeli legislative election?
+2101004,iran_israel,qp_v6/sweep_iran,Will Party R win the most seats in the 2026 Israeli legislative election?
+2101005,iran_israel,qp_v6/sweep_iran,Will Party S win the most seats in the 2026 Israeli legislative election?
+2101006,iran_israel,qp_v6/sweep_iran,Will Party T win the most seats in the 2026 Israeli legislative election?
+2101007,iran_israel,qp_v6/sweep_iran,Will Party U win the most seats in the 2026 Israeli legislative election?
+2101008,iran_israel,qp_v6/sweep_iran,Will Party V win the most seats in the 2026 Israeli legislative election?
+2101009,iran_israel,qp_v6/sweep_iran,Will Party W win the most seats in the 2026 Israeli legislative election?
+2101010,iran_israel,qp_v6/sweep_iran,Will Party X win the most seats in the 2026 Israeli legislative election?
+2101011,iran_israel,qp_v6/sweep_iran,Will Party Y win the most seats in the 2026 Israeli legislative election?
+2101012,iran_israel,qp_v6/sweep_iran,Will Party Z win the most seats in the 2026 Israeli legislative election?
+2101013,iran_israel,qp_v6/sweep_iran,Will Party AA win the most seats in the 2026 Israeli legislative election?
+2101014,iran_israel,qp_v6/sweep_iran,Will Party AB win the most seats in the 2026 Israeli legislative election?
+2101015,iran_israel,qp_v6/sweep_iran,Will Party AC win the most seats in the 2026 Israeli legislative election?
+2101016,iran_israel,qp_v6/sweep_iran,Will Party AD win the most seats in the 2026 Israeli legislative election?
+2101017,iran_israel,qp_v6/sweep_iran,Will Party AE win the most seats in the 2026 Israeli legislative election?
+2101018,iran_israel,qp_v6/sweep_iran,Will Party AF win the most seats in the 2026 Israeli legislative election?
+2101019,iran_israel,qp_v6/sweep_iran,Will Other win the most seats in the 2026 Israeli legislative election?
+2107989,russia_ukraine,qp_v6/tapes_full,Will Russia capture all of Vovchansk by December 31?
+2109956,iran_israel,qp_v6/sweep_iran,Israeli election results in a hung parliament?
+2110142,iran_israel,qp_v6/sweep_iran,Israel election: will Likud lose seats?
+2110576,iran_israel,qp_v6/sweep_iran,Will Likud win fewer than 20 seats in the 2026 Israeli legislative election?
+2110577,iran_israel,qp_v6/sweep_iran,Will Likud win 20-24 seats in the 2026 Israeli legislative election?
+2110578,iran_israel,qp_v6/sweep_iran,Will Likud win 25-29 seats in the 2026 Israeli legislative election?
+2110579,iran_israel,qp_v6/sweep_iran,Will Likud win 30-34 seats in the 2026 Israeli legislative election?
+2110580,iran_israel,qp_v6/sweep_iran,Will Likud win 35 or more seats in the 2026 Israeli legislative election?
+2116877,iran_israel,qp_v6/sweep_iran,Will Benjamin Netanyahu be arrested before 2027?
+2118850,iran_israel,qp_v6/sweep_iran,Houthis successfully target shipping by May 31?
+2125383,russia_ukraine,qp_v6/tapes_full,"Will Russia capture all of Prymorske by December 31, 2026?"
+2125426,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Prymorske by December 31, 2026?"
+2126517,iran_israel,qp_v6/sweep_iran,"Israel x Iran permanent peace deal by December 31, 2026?"
+2176270,iran_israel,qp_v6/sweep_iran,Strait of Hormuz traffic returns to normal by December 31?
+2232190,russia_ukraine,qp_v6/tapes_full,"Will Russia enter Sloviansk by December 31, 2026?"
+2232191,russia_ukraine,qp_v6/tapes_full,"Will Russia enter Sumy by December 31, 2026?"
+2232192,russia_ukraine,qp_v6/tapes_full,"Will Russia enter Druzkhivka by December 31, 2026?"
+2232194,russia_ukraine,qp_v6/tapes_full,"Will Russia enter Kramatorsk by December 31, 2026?"
+2232195,russia_ukraine,qp_v6/tapes_full,"Will Russia enter Kharkiv by December 31, 2026?"
+2232196,russia_ukraine,qp_v6/tapes_full,"Will Russia enter Kherson by December 31, 2026?"
+2232197,russia_ukraine,qp_v6/tapes_full,"Will Russia enter Zaporizhia by December 31, 2026?"
+2243896,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire agreement by October 31, 2026?"
+2243897,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire agreement by December 31, 2026?"
+2246417,russia_ukraine,qp_v6/tapes_full,"Will Russia capture all of Donetsk Oblast by December 31, 2026?"
+2261102,russia_ukraine,qp_v6/tapes_full,"Ukraine election called by December 31, 2026?"
+2262329,russia_ukraine,qp_v6/tapes_full,Russia coup attempt in 2026?
+2264327,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire by October 31, 2026?"
+2264328,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire by December 31, 2026?"
+2318107,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Orikhiv by December 31, 2026?"
+2318140,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Borova by December 31, 2026?"
+2318183,russia_ukraine,qp_v6/tapes_full,Will Russia capture all of Chasiv Yar by December 31?
+2355076,iran_israel,qp_v6/sweep_iran,US obtains Iranian enriched uranium by July 31?
+2365031,russia_ukraine,qp_v6/tapes_full,Trump meets with Putin by December 31?
+2373341,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Kupiansk by December 31, 2026?"
+2373388,russia_ukraine,qp_v6/tapes_full,U.S. agrees to give Ukraine security guarantee by December 31? 
+2373683,russia_ukraine,qp_v6/tapes_full,Will Russia capture all of Bilytske by December 31?
+2373817,russia_ukraine,qp_v6/tapes_full,Will Russia capture all of Kupiansk by December 31?
+2373818,russia_ukraine,qp_v6/tapes_full,"Will Russia capture all of Ternuvate by December 31, 2026?"
+2373826,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Bilytske by December 31, 2026?"
+2373847,russia_ukraine,qp_v6/tapes_full,Will Russia capture Kupiansk-Vuzlovyi by December 31?
+2373865,russia_ukraine,qp_v6/tapes_full,Will Russia capture Rai-Oleksandrivka by December 31?
+2373913,russia_ukraine,qp_v6/tapes_full,Will Russia capture Viroliubivka by December 31?
+2373974,russia_ukraine,qp_v6/tapes_full,"Will Russia enter Pokrovskoe by December 31, 2026?"
+2374237,russia_ukraine,qp_v6/tapes_full,Will Ukraine re-enter Myrnohrad by December 31?
+2374243,russia_ukraine,qp_v6/tapes_full,Will Ukraine re-enter Obratne or Temyrivka by December 31?
+2374258,russia_ukraine,qp_v6/tapes_full,Will Ukraine re-enter Uspenivka by December 31?
+2374271,russia_ukraine,qp_v6/tapes_full,"Will Ukraine recapture Crimean territory by December 31, 2026?"
+2382807,iran_israel,qp_v6/sweep_iran,"U.S. Embassy in Damascus reopened by December 31, 2026?"
+2382819,china_taiwan,qp_v6/tapes_full,Will China blockade Taiwan in 2026?
+2412359,iran_israel,qp_v6/sweep_iran,Will North Korea recognize Israel by December 31?
+2412360,iran_israel,qp_v6/sweep_iran,Will Cuba recognize Israel by December 31?
+2412361,iran_israel,qp_v6/sweep_iran,Will Saudi Arabia recognize Israel by December 31?
+2412362,iran_israel,qp_v6/sweep_iran,Will Lebanon recognize Israel by December 31?
+2412363,iran_israel,qp_v6/sweep_iran,Will Afghanistan recognize Israel by December 31?
+2412364,iran_israel,qp_v6/sweep_iran,Will Iraq recognize Israel by December 31?
+2412365,iran_israel,qp_v6/sweep_iran,Will Pakistan recognize Israel by December 31?
+2412366,iran_israel,qp_v6/sweep_iran,Will Syria recognize Israel by December 31?
+2412367,iran_israel,qp_v6/sweep_iran,Will Venezuela recognize Israel by December 31?
+2412368,iran_israel,qp_v6/sweep_iran,Will Tunisia recognize Israel by December 31?
+2412369,iran_israel,qp_v6/sweep_iran,Will Kuwait recognize Israel by December 31?
+2412370,iran_israel,qp_v6/sweep_iran,Will Qatar recognize Israel by December 31?
+2412371,iran_israel,qp_v6/sweep_iran,Will Indonesia recognize Israel by December 31?
+2412372,iran_israel,qp_v6/sweep_iran,Will Malaysia recognize Israel by December 31?
+2412373,iran_israel,qp_v6/sweep_iran,Will Bangladesh recognize Israel by December 31?
+2412374,iran_israel,qp_v6/sweep_iran,Will Iran recognize Israel by December 31?
+2429575,iran_israel,qp_v6/sweep_iran,Trump meets with Mojtaba Khamenei by December 31?
+2439087,russia_ukraine,qp_v6/tapes_full,European country agrees to give Ukraine security guarantee by December 31?
+2491900,iran_israel,qp_v6/sweep_iran,Will Trump endorse Likud in the 2026 Israeli Election?
+2491901,iran_israel,qp_v6/sweep_iran,Will Trump endorse Together in the 2026 Israeli Election?
+2491902,iran_israel,qp_v6/sweep_iran,Will Trump endorse Shas in the 2026 Israeli Election?
+2491903,iran_israel,qp_v6/sweep_iran,Will Trump endorse Blue and White in the 2026 Israeli Election?
+2491904,iran_israel,qp_v6/sweep_iran,Will Trump endorse Religious Zionism in the 2026 Israeli Election?
+2491905,iran_israel,qp_v6/sweep_iran,Will Trump endorse UTJ in the 2026 Israeli Election?
+2491906,iran_israel,qp_v6/sweep_iran,Will Trump endorse Otzma Yehudit in the 2026 Israeli Election?
+2491907,iran_israel,qp_v6/sweep_iran,Will Trump endorse Yisrael Beiteinu in the 2026 Israeli Election?
+2491908,iran_israel,qp_v6/sweep_iran,Will Trump endorse Yashar in the 2026 Israeli Election?
+2491909,iran_israel,qp_v6/sweep_iran,Will Trump endorse Hadash–Ta'al in the 2026 Israeli Election?
+2491910,iran_israel,qp_v6/sweep_iran,Will Trump endorse Democrats in the 2026 Israeli Election?
+2491911,iran_israel,qp_v6/sweep_iran,Will Trump endorse New Hope in the 2026 Israeli Election?
+2491912,iran_israel,qp_v6/sweep_iran,Will Trump endorse Noam in the 2026 Israeli Election?
+2491913,iran_israel,qp_v6/sweep_iran,Will Trump not endorse a Party in the 2026 Israeli Election?
+2491914,iran_israel,qp_v6/sweep_iran,Will Trump endorse Party B in the 2026 Israeli Election?
+2491915,iran_israel,qp_v6/sweep_iran,Will Trump endorse Party C in the 2026 Israeli Election?
+2491916,iran_israel,qp_v6/sweep_iran,Will Trump endorse Party D in the 2026 Israeli Election?
+2491917,iran_israel,qp_v6/sweep_iran,Will Trump endorse Party E in the 2026 Israeli Election?
+2491918,iran_israel,qp_v6/sweep_iran,Will Trump endorse Party F in the 2026 Israeli Election?
+2491919,iran_israel,qp_v6/sweep_iran,Will Trump endorse Party G in the 2026 Israeli Election?
+2491920,iran_israel,qp_v6/sweep_iran,Will Trump endorse Party H in the 2026 Israeli Election?
+2491921,iran_israel,qp_v6/sweep_iran,Will Trump endorse Party I in the 2026 Israeli Election?
+2491922,iran_israel,qp_v6/sweep_iran,Will Trump endorse another party in the 2026 Israeli Election?
+2523880,russia_ukraine,qp_v6/tapes_full,"Will Ukraine sign an EU accession treaty by December 31, 2027?"
+2555375,iran_israel,qp_v6/sweep_iran,"US x Iran diplomatic meeting by June 20, 2026?"
+2569893,iran_israel,qp_v6/sweep_iran,Congress approves Iran deal in 2026?
+2591184,russia_ukraine,qp_v6/tapes_full,"Russia-Ukraine peace talks by December 31, 2026?"
+2639520,iran_israel,qp_v6/sweep_iran,Will Israeli forces withdraw from beyond the Litani River by December 31
+2641019,iran_israel,qp_v6/sweep_iran,"Israel withdraws from Lebanon by December 31, 2026?"
+2643514,iran_israel,qp_v6/sweep_iran,"Will Israel and Lebanon hold a diplomatic meeting by June 23, 2026?"
+2643553,iran_israel,qp_v6/sweep_iran,Will Israel recognize Palestine before 2027?
+2647846,iran_israel,qp_v6/sweep_iran,UNSC Resolution Endorsing Final U.S.-Iran Deal by December 31?
+2658293,iran_israel,qp_v6/sweep_iran,"Israel x Hezbollah diplomatic meeting by July 31, 2026?"
+2663602,iran_israel,qp_v6/sweep_iran,Will a 1+ Year Enrichment Moratorium be in a US-Iran deal in 2026?
+2663603,iran_israel,qp_v6/sweep_iran,Will any Uranium Enrichment % Cap (1+ Year) be in a US-Iran deal in 2026?
+2668004,iran_israel,qp_v6/sweep_iran,Will a ≤5% Uranium Enrichment Cap (1+ Year) be in a US-Iran deal in 2026?
+2668005,iran_israel,qp_v6/sweep_iran,Will Iran Reconstruction Funding be in a US-Iran deal in 2026?
+2668006,iran_israel,qp_v6/sweep_iran,Will Dilution of Iranian Uranium be in a US-Iran deal in 2026?
+2668007,iran_israel,qp_v6/sweep_iran,Will a US-Iran deal in 2026 include Surrender of Iranian Enriched Uranium?
+2676288,russia_ukraine,qp_v6/tapes_full,Will Russia capture Sloviansk by December 31?
+2676310,russia_ukraine,qp_v6/tapes_full,Ukraine coup attempt by December 31?
+2676528,russia_ukraine,qp_v6/tapes_full,"Will Russia capture all of Stepnohirsk by December 31, 2026?"
+2676529,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Mala Tokmachka by December 31, 2026?"
+2677044,russia_ukraine,qp_v6/tapes_full,Will Russia capture Myropillia by December 31?
+2677096,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Havrylivka by December 31, 2026?"
+2677097,russia_ukraine,qp_v6/tapes_full,Will Russia capture all of Drobysheve by December 31?
+2677115,russia_ukraine,qp_v6/tapes_full,"Will Russia enter Khatnie by December 31, 2026?"
+2677132,russia_ukraine,qp_v6/tapes_full,Will Russia capture Serhiivka by December 31?
+2696747,iran_israel,qp_v6/sweep_iran,"US-Iran Final Nuclear Deal by December 31, 2026?"
+2730744,iran_israel,qp_v6/sweep_iran,Mojtaba Khamenei seen in public by July 4?
+2734538,iran_israel,qp_v6/sweep_iran,"Will an international court find Israel or its leaders guilty of Genocide by December 31, 2027?"
+2737233,iran_israel,qp_v6/sweep_iran,"Iran leadership change by June 30, 2027?"
+2745549,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Kozacha Lopan by December 31, 2026?"
+2747379,iran_israel,qp_v6/sweep_iran,U.S. evacuates Beirut Embassy by December 31?
+2747387,iran_israel,qp_v6/sweep_iran,Iran coup attempt by December 31?
+2747434,israel_gaza,qp_v6/sweep_gaza,Will Hamas agree to disarm by December 31?
+2747437,israel_gaza,qp_v6/sweep_gaza,Israel x Hamas ceasefire cancelled by December 31?
+2747445,iran_israel,qp_v6/sweep_iran,Will Netanyahu be pardoned by December 31?
+2747460,iran_israel,qp_v6/sweep_iran,"Naim Qassem out as Hezbollah’s secretary-general by December 31, 2026?"
+2747468,israel_gaza,qp_v6/sweep_gaza,Israel x Hamas Ceasefire Phase II by December 31?
+2749302,iran_israel,qp_v6/sweep_iran,Will Netanyahu talk to Joseph Aoun by December 31?
+2749311,israel_gaza,qp_v6/sweep_gaza,Foreign intervention in Gaza by December 31?
+2749346,iran_israel,qp_v6/sweep_iran,Will Iran hold a presidential election by December 31?
+2749365,iran_israel,qp_v6/sweep_iran,"IAEA visits Isfahan, Fordow, or Natanz nuclear site by December 31?"
+2749366,iran_israel,qp_v6/sweep_iran,Will Trump talk to Mojtaba Khamenei by December 31?
+2749367,russia_ukraine,qp_v6/tapes_full,"Will Russia invade a NATO country by December 31, 2026?"
+2749382,russia_ukraine,qp_v6/tapes_full,"NATO/EU troops fighting in Ukraine by December 31, 2026?"
+2749421,russia_ukraine,qp_v6/tapes_full,"U.S. x Russia Nuclear deal by December 31, 2026?"
+2750302,iran_israel,qp_v6/sweep_iran,Will Benjamin Netanyahu be the next leader out before 2027?
+2750307,russia_ukraine,qp_v6/tapes_full,Will Volodymyr Zelenskyy be the next leader out before 2027?
+2750308,russia_ukraine,qp_v6/tapes_full,Will Vladimir Putin be the next leader out before 2027?
+2757806,iran_israel,qp_v6/sweep_iran,Iran charges Hormuz fees by October 31?
+2758321,iran_israel,qp_v6/sweep_iran,"Will Israel launch a ground operation in Iran by December 31, 2026?"
+2760948,iran_israel,qp_v6/sweep_iran,US announces military base in Israel in 2026?
+2771185,iran_israel,qp_v6/sweep_iran,Mojtaba Khamenei seen in public by December 31?
+2822017,russia_ukraine,qp_v6/tapes_full,"Putin out as President of Russia by June 30, 2027?"
+2824614,iran_israel,qp_v6/sweep_iran,Iran charges Hormuz fees by December 31?
+2839963,china_taiwan,qp_v6/tapes_full,China ballistic missile launch by December 31?
+2846149,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Oleksiievo-Druzhkivka by December 31, 2026?"
+2849420,iran_israel,qp_v6/sweep_iran,Will Strait of Hormuz traffic return to normal in September?
+2849421,iran_israel,qp_v6/sweep_iran,Will Strait of Hormuz traffic return to normal in October?
+2849422,iran_israel,qp_v6/sweep_iran,Will Strait of Hormuz traffic return to normal in November?
+2849423,iran_israel,qp_v6/sweep_iran,Will Strait of Hormuz traffic return to normal in December?
+2849424,iran_israel,qp_v6/sweep_iran,Will Strait of Hormuz traffic not return to normal in 2026?
+2853114,iran_israel,qp_v6/sweep_iran,"IAEA visits Isfahan, Fordow, or Natanz nuclear site by October 31?"
+2853134,iran_israel,qp_v6/sweep_iran,"Iran agrees to surrender enriched uranium stockpile by October 31, 2026?"
+2865997,iran_israel,qp_v6/sweep_iran,"Mohammed Ghalibaf out as Speaker of Iran Parliament by December 31, 2026?"
+2866014,iran_israel,qp_v6/sweep_iran,"Abbas Araghchi out as Minister of Foreign Affairs of Iran by December 31, 2026?"
+2907324,iran_israel,qp_v6/sweep_iran,"US charges Hormuz fees by December 31, 2026?"
+3008329,iran_israel,qp_v6/sweep_iran,Will Israel election happen as scheduled?
+3089431,russia_ukraine,qp_v6/tapes_full,Will Russia capture Vodianske by December 31?
+3089558,russia_ukraine,qp_v6/tapes_full,Will Russia capture Novyi Donbas by October 31?
+3089567,russia_ukraine,qp_v6/tapes_full,Will Russia capture Kucheriv Yar by October 31?
+3091051,china_taiwan,qp_v6/tapes_full,China x Philippines military clash before 2027?
+3092026,russia_ukraine,qp_v6/tapes_full,"Will Ukraine re-enter Rodynske by December 31, 2026?"
+3120760,russia_ukraine,qp_v6/tapes_full,"NATO x Russia military clash by October 31, 2026?"
+3121259,russia_ukraine,qp_v6/tapes_full,"Another NATO Article 4 invocation by October 31, 2026?"
+3121260,russia_ukraine,qp_v6/tapes_full,"Another NATO Article 4 invocation by December 31, 2026?"
+3128768,iran_israel,qp_v6/sweep_iran,Iran full airspace closure by December 31?
+3128886,iran_israel,qp_v6/sweep_iran,"US announces end of Iranian blockade by December 31, 2026?"
+3128888,iran_israel,qp_v6/sweep_iran,"US announces end of Iranian blockade by October 31, 2026?"
+3192166,iran_israel,qp_v6/sweep_iran,Will exactly 0 Israeli legislative elections occur before a government is formed?
+3192167,iran_israel,qp_v6/sweep_iran,Will exactly 1 Israeli legislative election occur before a government is formed?
+3192168,iran_israel,qp_v6/sweep_iran,Will exactly 2 Israeli legislative elections occur before a government is formed?
+3192169,iran_israel,qp_v6/sweep_iran,Will exactly 3 Israeli legislative elections occur before a government is formed?
+3192170,iran_israel,qp_v6/sweep_iran,Will exactly 4 Israeli legislative elections occur before a government is formed?
+3192171,iran_israel,qp_v6/sweep_iran,Will at least 5 Israeli legislative elections occur before a government is formed?
+3204105,iran_israel,qp_v6/sweep_iran,"Israel x Iran permanent peace deal by August 31, 2026?"
+3215073,iran_israel,qp_v6/sweep_iran,Kharg Island no longer under Iranian control by December 31?
+3249688,israel_gaza,qp_v6/sweep_gaza,Will Trump visit Gaza in 2026?
+3358421,iran_israel,qp_v6/sweep_iran,Will José Israel González win the 2027 Colima Governor Election?
+3372765,russia_ukraine,qp_v6/tapes_full,"Will Ukraine re-enter Huliaipole by October 31, 2026?"
+3372766,russia_ukraine,qp_v6/tapes_full,"Will Ukraine re-enter Huliaipole by December 31, 2026?"
+3372768,russia_ukraine,qp_v6/tapes_full,Will Russia capture Svitle by October 31?
+3372772,russia_ukraine,qp_v6/tapes_full,Will Russia capture Shevchenko by October 31?
+3399450,iran_israel,qp_v6/sweep_iran,Iran leadership change by October 31?
+3399451,iran_israel,qp_v6/sweep_iran,Iran leadership change by November 30?
+3399459,iran_israel,qp_v6/sweep_iran,Israel x Iran ceasefire continues through October 31?
+3399468,iran_israel,qp_v6/sweep_iran,Israel x Iran ceasefire continues through December 31?
+3399472,iran_israel,qp_v6/sweep_iran,"Total Internet Blackout in Iran by December 31, 2026?"
+3491438,iran_israel,qp_v6/sweep_iran,"US-Iran Final Nuclear Deal by November 30, 2026?"
+3491459,iran_israel,qp_v6/sweep_iran,"US-Iran Final Nuclear Deal by October 31, 2026?"
+3501950,iran_israel,qp_v6/sweep_iran,Strait of Hormuz traffic returns to normal by October 31?
+3501951,iran_israel,qp_v6/sweep_iran,Strait of Hormuz traffic returns to normal by November 30?
+3517858,russia_ukraine,qp_v6/tapes_full,"Will Russia capture all of Kostyantynivka by October 31, 2026?"
+3553880,iran_israel,qp_v6/sweep_iran,"Will Donald Trump attend a US x Iran diplomatic meeting by December 31, 2026?"
+3553881,iran_israel,qp_v6/sweep_iran,"Will Marco Rubio attend a US x Iran diplomatic meeting by December 31, 2026?"
+3553882,iran_israel,qp_v6/sweep_iran,"Will J.D. Vance attend a US x Iran diplomatic meeting by December 31, 2026?"
+3553885,iran_israel,qp_v6/sweep_iran,"Will Pete Hegseth attend a US x Iran diplomatic meeting by December 31, 2026?"
+3553887,iran_israel,qp_v6/sweep_iran,"Will Mohammad Bagher Ghalibaf attend a US x Iran diplomatic meeting by December 31, 2026?"
+3553888,iran_israel,qp_v6/sweep_iran,"Will Mojtaba Khamenei attend a US x Iran diplomatic meeting by December 31, 2026?"
+3553889,iran_israel,qp_v6/sweep_iran,"Will Masoud Pezeshkian attend a US x Iran diplomatic meeting by December 31, 2026?"
+3553890,iran_israel,qp_v6/sweep_iran,"Will Majid Takht-Ravanchi attend a US x Iran diplomatic meeting by December 31, 2026?"
+3553891,iran_israel,qp_v6/sweep_iran,"Will Kazem Gharibabadi attend a US x Iran diplomatic meeting by December 31, 2026?"
+3553892,iran_israel,qp_v6/sweep_iran,"Will Ahmad Vahidi attend a US x Iran diplomatic meeting by December 31, 2026?"
+3553893,iran_israel,qp_v6/sweep_iran,"Will Esmail Qaani attend a US x Iran diplomatic meeting by December 31, 2026?"
+3553894,iran_israel,qp_v6/sweep_iran,"Will Badr bin Hamad Al Busaidi attend a US x Iran diplomatic meeting by December 31, 2026?"
+3553896,iran_israel,qp_v6/sweep_iran,"Will Ishaq Dar attend a US x Iran diplomatic meeting by December 31, 2026?"
+3553897,iran_israel,qp_v6/sweep_iran,"Will Rafael Grossi attend a US x Iran diplomatic meeting by December 31, 2026?"
+3553898,iran_israel,qp_v6/sweep_iran,"Will Nick Stewart attend a US x Iran diplomatic meeting by December 31, 2026?"
+3579164,russia_ukraine,qp_v6/tapes_full,"Will Ukraine recapture Crimean territory by June 30, 2027?"
+3701687,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire agreement by March 31, 2027?"
+3701688,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire agreement by June 30, 2027?"
+3702192,iran_israel,qp_v6/sweep_iran,Will Mojtaba Khamenei leave Iran by October 31?
+3702193,iran_israel,qp_v6/sweep_iran,Will Mojtaba Khamenei leave Iran by December 31?
+3708624,iran_israel,qp_v6/sweep_iran,"Trump renames Strait of Hormuz to ""Strait of Trump"" by December 31?"
+3708872,russia_ukraine,qp_v6/tapes_full,"Will Russia capture the Royal Café Alex in Kostyantynivka by October 31, 2026?"
+3708873,russia_ukraine,qp_v6/tapes_full,"Will Russia capture the Royal Café Alex in Kostyantynivka by December 31, 2026?"
+3733136,iran_israel,qp_v6/sweep_iran,"Another Iranian Ambassador expelled by October 31, 2026?"
+3733176,russia_ukraine,qp_v6/tapes_full,"Russia strikes another vessel in the Black Sea by August 21, 2026?"
+3733177,russia_ukraine,qp_v6/tapes_full,"Russia strikes another vessel in the Black Sea by August 28, 2026?"
+3733199,russia_ukraine,qp_v6/tapes_full,"Will Russia and Ukraine hold any diplomatic meeting by December 31, 2026?"
+3741671,russia_ukraine,qp_v6/tapes_full,"Will Russia and Ukraine hold any diplomatic meeting by October 31, 2026?"
+3764664,iran_israel,qp_v6/sweep_iran,Mojtaba Khamenei seen in public by October 31?
+3764738,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Mykolaivka by October 31, 2026?"
+3764739,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Mykolaivka by December 31, 2026?"
+3767084,israel_gaza,qp_v6/sweep_gaza,Will Gbefwi Gaza Jonathan win the 2027 Nasarawa State gubernatorial election?
+3860599,russia_ukraine,qp_v6/tapes_full,"Will Russia announce a new forced mobilization by October 31, 2026?"
+3860600,russia_ukraine,qp_v6/tapes_full,"Will Russia announce a new forced mobilization by December 31, 2026?"
+3862799,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Dobropillia by October 31, 2026?"
+3862800,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Dobropillia by December 31, 2026?"
+3890233,iran_israel,qp_v6/sweep_iran,"Will Iran join the Mecca Agreement by December 31, 2026?"
+3890240,iran_israel,qp_v6/sweep_iran,"Will Lebanon join the Mecca Agreement by December 31, 2026?"
+3890246,iran_israel,qp_v6/sweep_iran,"Will Syria join the Mecca Agreement by December 31, 2026?"
+3890248,iran_israel,qp_v6/sweep_iran,"Will Yemen join the Mecca Agreement by December 31, 2026?"
+3902310,iran_israel,qp_v6/sweep_iran,"Will Mohammed bin Salman attend a US x Iran diplomatic meeting by December 31, 2026?"
+3902322,russia_ukraine,qp_v6/tapes_full,"Ukraine strikes another tanker in the Caspian Sea by September 30, 2026?"
+3902370,iran_israel,qp_v6/sweep_iran,Israel x Iran ceasefire continues through November 30?
+3902371,iran_israel,qp_v6/sweep_iran,Will a European country take military action on Iran by October 31?
+3902374,iran_israel,qp_v6/sweep_iran,Will a European country take military action on Iran by December 31?
+3902468,russia_ukraine,qp_v6/tapes_full,Will Russia enter Moskovka by October 31?
+3902496,russia_ukraine,qp_v6/tapes_full,Will Russia enter Mykhailivka by October 31?
+3903076,iran_israel,qp_v6/sweep_iran,Iran invades Kuwait by October 31?
+3903085,iran_israel,qp_v6/sweep_iran,Iran invades Kuwait by December 31?
+3913254,russia_ukraine,qp_v6/tapes_full,Ukraine signs peace deal with Russia by October 31?
+3914548,russia_ukraine,qp_v6/tapes_full,"Will Putin meet with Zelenskyy by December 31, 2026?"
+3915299,iran_israel,qp_v6/sweep_iran,"Will the United Kingdom send warships through the Strait of Hormuz by December 31, 2026?"
+3915300,iran_israel,qp_v6/sweep_iran,"Will France send warships through the Strait of Hormuz by December 31, 2026?"
+3915301,iran_israel,qp_v6/sweep_iran,"Will the United States send warships through the Strait of Hormuz by December 31, 2026?"
+3915302,iran_israel,qp_v6/sweep_iran,"Will the Netherlands send warships through the Strait of Hormuz by December 31, 2026?"
+3915303,iran_israel,qp_v6/sweep_iran,"Will Greece send warships through the Strait of Hormuz by December 31, 2026?"
+3915304,iran_israel,qp_v6/sweep_iran,"Will Italy send warships through the Strait of Hormuz by December 31, 2026?"
+3915305,iran_israel,qp_v6/sweep_iran,"Will Germany send warships through the Strait of Hormuz by December 31, 2026?"
+3915306,iran_israel,qp_v6/sweep_iran,"Will Australia send warships through the Strait of Hormuz by December 31, 2026?"
+3954617,iran_israel,qp_v6/sweep_iran,Iran-Oman Hormuz Agreement by October 31?
+4062508,iran_israel,qp_v6/sweep_iran,US-Iran ceasefire continues through September 2?
+4062509,iran_israel,qp_v6/sweep_iran,US-Iran ceasefire continues through September 3?
+4062510,iran_israel,qp_v6/sweep_iran,US-Iran ceasefire continues through September 4?
+4062511,iran_israel,qp_v6/sweep_iran,US-Iran ceasefire continues through September 6?
+4062512,iran_israel,qp_v6/sweep_iran,US-Iran ceasefire continues through September 9?
+4062513,iran_israel,qp_v6/sweep_iran,US-Iran ceasefire continues through September 15?
+4062515,iran_israel,qp_v6/sweep_iran,US-Iran ceasefire continues through October 31?
+4082026,iran_israel,qp_v6/sweep_iran,Will the Bank of Israel decrease the Bank of Israel Interest Rate after the October decision?
+4082027,iran_israel,qp_v6/sweep_iran,Will the Bank of Israel make no change to the Bank of Israel Interest Rate after the October decision?
+4082028,iran_israel,qp_v6/sweep_iran,Will the Bank of Israel increase the Bank of Israel Interest Rate after the October decision?
+4096506,russia_ukraine,qp_v6/tapes_full,Will Russia enter Oleksiievo-Druzhkivka by October 31?
+4096507,russia_ukraine,qp_v6/tapes_full,Will Russia enter Oleksiievo-Druzhkivka by December 31?
+4096541,iran_israel,qp_v6/sweep_iran,"Israel x Syria diplomatic meeting by October 31, 2026?"
+4118936,russia_ukraine,qp_v6/tapes_full,"Russia-Ukraine peace talks by October 15, 2026?"
+4118937,russia_ukraine,qp_v6/tapes_full,"Russia-Ukraine peace talks by October 31, 2026?"
+4118938,russia_ukraine,qp_v6/tapes_full,"Russia-Ukraine peace talks by November 30, 2026?"
+4119722,iran_israel,qp_v6/sweep_iran,Israel military action against Greater Beirut by October 31?
+4175134,iran_israel,qp_v6/sweep_iran,Israel x Lebanon Effective Ceasefire by September 30?
+4188006,iran_israel,qp_v6/sweep_iran,Iran blockade lifted before Iran-Oman Hormuz agreement?
+4188114,russia_ukraine,qp_v6/tapes_full,Will any aircraft land or take off at Kyiv Boryspil Airport by October 31?
+4188115,russia_ukraine,qp_v6/tapes_full,Will any aircraft land or take off at Kyiv Boryspil Airport by December 31?
+4199436,iran_israel,qp_v6/sweep_iran,Will USD be less than 2.0M Iranian rials on December 31?
+4199437,iran_israel,qp_v6/sweep_iran,Will USD be between 2.0M and 2.5M Iranian rials on December 31?
+4199438,iran_israel,qp_v6/sweep_iran,Will USD be between 2.5M and 3.0M Iranian rials on December 31?
+4199439,iran_israel,qp_v6/sweep_iran,Will USD be between 3.0M and 3.5M Iranian rials on December 31?
+4199440,iran_israel,qp_v6/sweep_iran,Will USD be between 3.5M and 4.0M Iranian rials on December 31?
+4199441,iran_israel,qp_v6/sweep_iran,Will USD be at least 4.0M Iranian rials on December 31?
+4338135,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire agreement by April 30, 2027?"
+4338136,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire agreement by May 31, 2027?"
+4338137,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire agreement by October 31, 2027?"
+4338138,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire agreement by July 31, 2027?"
+4338139,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire agreement by September 30, 2027?"
+4338140,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire agreement by December 31, 2027?"
+4338141,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire agreement by August 31, 2027?"
+4338142,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire agreement by November 30, 2027?"
+4338143,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire agreement by January 31, 2027?"
+4338144,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire agreement by February 28, 2027?"
+4338145,russia_ukraine,qp_v6/tapes_full,"Russia x Ukraine ceasefire agreement by November 30, 2026?"
+4338162,iran_israel,qp_v6/sweep_iran,Will Israeli forces withdraw from beyond the Litani River by October 31?
+4339031,iran_israel,qp_v6/sweep_iran,Israeli forces enter Nabatieh by December 31?
+4346270,iran_israel,qp_v6/sweep_iran,US reissues Iran oil sanction relief by October 31?
+4376691,iran_israel,qp_v6/sweep_iran,"Will Iran target Iraq by September 30, 2026?"
+4424722,iran_israel,qp_v6/sweep_iran,"Will Iran target an Arab country by September 30, 2026?"
+4424725,iran_israel,qp_v6/sweep_iran,"Will Iran target Jordan by October 31, 2026?"
+4424732,iran_israel,qp_v6/sweep_iran,"Pakistan military action against Yemen by October 31, 2026?"
+4424733,iran_israel,qp_v6/sweep_iran,"Pakistan military action against Yemen by December 31, 2026?"
+4451522,iran_israel,qp_v6/sweep_iran,"Houthis enter Aden by October 31, 2026?"
+4451523,iran_israel,qp_v6/sweep_iran,"Houthis enter Aden by December 31, 2026?"
+4475805,iran_israel,qp_v6/sweep_iran,Trump invokes war powers in Yemen by September 30?
+4487264,iran_israel,qp_v6/sweep_iran,Will the Houthis enter Saudi Arabia by October 31?
+4487265,iran_israel,qp_v6/sweep_iran,Will the Houthis enter Saudi Arabia by December 31?
+4487706,iran_israel,qp_v6/sweep_iran,"Saudi troops fighting in Yemen by December 31, 2026?"
+4599795,iran_israel,qp_v6/sweep_iran,"Israeli airspace closed by October 31, 2026?"
+4599796,iran_israel,qp_v6/sweep_iran,"Israeli airspace closed by December 31, 2026?"
+4603351,iran_israel,qp_v6/sweep_iran,"France, UK, or Germany military action against Yemen by October 31, 2026?"
+4603352,iran_israel,qp_v6/sweep_iran,"France, UK, or Germany military action against Yemen by December 31, 2026?"
+4618478,iran_israel,qp_v6/sweep_iran,"Will Iran target Saudi Arabia by October 31, 2026?"
+4618741,iran_israel,qp_v6/sweep_iran,"Houthis seize an oil tanker by October 31, 2026?"
+4618771,iran_israel,qp_v6/sweep_iran,Israel military action against Yemen by December 31?
+4618776,iran_israel,qp_v6/sweep_iran,Israel military action against Yemen by October 31?
+4620250,iran_israel,qp_v6/sweep_iran,"Iran full airspace closure by October 31, 2026?"
+4621846,iran_israel,qp_v6/sweep_iran,Israeli airspace closed between Oct. 15 and Oct. 31?
+4624567,iran_israel,qp_v6/sweep_iran,Will Israeli forces withdraw from beyond the Litani River by March 31?
+4639163,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on September 20?
+4639164,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on September 21?
+4639165,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on September 22?
+4639166,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on September 23?
+4639167,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on September 24?
+4639168,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on September 25?
+4639169,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on September 26?
+4639170,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on September 27?
+4639171,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on September 28?
+4639172,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on September 29?
+4639173,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on September 30?
+4639441,iran_israel,qp_v6/sweep_iran,"Saudi Arabia military action against Iran by October 31, 2026?"
+4639442,iran_israel,qp_v6/sweep_iran,"Saudi Arabia military action against Iran by December 31, 2026?"
+4639617,iran_israel,qp_v6/sweep_iran,Netanyahu convicted in corruption trial?
+4640130,iran_israel,qp_v6/sweep_iran,"Houthi military action against Mecca by September 30, 2026?"
+4640131,iran_israel,qp_v6/sweep_iran,"Houthi military action against Mecca by October 31, 2026?"
+4640132,iran_israel,qp_v6/sweep_iran,"Houthi military action against Mecca by December 31, 2026?"
+4640286,iran_israel,qp_v6/sweep_iran,Houthi x Saudi Arabia effective ceasefire by September 23?
+4640287,iran_israel,qp_v6/sweep_iran,Houthi x Saudi Arabia effective ceasefire by September 30?
+4640288,iran_israel,qp_v6/sweep_iran,Houthi x Saudi Arabia effective ceasefire by October 31?
+4640775,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on September 18?
+4640778,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on September 20?
+4640780,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on September 22?
+4640781,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on September 23?
+4640782,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on September 24?
+4640783,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on September 25?
+4640786,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on September 26?
+4640790,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on September 27?
+4640792,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on September 28?
+4640795,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on September 30?
+4640848,iran_israel,qp_v6/sweep_iran,Perim Island no longer under Houthi control by October 31?
+4640849,iran_israel,qp_v6/sweep_iran,Perim Island no longer under Houthi control by December 31?
+4641016,iran_israel,qp_v6/sweep_iran,NATO troops fighting in Yemen before 2027?
+4641065,iran_israel,qp_v6/sweep_iran,US x Iran ceasefire continues through October 31?
+4642542,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on September 17, 2026?"
+4642545,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on September 20, 2026?"
+4642546,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on September 21, 2026?"
+4642547,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on September 22, 2026?"
+4642549,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on September 24, 2026?"
+4642550,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on September 25, 2026?"
+4642551,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on September 26, 2026?"
+4642552,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on September 27, 2026?"
+4642553,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on September 28, 2026?"
+4642554,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on September 29, 2026?"
+4642555,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on September 30, 2026?"
+4662231,iran_israel,qp_v6/sweep_iran,"Will Trump meet with Netanyahu by October 31, 2026?"
+4662232,iran_israel,qp_v6/sweep_iran,"Will Trump meet with Netanyahu by December 31, 2026?"
+4688838,iran_israel,qp_v6/sweep_iran,Saudi-Houthi ceasefire agreement announced by October 31?
+4713483,iran_israel,qp_v6/sweep_iran,US x Iran ceasefire continues through November 30?
+4713484,iran_israel,qp_v6/sweep_iran,US x Iran ceasefire continues through December 31?
+4713962,russia_ukraine,qp_v6/tapes_full,"Russia military action against an EU country by December 31, 2026?"
+4714426,russia_ukraine,qp_v6/tapes_full,EU country expels Russian ambassador by December 31?
+4761461,iran_israel,qp_v6/sweep_iran,US x Yemen ceasefire continues through October 9?
+4761462,iran_israel,qp_v6/sweep_iran,US x Yemen ceasefire continues through October 31?
+4824661,iran_israel,qp_v6/sweep_iran,Will Likud be in the next Israeli government?
+4824662,iran_israel,qp_v6/sweep_iran,Will Shas be in the next Israeli government?
+4824663,iran_israel,qp_v6/sweep_iran,Will United Torah Judaism be in the next Israeli government?
+4824664,iran_israel,qp_v6/sweep_iran,Will RZP-Zehut be in the next Israeli government?
+4824665,iran_israel,qp_v6/sweep_iran,Will Otzma Yehudit be in the next Israeli government?
+4824666,iran_israel,qp_v6/sweep_iran,Will Together be in the next Israeli government?
+4824667,iran_israel,qp_v6/sweep_iran,Will Blue and White be in the next Israeli government?
+4824668,iran_israel,qp_v6/sweep_iran,Will Yisrael Beiteinu be in the next Israeli government?
+4824669,iran_israel,qp_v6/sweep_iran,Will The Democrats be in the next Israeli government?
+4824670,iran_israel,qp_v6/sweep_iran,Will Yashar be in the next Israeli government?
+4824671,iran_israel,qp_v6/sweep_iran,Will the New Economic Party / The Reservists be in the next Israeli government?
+4824672,iran_israel,qp_v6/sweep_iran,Will Ra'am be in the next Israeli government?
+4824673,iran_israel,qp_v6/sweep_iran,Will the Joint List be in the next Israeli government?
+4824674,iran_israel,qp_v6/sweep_iran,Will Noam be in the next Israeli government?
+4824675,iran_israel,qp_v6/sweep_iran,Will Amcha Yisrael be in the next Israeli government?
+4838444,russia_ukraine,qp_v6/tapes_full,"Will Russia enter Stavky by December 31, 2026?"
+4838461,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Stavky by December 31, 2026?"
+4838462,russia_ukraine,qp_v6/tapes_full,"Will Ukraine re-enter Kamianske by December 31, 2026?"
+4838499,russia_ukraine,qp_v6/tapes_full,"Will Ukraine re-enter Hryshyne by December 31, 2026?"
+4838500,russia_ukraine,qp_v6/tapes_full,"Will Russia enter Borova by December 31, 2026?"
+4838569,russia_ukraine,qp_v6/tapes_full,Will Russia capture Kindrativka by December 31?
+4838598,russia_ukraine,qp_v6/tapes_full,"Will Russia enter Krasnopillya by December 31, 2026?"
+4838599,russia_ukraine,qp_v6/tapes_full,Will Russia capture Novodmytrivka by December 31?
+4838600,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Huliaipilske by December 31, 2026?"
+4838609,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Verkhnia Tersa by December 31, 2026?"
+4838610,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Dovha Balka by December 31, 2026?"
+4839000,iran_israel,qp_v6/sweep_iran,"Will there be Houthi military action against Israel by October 31, 2026?"
+4839196,iran_israel,qp_v6/sweep_iran,"Israel military action against Syria by October 31, 2026?"
+4839197,iran_israel,qp_v6/sweep_iran,"Will Iran target the United Arab Emirates by October 31, 2026?"
+4839199,iran_israel,qp_v6/sweep_iran,"Will Iran target Egypt by October 31, 2026?"
+4839216,iran_israel,qp_v6/sweep_iran,"Will Iran target Syria by October 31, 2026?"
+4839219,iran_israel,qp_v6/sweep_iran,"Will Iran target Oman by October 31, 2026?"
+4839220,iran_israel,qp_v6/sweep_iran,"Will Iran target Qatar by October 31, 2026?"
+4844456,iran_israel,qp_v6/sweep_iran,"Israel x Lebanon diplomatic meeting by October 15, 2026?"
+4844457,iran_israel,qp_v6/sweep_iran,"Israel x Lebanon diplomatic meeting by October 31, 2026?"
+4844467,russia_ukraine,qp_v6/tapes_full,NATO downs another Russian drone by September 30?
+4844468,russia_ukraine,qp_v6/tapes_full,NATO downs another Russian drone by October 15?
+4844469,russia_ukraine,qp_v6/tapes_full,NATO downs another Russian drone by October 31?
+4847319,iran_israel,qp_v6/sweep_iran,Will fewer than 20 ships transit the Strait of Hormuz between September 28-October 4?
+4847320,iran_israel,qp_v6/sweep_iran,Will 20-24 ships transit the Strait of Hormuz between September 28-October 4?
+4847321,iran_israel,qp_v6/sweep_iran,Will 25-29 ships transit the Strait of Hormuz between September 28-October 4?
+4847322,iran_israel,qp_v6/sweep_iran,Will 30-34 ships transit the Strait of Hormuz between September 28-October 4?
+4847323,iran_israel,qp_v6/sweep_iran,Will 35-39 ships transit the Strait of Hormuz between September 28-October 4?
+4847324,iran_israel,qp_v6/sweep_iran,Will 40 or more ships transit the Strait of Hormuz between September 28-October 4?
+4853052,iran_israel,qp_v6/sweep_iran,"Israel military action against Iraq by October 31, 2026?"
+4867451,iran_israel,qp_v6/sweep_iran,"Next US-Iran senior diplomatic meeting by October 31, 2026? (copy)"
+4867452,iran_israel,qp_v6/sweep_iran,"Next US-Iran senior diplomatic meeting by December 31, 2026?"
+4867865,iran_israel,qp_v6/sweep_iran,"Will no qualifying US-Iran senior diplomatic meeting take place by December 31, 2026?"
+4867867,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in Oman by December 31, 2026?"
+4867869,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in the UAE by December 31, 2026?"
+4867870,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in Saudi Arabia by December 31, 2026?"
+4867871,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in Qatar by December 31, 2026?"
+4867872,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in Switzerland by December 31, 2026?"
+4867873,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in Austria by December 31, 2026?"
+4867876,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in Turkey by December 31, 2026?"
+4867877,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in Iran by December 31, 2026?"
+4867878,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in the United States by December 31, 2026?"
+4867879,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in Egypt by December 31, 2026?"
+4867881,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in Italy by December 31, 2026?"
+4867883,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in Iraq by December 31, 2026?"
+4867884,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in Kazakhstan by December 31, 2026?"
+4867885,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in Pakistan by December 31, 2026?"
+4867886,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in Russia by December 31, 2026?"
+4867887,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in another Middle East/North Africa country by December 31, 2026?"
+4867888,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in another European country by December 31, 2026?"
+4867891,iran_israel,qp_v6/sweep_iran,"Will the next US-Iran senior diplomatic meeting take place in another country by December 31, 2026?"
+4882378,iran_israel,qp_v6/sweep_iran,"Will the Houthis successfully target shipping by October 15, 2026?"
+4882379,iran_israel,qp_v6/sweep_iran,"Will the Houthis successfully target shipping by October 31, 2026?"
+4906127,iran_israel,qp_v6/sweep_iran,"US announces end of Iranian blockade by October 15, 2026?"
+4906128,iran_israel,qp_v6/sweep_iran,"US announces end of Iranian blockade by November 30, 2026?"
+4906129,iran_israel,qp_v6/sweep_iran,"US announces end of Iranian blockade by March 31, 2027?"
+4959105,russia_ukraine,qp_v6/tapes_full,Trump meets with Putin by November 30?
+5074918,iran_israel,qp_v6/sweep_iran,US-Iran Hormuz Agreement by October 15?
+5074920,iran_israel,qp_v6/sweep_iran,US-Iran Hormuz Agreement by October 31?
+5080436,russia_ukraine,qp_v6/tapes_full,"Will Russia and Ukraine hold any diplomatic meeting by October 15, 2026?"
+5081322,iran_israel,qp_v6/sweep_iran,"Next US-Iran senior diplomatic meeting by October 5, 2026?"
+5081860,iran_israel,qp_v6/sweep_iran,Kharg Island no longer under Iranian control by October 31?
+5087226,iran_israel,qp_v6/sweep_iran,US-Iran Hormuz Agreement by November 30?
+5087227,iran_israel,qp_v6/sweep_iran,US-Iran Hormuz Agreement by October 7?
+5087228,iran_israel,qp_v6/sweep_iran,US-Iran Hormuz Agreement by December 31?
+5105094,russia_ukraine,qp_v6/tapes_full,"Will no qualifying Russia x Ukraine peace talks take place by December 31, 2027?"
+5105095,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Turkey by December 31, 2027?"
+5105096,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Switzerland by December 31, 2027?"
+5105098,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Hungary by December 31, 2027?"
+5105099,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in the United States by December 31, 2027?"
+5105101,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in China by December 31, 2027?"
+5105103,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Russia by December 31, 2027?"
+5105105,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Ukraine by December 31, 2027?"
+5105106,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Germany by December 31, 2027?"
+5105108,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Saudi Arabia by December 31, 2027?"
+5105110,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in the UAE by December 31, 2027?"
+5105111,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Qatar by December 31, 2027?"
+5105113,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Vatican City by December 31, 2027?"
+5105115,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Italy by December 31, 2027?"
+5105117,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Austria by December 31, 2027?"
+5105118,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Slovakia by December 31, 2027?"
+5105120,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Finland by December 31, 2027?"
+5105121,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Belarus by December 31, 2027?"
+5105123,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Kazakhstan by December 31, 2027?"
+5105125,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in India by December 31, 2027?"
+5105127,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Poland by December 31, 2027?"
+5105128,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Serbia by December 31, 2027?"
+5105130,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Azerbaijan by December 31, 2027?"
+5105132,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Egypt by December 31, 2027?"
+5105133,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in Brazil by December 31, 2027?"
+5105135,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in South Africa by December 31, 2027?"
+5105136,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in another European country by December 31, 2027?"
+5105138,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in another Middle East/North Africa country by December 31, 2027?"
+5105139,russia_ukraine,qp_v6/tapes_full,"Will the next Russia x Ukraine peace talks take place in another country by December 31, 2027?"
+5105320,russia_ukraine,qp_v6/tapes_full,"Will Putin meet with Zelenskyy by March 31, 2027?"
+5105321,russia_ukraine,qp_v6/tapes_full,"Will Putin meet with Zelenskyy by June 30, 2027?"
+5105322,russia_ukraine,qp_v6/tapes_full,"Will Putin meet with Zelenskyy by December 31, 2027?"
+5130977,iran_israel,qp_v6/sweep_iran,US x Iran ceasefire continues through October 7?
+5130978,iran_israel,qp_v6/sweep_iran,US x Iran ceasefire continues through October 15?
+5139846,russia_ukraine,qp_v6/tapes_full,EU country blames Russia for new sabotage attack by October 31?
+5139847,russia_ukraine,qp_v6/tapes_full,EU country blames Russia for new sabotage attack by December 31?
+5151605,iran_israel,qp_v6/sweep_iran,Will Israel Katz be the next Israeli Minister of Defense?
+5151606,iran_israel,qp_v6/sweep_iran,Will Gadi Eizenkot be the next Israeli Minister of Defense?
+5151607,iran_israel,qp_v6/sweep_iran,Will Naftali Bennett be the next Israeli Minister of Defense?
+5151608,iran_israel,qp_v6/sweep_iran,Will Benny Gantz be the next Israeli Minister of Defense?
+5151609,iran_israel,qp_v6/sweep_iran,Will Avigdor Lieberman be the next Israeli Minister of Defense?
+5151610,iran_israel,qp_v6/sweep_iran,Will Yair Golan be the next Israeli Minister of Defense?
+5151611,iran_israel,qp_v6/sweep_iran,Will Bezalel Smotrich be the next Israeli Minister of Defense?
+5151612,iran_israel,qp_v6/sweep_iran,Will Itamar Ben Gvir be the next Israeli Minister of Defense?
+5151613,iran_israel,qp_v6/sweep_iran,Will Ofer Winter be the next Israeli Minister of Defense?
+5151614,iran_israel,qp_v6/sweep_iran,Will Eli Cohen be the next Israeli Minister of Defense?
+5151615,iran_israel,qp_v6/sweep_iran,Will Matan Kahana be the next Israeli Minister of Defense?
+5151616,iran_israel,qp_v6/sweep_iran,Will Elazar Stern be the next Israeli Minister of Defense?
+5151617,iran_israel,qp_v6/sweep_iran,Will Moshe Feiglin be the next Israeli Minister of Defense?
+5151618,iran_israel,qp_v6/sweep_iran,Will Benjamin Netanyahu be the next Israeli Minister of Defense?
+5151619,iran_israel,qp_v6/sweep_iran,Will Yair Lapid be the next Israeli Minister of Defense?
+5151620,iran_israel,qp_v6/sweep_iran,Will Yoram Cohen be the next Israeli Minister of Defense?
+5151621,iran_israel,qp_v6/sweep_iran,Will Amir Ohana be the next Israeli Minister of Defense?
+5151622,iran_israel,qp_v6/sweep_iran,Will Person L be the next Israeli Minister of Defense?
+5151623,iran_israel,qp_v6/sweep_iran,Will Person M be the next Israeli Minister of Defense?
+5151624,iran_israel,qp_v6/sweep_iran,Will Person N be the next Israeli Minister of Defense?
+5151625,iran_israel,qp_v6/sweep_iran,Will Person O be the next Israeli Minister of Defense?
+5151626,iran_israel,qp_v6/sweep_iran,Will Person P be the next Israeli Minister of Defense?
+5151627,iran_israel,qp_v6/sweep_iran,Will Person Q be the next Israeli Minister of Defense?
+5151628,iran_israel,qp_v6/sweep_iran,Will Person R be the next Israeli Minister of Defense?
+5151629,iran_israel,qp_v6/sweep_iran,Will Person S be the next Israeli Minister of Defense?
+5151630,iran_israel,qp_v6/sweep_iran,Will Person T be the next Israeli Minister of Defense?
+5151631,iran_israel,qp_v6/sweep_iran,Will Person U be the next Israeli Minister of Defense?
+5151632,iran_israel,qp_v6/sweep_iran,Will Person V be the next Israeli Minister of Defense?
+5151633,iran_israel,qp_v6/sweep_iran,Will Person W be the next Israeli Minister of Defense?
+5151634,iran_israel,qp_v6/sweep_iran,Will Person X be the next Israeli Minister of Defense?
+5151635,iran_israel,qp_v6/sweep_iran,Will Person Y be the next Israeli Minister of Defense?
+5151636,iran_israel,qp_v6/sweep_iran,Will Person Z be the next Israeli Minister of Defense?
+5151637,iran_israel,qp_v6/sweep_iran,"Will no next Israeli Minister of Defense be appointed by February 28, 2027?"
+5151638,iran_israel,qp_v6/sweep_iran,Will another individual be the next Israeli Minister of Defense?
+5151639,iran_israel,qp_v6/sweep_iran,Will Bezalel Smotrich be the next Israeli Minister of Finance?
+5151640,iran_israel,qp_v6/sweep_iran,Will Nir Barkat be the next Israeli Minister of Finance?
+5151641,iran_israel,qp_v6/sweep_iran,Will Yair Lapid be the next Israeli Minister of Finance?
+5151642,iran_israel,qp_v6/sweep_iran,Will Avigdor Lieberman be the next Israeli Minister of Finance?
+5151643,iran_israel,qp_v6/sweep_iran,Will Shaul Meridor be the next Israeli Minister of Finance?
+5151644,iran_israel,qp_v6/sweep_iran,Will Yaron Zelekha be the next Israeli Minister of Finance?
+5151645,iran_israel,qp_v6/sweep_iran,Will Eli Cohen be the next Israeli Minister of Finance?
+5151647,iran_israel,qp_v6/sweep_iran,Will Orit Farkash-Hacohen be the next Israeli Minister of Finance?
+5151648,iran_israel,qp_v6/sweep_iran,Will Benjamin Netanyahu be the next Israeli Minister of Finance?
+5151649,iran_israel,qp_v6/sweep_iran,Will Naftali Bennett be the next Israeli Minister of Finance?
+5151650,iran_israel,qp_v6/sweep_iran,Will Moshe Feiglin be the next Israeli Minister of Finance?
+5151651,iran_israel,qp_v6/sweep_iran,Will Yair Golan be the next Israeli Minister of Finance?
+5151652,iran_israel,qp_v6/sweep_iran,Will Gadi Eizenkot be the next Israeli Minister of Finance?
+5151653,iran_israel,qp_v6/sweep_iran,Will Israel Katz be the next Israeli Minister of Finance?
+5151654,iran_israel,qp_v6/sweep_iran,Will Hili Tropper be the next Israeli Minister of Finance?
+5151655,iran_israel,qp_v6/sweep_iran,Will Person L be the next Israeli Minister of Finance?
+5151656,iran_israel,qp_v6/sweep_iran,Will Person M be the next Israeli Minister of Finance?
+5151657,iran_israel,qp_v6/sweep_iran,Will Person N be the next Israeli Minister of Finance?
+5151658,iran_israel,qp_v6/sweep_iran,Will Person O be the next Israeli Minister of Finance?
+5151659,iran_israel,qp_v6/sweep_iran,Will Person P be the next Israeli Minister of Finance?
+5151660,iran_israel,qp_v6/sweep_iran,Will Person Q be the next Israeli Minister of Finance?
+5151661,iran_israel,qp_v6/sweep_iran,Will Person R be the next Israeli Minister of Finance?
+5151662,iran_israel,qp_v6/sweep_iran,Will Person S be the next Israeli Minister of Finance?
+5151663,iran_israel,qp_v6/sweep_iran,Will Person T be the next Israeli Minister of Finance?
+5151664,iran_israel,qp_v6/sweep_iran,Will Person U be the next Israeli Minister of Finance?
+5151665,iran_israel,qp_v6/sweep_iran,Will Person V be the next Israeli Minister of Finance?
+5151666,iran_israel,qp_v6/sweep_iran,Will Person W be the next Israeli Minister of Finance?
+5151667,iran_israel,qp_v6/sweep_iran,Will Person X be the next Israeli Minister of Finance?
+5151668,iran_israel,qp_v6/sweep_iran,Will Person Y be the next Israeli Minister of Finance?
+5151669,iran_israel,qp_v6/sweep_iran,Will Person Z be the next Israeli Minister of Finance?
+5151671,iran_israel,qp_v6/sweep_iran,"Will no next Israeli Minister of Finance be appointed by February 28, 2027?"
+5151674,iran_israel,qp_v6/sweep_iran,Will another individual be the next Israeli Minister of Finance?
+5151684,iran_israel,qp_v6/sweep_iran,Will Gideon Sa’ar be the next Israeli Minister of Foreign Affairs?
+5151685,iran_israel,qp_v6/sweep_iran,Will Yair Lapid be the next Israeli Minister of Foreign Affairs?
+5151686,iran_israel,qp_v6/sweep_iran,Will Israel Katz be the next Israeli Minister of Foreign Affairs?
+5151687,iran_israel,qp_v6/sweep_iran,Will Avigdor Lieberman be the next Israeli Minister of Foreign Affairs?
+5151688,iran_israel,qp_v6/sweep_iran,Will Benny Gantz be the next Israeli Minister of Foreign Affairs?
+5151689,iran_israel,qp_v6/sweep_iran,Will Yossi Cohen be the next Israeli Minister of Foreign Affairs?
+5151690,iran_israel,qp_v6/sweep_iran,Will Ron Dermer be the next Israeli Minister of Foreign Affairs?
+5151691,iran_israel,qp_v6/sweep_iran,Will Eli Cohen be the next Israeli Minister of Foreign Affairs?
+5151692,iran_israel,qp_v6/sweep_iran,Will Gadi Eizenkot be the next Israeli Minister of Foreign Affairs?
+5151693,iran_israel,qp_v6/sweep_iran,Will Benjamin Netanyahu be the next Israeli Minister of Foreign Affairs?
+5151694,iran_israel,qp_v6/sweep_iran,Will Amir Ohana be the next Israeli Minister of Foreign Affairs?
+5151695,iran_israel,qp_v6/sweep_iran,Will Naftali Bennett be the next Israeli Minister of Foreign Affairs?
+5151696,iran_israel,qp_v6/sweep_iran,Will Yair Golan be the next Israeli Minister of Foreign Affairs?
+5151697,iran_israel,qp_v6/sweep_iran,Will Yoram Cohen be the next Israeli Minister of Foreign Affairs?
+5151698,iran_israel,qp_v6/sweep_iran,Will Person I be the next Israeli Minister of Foreign Affairs?
+5151699,iran_israel,qp_v6/sweep_iran,Will Person J be the next Israeli Minister of Foreign Affairs?
+5151700,iran_israel,qp_v6/sweep_iran,Will Person K be the next Israeli Minister of Foreign Affairs?
+5151701,iran_israel,qp_v6/sweep_iran,Will Person L be the next Israeli Minister of Foreign Affairs?
+5151702,iran_israel,qp_v6/sweep_iran,Will Person M be the next Israeli Minister of Foreign Affairs?
+5151703,iran_israel,qp_v6/sweep_iran,Will Person N be the next Israeli Minister of Foreign Affairs?
+5151704,iran_israel,qp_v6/sweep_iran,Will Person O be the next Israeli Minister of Foreign Affairs?
+5151705,iran_israel,qp_v6/sweep_iran,Will Person P be the next Israeli Minister of Foreign Affairs?
+5151706,iran_israel,qp_v6/sweep_iran,Will Person Q be the next Israeli Minister of Foreign Affairs?
+5151707,iran_israel,qp_v6/sweep_iran,Will Person R be the next Israeli Minister of Foreign Affairs?
+5151708,iran_israel,qp_v6/sweep_iran,Will Person S be the next Israeli Minister of Foreign Affairs?
+5151709,iran_israel,qp_v6/sweep_iran,Will Person T be the next Israeli Minister of Foreign Affairs?
+5151710,iran_israel,qp_v6/sweep_iran,Will Person U be the next Israeli Minister of Foreign Affairs?
+5151711,iran_israel,qp_v6/sweep_iran,Will Person V be the next Israeli Minister of Foreign Affairs?
+5151712,iran_israel,qp_v6/sweep_iran,Will Person W be the next Israeli Minister of Foreign Affairs?
+5151713,iran_israel,qp_v6/sweep_iran,Will Person X be the next Israeli Minister of Foreign Affairs?
+5151714,iran_israel,qp_v6/sweep_iran,Will Person Y be the next Israeli Minister of Foreign Affairs?
+5151715,iran_israel,qp_v6/sweep_iran,Will Person Z be the next Israeli Minister of Foreign Affairs?
+5151716,iran_israel,qp_v6/sweep_iran,"Will no next Israeli Minister of Foreign Affairs be appointed by February 28, 2027?"
+5151717,iran_israel,qp_v6/sweep_iran,Will another individual be the next Israeli Minister of Foreign Affairs?
+5151718,iran_israel,qp_v6/sweep_iran,Will Yariv Levin be the next Israeli Minister of Justice?
+5151719,iran_israel,qp_v6/sweep_iran,Will Gideon Sa’ar be the next Israeli Minister of Justice?
+5151720,iran_israel,qp_v6/sweep_iran,Will Ayelet Shaked be the next Israeli Minister of Justice?
+5151721,iran_israel,qp_v6/sweep_iran,Will Amir Ohana be the next Israeli Minister of Justice?
+5151722,iran_israel,qp_v6/sweep_iran,Will Simcha Rothman be the next Israeli Minister of Justice?
+5151723,iran_israel,qp_v6/sweep_iran,Will Ofir Katz be the next Israeli Minister of Justice?
+5151724,iran_israel,qp_v6/sweep_iran,Will Gilad Kariv be the next Israeli Minister of Justice?
+5151725,iran_israel,qp_v6/sweep_iran,Will Orit Farkash-Hacohen be the next Israeli Minister of Justice?
+5151726,iran_israel,qp_v6/sweep_iran,Will Oded Forer be the next Israeli Minister of Justice?
+5151727,iran_israel,qp_v6/sweep_iran,Will Tally Gotliv be the next Israeli Minister of Justice?
+5151728,iran_israel,qp_v6/sweep_iran,Will Person F be the next Israeli Minister of Justice?
+5151729,iran_israel,qp_v6/sweep_iran,Will Person G be the next Israeli Minister of Justice?
+5151730,iran_israel,qp_v6/sweep_iran,Will Person H be the next Israeli Minister of Justice?
+5151731,iran_israel,qp_v6/sweep_iran,Will Person I be the next Israeli Minister of Justice?
+5151732,iran_israel,qp_v6/sweep_iran,Will Person J be the next Israeli Minister of Justice?
+5151733,iran_israel,qp_v6/sweep_iran,Will Person K be the next Israeli Minister of Justice?
+5151734,iran_israel,qp_v6/sweep_iran,Will Person L be the next Israeli Minister of Justice?
+5151735,iran_israel,qp_v6/sweep_iran,Will Person M be the next Israeli Minister of Justice?
+5151736,iran_israel,qp_v6/sweep_iran,Will Person N be the next Israeli Minister of Justice?
+5151737,iran_israel,qp_v6/sweep_iran,Will Person O be the next Israeli Minister of Justice?
+5151738,iran_israel,qp_v6/sweep_iran,Will Person P be the next Israeli Minister of Justice?
+5151739,iran_israel,qp_v6/sweep_iran,Will Person Q be the next Israeli Minister of Justice?
+5151740,iran_israel,qp_v6/sweep_iran,Will Person R be the next Israeli Minister of Justice?
+5151741,iran_israel,qp_v6/sweep_iran,Will Person S be the next Israeli Minister of Justice?
+5151742,iran_israel,qp_v6/sweep_iran,Will Person T be the next Israeli Minister of Justice?
+5151743,iran_israel,qp_v6/sweep_iran,Will Person U be the next Israeli Minister of Justice?
+5151744,iran_israel,qp_v6/sweep_iran,Will Person V be the next Israeli Minister of Justice?
+5151745,iran_israel,qp_v6/sweep_iran,Will Person W be the next Israeli Minister of Justice?
+5151746,iran_israel,qp_v6/sweep_iran,Will Person X be the next Israeli Minister of Justice?
+5151747,iran_israel,qp_v6/sweep_iran,Will Person Y be the next Israeli Minister of Justice?
+5151748,iran_israel,qp_v6/sweep_iran,Will Person Z be the next Israeli Minister of Justice?
+5151749,iran_israel,qp_v6/sweep_iran,"Will no next Israeli Minister of Justice be appointed by February 28, 2027?"
+5151750,iran_israel,qp_v6/sweep_iran,Will another individual be the next Israeli Minister of Justice?
+5151751,iran_israel,qp_v6/sweep_iran,Will Itamar Ben Gvir be the next Israeli Minister of National Security?
+5151752,iran_israel,qp_v6/sweep_iran,Will Amir Ohana be the next Israeli Minister of National Security?
+5151753,iran_israel,qp_v6/sweep_iran,Will Avi Dichter be the next Israeli Minister of National Security?
+5151754,iran_israel,qp_v6/sweep_iran,Will Gideon Sa’ar be the next Israeli Minister of National Security?
+5151755,iran_israel,qp_v6/sweep_iran,Will Yossi Cohen be the next Israeli Minister of National Security?
+5151756,iran_israel,qp_v6/sweep_iran,Will Ofer Winter be the next Israeli Minister of National Security?
+5151757,iran_israel,qp_v6/sweep_iran,Will Matan Kahana be the next Israeli Minister of National Security?
+5151758,iran_israel,qp_v6/sweep_iran,Will Elazar Stern be the next Israeli Minister of National Security?
+5151759,iran_israel,qp_v6/sweep_iran,Will Yoav Segalovich be the next Israeli Minister of National Security?
+5151760,iran_israel,qp_v6/sweep_iran,Will Bezalel Smotrich be the next Israeli Minister of National Security?
+5151761,iran_israel,qp_v6/sweep_iran,Will Yair Golan be the next Israeli Minister of National Security?
+5151762,iran_israel,qp_v6/sweep_iran,Will Eli Cohen be the next Israeli Minister of National Security?
+5151763,iran_israel,qp_v6/sweep_iran,Will Yoram Cohen be the next Israeli Minister of National Security?
+5151764,iran_israel,qp_v6/sweep_iran,Will Meirav Ben-Ari be the next Israeli Minister of National Security?
+5151765,iran_israel,qp_v6/sweep_iran,Will Ram Ben-Barak be the next Israeli Minister of National Security?
+5151766,iran_israel,qp_v6/sweep_iran,Will Hili Tropper (Yechiel Tropper) be the next Israeli Minister of National Security?
+5151767,iran_israel,qp_v6/sweep_iran,Will Talya Lankri be the next Israeli Minister of National Security?
+5151768,iran_israel,qp_v6/sweep_iran,Will Person M be the next Israeli Minister of National Security?
+5151769,iran_israel,qp_v6/sweep_iran,Will Person N be the next Israeli Minister of National Security?
+5151770,iran_israel,qp_v6/sweep_iran,Will Person O be the next Israeli Minister of National Security?
+5151771,iran_israel,qp_v6/sweep_iran,Will Person P be the next Israeli Minister of National Security?
+5151772,iran_israel,qp_v6/sweep_iran,Will Person Q be the next Israeli Minister of National Security?
+5151773,iran_israel,qp_v6/sweep_iran,Will Person R be the next Israeli Minister of National Security?
+5151774,iran_israel,qp_v6/sweep_iran,Will Person S be the next Israeli Minister of National Security?
+5151775,iran_israel,qp_v6/sweep_iran,Will Person T be the next Israeli Minister of National Security?
+5151776,iran_israel,qp_v6/sweep_iran,Will Person U be the next Israeli Minister of National Security?
+5151777,iran_israel,qp_v6/sweep_iran,Will Person V be the next Israeli Minister of National Security?
+5151778,iran_israel,qp_v6/sweep_iran,Will Person W be the next Israeli Minister of National Security?
+5151779,iran_israel,qp_v6/sweep_iran,Will Person X be the next Israeli Minister of National Security?
+5151780,iran_israel,qp_v6/sweep_iran,Will Person Y be the next Israeli Minister of National Security?
+5151781,iran_israel,qp_v6/sweep_iran,Will Person Z be the next Israeli Minister of National Security?
+5151782,iran_israel,qp_v6/sweep_iran,"Will no next Israeli Minister of National Security be appointed by February 28, 2027?"
+5151783,iran_israel,qp_v6/sweep_iran,Will another individual be the next Israeli Minister of National Security?
+5151784,iran_israel,qp_v6/sweep_iran,Will Yariv Levin be the next Israeli Minister of Interior?
+5151785,iran_israel,qp_v6/sweep_iran,Will Aryeh Deri be the next Israeli Minister of Interior?
+5151786,iran_israel,qp_v6/sweep_iran,Will Moshe Arbel be the next Israeli Minister of Interior?
+5151787,iran_israel,qp_v6/sweep_iran,Will Ayelet Shaked be the next Israeli Minister of Interior?
+5151788,iran_israel,qp_v6/sweep_iran,Will Israel Katz be the next Israeli Minister of Interior?
+5151789,iran_israel,qp_v6/sweep_iran,Will Eli Cohen be the next Israeli Minister of Interior?
+5151790,iran_israel,qp_v6/sweep_iran,Will Miri Regev be the next Israeli Minister of Interior?
+5151791,iran_israel,qp_v6/sweep_iran,Will Avigdor Lieberman be the next Israeli Minister of Interior?
+5151792,iran_israel,qp_v6/sweep_iran,Will Yair Golan be the next Israeli Minister of Interior?
+5151793,iran_israel,qp_v6/sweep_iran,Will Orit Farkash-Hacohen be the next Israeli Minister of Interior?
+5151794,iran_israel,qp_v6/sweep_iran,Will Keren Terner Eyal be the next Israeli Minister of Interior?
+5151795,iran_israel,qp_v6/sweep_iran,Will Meirav Cohen be the next Israeli Minister of Interior?
+5151796,iran_israel,qp_v6/sweep_iran,Will Hili Tropper (Yechiel Tropper) be the next Israeli Minister of Interior?
+5151797,iran_israel,qp_v6/sweep_iran,Will Michael Malchieli be the next Israeli Minister of Interior?
+5151798,iran_israel,qp_v6/sweep_iran,Will Yoav Ben-Tzur be the next Israeli Minister of Interior?
+5151799,iran_israel,qp_v6/sweep_iran,Will Oded Forer be the next Israeli Minister of Interior?
+5151800,iran_israel,qp_v6/sweep_iran,Will Yoram Cohen be the next Israeli Minister of Interior?
+5151801,iran_israel,qp_v6/sweep_iran,Will Person M be the next Israeli Minister of Interior?
+5151802,iran_israel,qp_v6/sweep_iran,Will Person N be the next Israeli Minister of Interior?
+5151803,iran_israel,qp_v6/sweep_iran,Will Person O be the next Israeli Minister of Interior?
+5151804,iran_israel,qp_v6/sweep_iran,Will Person P be the next Israeli Minister of Interior?
+5151805,iran_israel,qp_v6/sweep_iran,Will Person Q be the next Israeli Minister of Interior?
+5151806,iran_israel,qp_v6/sweep_iran,Will Person R be the next Israeli Minister of Interior?
+5151807,iran_israel,qp_v6/sweep_iran,Will Person S be the next Israeli Minister of Interior?
+5151808,iran_israel,qp_v6/sweep_iran,Will Person T be the next Israeli Minister of Interior?
+5151809,iran_israel,qp_v6/sweep_iran,Will Person U be the next Israeli Minister of Interior?
+5151810,iran_israel,qp_v6/sweep_iran,Will Person V be the next Israeli Minister of Interior?
+5151811,iran_israel,qp_v6/sweep_iran,Will Person W be the next Israeli Minister of Interior?
+5151812,iran_israel,qp_v6/sweep_iran,Will Person X be the next Israeli Minister of Interior?
+5151813,iran_israel,qp_v6/sweep_iran,Will Person Y be the next Israeli Minister of Interior?
+5151814,iran_israel,qp_v6/sweep_iran,Will Person Z be the next Israeli Minister of Interior?
+5151815,iran_israel,qp_v6/sweep_iran,"Will no next Israeli Minister of Interior be appointed by February 28, 2027?"
+5151816,iran_israel,qp_v6/sweep_iran,Will another individual be the next Israeli Minister of Interior?
+5162761,iran_israel,qp_v6/sweep_iran,"Will there be Houthi military action against Israel by December 31, 2026?"
+5162764,iran_israel,qp_v6/sweep_iran,"Israel military action against Syria by November 30, 2026?"
+5162928,iran_israel,qp_v6/sweep_iran,"Will Iran target Saudi Arabia by November 30, 2026?"
+5162929,iran_israel,qp_v6/sweep_iran,"Will Iran target the United Arab Emirates by November 30, 2026?"
+5162970,iran_israel,qp_v6/sweep_iran,"Will Iran target Kuwait by October 15, 2026?"
+5162971,iran_israel,qp_v6/sweep_iran,"Will Iran target Kuwait by October 31, 2026?"
+5163038,iran_israel,qp_v6/sweep_iran,"Will Iran target Bahrain by October 31, 2026?"
+5163128,iran_israel,qp_v6/sweep_iran,"Will Iran target Oman by November 30, 2026?"
+5164680,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Bilytske by October 31, 2026?"
+5164765,iran_israel,qp_v6/sweep_iran,Israel accuses Iran/proxies of plane stabbing incident by Oct 31?
+5164767,iran_israel,qp_v6/sweep_iran,FlyDubai co-pilot transferred to Israel by Oct. 31?
+5165288,iran_israel,qp_v6/sweep_iran,Abu Musa Island no longer under Iranian control by October 31?
+5165374,iran_israel,qp_v6/sweep_iran,Farsi Island no longer under Iranian control by October 31?
+5165379,iran_israel,qp_v6/sweep_iran,Greater Tunb Island no longer under Iranian control by October 31?
+5165442,iran_israel,qp_v6/sweep_iran,Hengam Island no longer under Iranian control by October 31?
+5165443,iran_israel,qp_v6/sweep_iran,Hormuz Island no longer under Iranian control by October 31?
+5165444,iran_israel,qp_v6/sweep_iran,"Will Farsi, Hengam, Hormuz or Kharg Island no longer be under Iranian control by October 31, 2026?"
+5165445,iran_israel,qp_v6/sweep_iran,Israel x Lebanon Effective Ceasefire by October 15?
+5165446,iran_israel,qp_v6/sweep_iran,Israel x Lebanon Effective Ceasefire by October 31?
+5165447,russia_ukraine,qp_v6/tapes_full,"Will Russia enter Havrylivka by October 31, 2026?"
+5165448,russia_ukraine,qp_v6/tapes_full,"Will Russia enter Havrylivka by December 31, 2026?"
+5166674,iran_israel,qp_v6/sweep_iran,Iran agrees to end enrichment of uranium by October 31?
+5166676,iran_israel,qp_v6/sweep_iran,Will the Iranian regime fall by October 31?
+5166677,iran_israel,qp_v6/sweep_iran,Trump invokes war powers in Yemen by October 31?
+5166684,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 1, 2026?"
+5166685,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 2, 2026?"
+5166686,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 3, 2026?"
+5166688,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 4, 2026?"
+5166691,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 5, 2026?"
+5166693,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 6, 2026?"
+5166695,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 7, 2026?"
+5166697,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 8, 2026?"
+5166699,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 9, 2026?"
+5166700,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 10, 2026?"
+5166703,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 11, 2026?"
+5166704,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 12, 2026?"
+5166706,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 13, 2026?"
+5166708,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 14, 2026?"
+5166709,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 15, 2026?"
+5166710,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 16, 2026?"
+5166711,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 17, 2026?"
+5166712,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 18, 2026?"
+5166713,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 19, 2026?"
+5166714,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 20, 2026?"
+5166715,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 21, 2026?"
+5166716,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 22, 2026?"
+5166717,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 23, 2026?"
+5166718,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 24, 2026?"
+5166719,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 25, 2026?"
+5166720,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 26, 2026?"
+5166721,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 27, 2026?"
+5166722,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 28, 2026?"
+5166723,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 29, 2026?"
+5166724,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 30, 2026?"
+5166725,iran_israel,qp_v6/sweep_iran,"Shipping targeted in Hormuz on October 31, 2026?"
+5166734,iran_israel,qp_v6/sweep_iran,"Will at least 10 ships transit the Strait of Hormuz on any day by October 31, 2026?"
+5166735,iran_israel,qp_v6/sweep_iran,"Will at least 20 ships transit the Strait of Hormuz on any day by October 31, 2026?"
+5166736,iran_israel,qp_v6/sweep_iran,"Will at least 30 ships transit the Strait of Hormuz on any day by October 31, 2026?"
+5166737,iran_israel,qp_v6/sweep_iran,"Will at least 40 ships transit the Strait of Hormuz on any day by October 31, 2026?"
+5166738,iran_israel,qp_v6/sweep_iran,"Will at least 50 ships transit the Strait of Hormuz on any day by October 31, 2026?"
+5166753,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 2?
+5166754,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 3?
+5166755,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 4?
+5166756,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 5?
+5166757,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 6?
+5166758,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 7?
+5166759,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 8?
+5166760,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 9?
+5166761,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 10?
+5166762,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 11?
+5166763,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 12?
+5166764,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 13?
+5166765,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 14?
+5166766,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 15?
+5166767,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 16?
+5166769,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 17?
+5166770,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 18?
+5166771,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 19?
+5166772,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 20?
+5166773,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 21?
+5166774,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 22?
+5166775,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 23?
+5166776,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 24?
+5166777,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 25?
+5166778,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 26?
+5166779,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 27?
+5166780,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 28?
+5166781,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 29?
+5166782,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 30?
+5166783,iran_israel,qp_v6/sweep_iran,Houthi military action against Saudi Arabia on October 31?
+5166867,iran_israel,qp_v6/sweep_iran,Will fewer than 20 ships transit the Strait of Hormuz between October 5-October 11?
+5166868,iran_israel,qp_v6/sweep_iran,Will 20-24 ships transit the Strait of Hormuz between October 5-October 11?
+5166869,iran_israel,qp_v6/sweep_iran,Will 25-29 ships transit the Strait of Hormuz between October 5-October 11?
+5166870,iran_israel,qp_v6/sweep_iran,Will 30-34 ships transit the Strait of Hormuz between October 5-October 11?
+5166871,iran_israel,qp_v6/sweep_iran,Will 35-39 ships transit the Strait of Hormuz between October 5-October 11?
+5166872,iran_israel,qp_v6/sweep_iran,Will 40 or more ships transit the Strait of Hormuz between October 5-October 11?
+5166878,iran_israel,qp_v6/sweep_iran,Will USD be less than 2.3M Iranian rials on October 31?
+5166879,iran_israel,qp_v6/sweep_iran,Will USD be between 2.3M and 2.4M Iranian rials on October 31?
+5166880,iran_israel,qp_v6/sweep_iran,Will USD be between 2.4M and 2.5M Iranian rials on October 31?
+5166881,iran_israel,qp_v6/sweep_iran,Will USD be between 2.5M and 2.6M Iranian rials on October 31?
+5166882,iran_israel,qp_v6/sweep_iran,Will USD be between 2.6M and 2.7M Iranian rials on October 31?
+5166883,iran_israel,qp_v6/sweep_iran,Will USD be between 2.7M and 2.8M Iranian rials on October 31?
+5166884,iran_israel,qp_v6/sweep_iran,Will USD be at least 2.8M Iranian rials on October 31?
+5166953,iran_israel,qp_v6/sweep_iran,Will there be between 0 and 5 average daily transits of the Strait of Hormuz on October 31?
+5166954,iran_israel,qp_v6/sweep_iran,Will there be between 5 and 10 average daily transits of the Strait of Hormuz on October 31?
+5166955,iran_israel,qp_v6/sweep_iran,Will there be between 10 and 15 average daily transits of the Strait of Hormuz on October 31?
+5166956,iran_israel,qp_v6/sweep_iran,Will there be between 15 and 20 average daily transits of the Strait of Hormuz on October 31?
+5166957,iran_israel,qp_v6/sweep_iran,Will there be between 20 and 25 average daily transits of the Strait of Hormuz on October 31?
+5166958,iran_israel,qp_v6/sweep_iran,Will there be between 25 and 30 average daily transits of the Strait of Hormuz on October 31?
+5166959,iran_israel,qp_v6/sweep_iran,Will there be 30 or more average daily transits of the Strait of Hormuz on October 31?
+5167143,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 7, 2026?"
+5167144,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 8, 2026?"
+5167145,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 9, 2026?"
+5167146,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 10, 2026?"
+5167147,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 11, 2026?"
+5167148,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 12, 2026?"
+5167149,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 13, 2026?"
+5167150,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 14, 2026?"
+5167152,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 15, 2026?"
+5167155,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 16, 2026?"
+5167158,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 17, 2026?"
+5167159,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 18, 2026?"
+5167160,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 19, 2026?"
+5167161,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 20, 2026?"
+5167162,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 21, 2026?"
+5167163,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 22, 2026?"
+5167164,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 23, 2026?"
+5167165,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 24, 2026?"
+5167166,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 25, 2026?"
+5167167,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 26, 2026?"
+5167168,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 27, 2026?"
+5167169,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 28, 2026?"
+5167170,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 29, 2026?"
+5167171,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 30, 2026?"
+5167172,russia_ukraine,qp_v6/tapes_full,"Will Russia target Kyiv on October 31, 2026?"
+5167182,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 1?
+5167183,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 2?
+5167184,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 3?
+5167185,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 4?
+5167187,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 6?
+5167188,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 7?
+5167189,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 8?
+5167190,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 9?
+5167191,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 10?
+5167192,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 11?
+5167193,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 12?
+5167194,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 13?
+5167195,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 14?
+5167196,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 15?
+5167197,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 16?
+5167198,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 17?
+5167199,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 18?
+5167200,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 19?
+5167201,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 20?
+5167202,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 21?
+5167203,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 22?
+5167204,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 23?
+5167205,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 24?
+5167206,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 25?
+5167207,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 26?
+5167208,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 27?
+5167209,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 28?
+5167210,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 29?
+5167211,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 30?
+5167212,iran_israel,qp_v6/sweep_iran,Saudi Arabia military action against Yemen on October 31?
+5167217,russia_ukraine,qp_v6/tapes_full,Will Trump speak to Volodymyr Zelenskyy by October 31?
+5167220,russia_ukraine,qp_v6/tapes_full,Will Trump speak to Vladimir Putin by October 31?
+5167233,iran_israel,qp_v6/sweep_iran,Will Trump speak to Mojtaba Khamenei by October 31?
+5167237,russia_ukraine,qp_v6/tapes_full,"Will Trump meet with Volodymyr Zelenskyy by October 31, 2026?"
+5167240,russia_ukraine,qp_v6/tapes_full,"Will Trump meet with Vladimir Putin by October 31, 2026?"
+5167246,iran_israel,qp_v6/sweep_iran,"Will Trump meet with Benjamin Netanyahu by October 31, 2026?"
+5183407,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 6?
+5183408,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 7?
+5183409,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 8?
+5183410,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 9?
+5183411,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 10?
+5183412,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 11?
+5183413,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 12?
+5183414,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 13?
+5183415,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 14?
+5183416,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 15?
+5183417,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 16?
+5183418,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 17?
+5183419,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 18?
+5183420,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 19?
+5183421,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 20?
+5183422,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 21?
+5183423,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 22?
+5183424,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 23?
+5183425,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 24?
+5183426,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 25?
+5183427,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 26?
+5183428,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 27?
+5183429,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 28?
+5183430,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 29?
+5183431,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 30?
+5183432,iran_israel,qp_v6/sweep_iran,Israel military action against Lebanon on October 31?
+5190565,iran_israel,qp_v6/sweep_iran,"Next US-Iran senior diplomatic meeting by November 30, 2026?"
+5190663,russia_ukraine,qp_v6/tapes_full,Trump meets with Putin by October 31?
+5190747,iran_israel,qp_v6/sweep_iran,US x Iran ceasefire continues through November 15?
+5191215,iran_israel,qp_v6/sweep_iran,"Will Palmer Luckey attend a US x Iran diplomatic meeting by December 31, 2026?"
+5191216,iran_israel,qp_v6/sweep_iran,"Will Steve Witkoff attend a US x Iran diplomatic meeting by December 31, 2026?"
+5191217,iran_israel,qp_v6/sweep_iran,"Will Abbas Araghchi attend a US x Iran diplomatic meeting by December 31, 2026?"
+5191218,iran_israel,qp_v6/sweep_iran,"Will Jared Kushner attend a US x Iran diplomatic meeting by December 31, 2026?"
+5191219,iran_israel,qp_v6/sweep_iran,"Will Newt Gingrich attend a US x Iran diplomatic meeting by December 31, 2026?"
+5191220,iran_israel,qp_v6/sweep_iran,"Will Elon Musk attend a US x Iran diplomatic meeting by December 31, 2026?"
+5191221,iran_israel,qp_v6/sweep_iran,"Will Mohammed bin Abdulrahman Al Thani attend a US x Iran diplomatic meeting by December 31, 2026?"
+5194534,iran_israel,qp_v6/sweep_iran,"Will the Iranian regime fall by June 30, 2027?"
+5194535,iran_israel,qp_v6/sweep_iran,Will the Iranian regime fall before 2028?
+5203096,russia_ukraine,qp_v6/tapes_full,"Russia military action against an EU country by December 31, 2027?"
+5203112,russia_ukraine,qp_v6/tapes_full,"Will Russia invade another country by December 31, 2027?"
+5217835,iran_israel,qp_v6/sweep_iran,"Saudi troops fighting in Yemen by October 10, 2026?"
+5218042,iran_israel,qp_v6/sweep_iran,"Saudi troops fighting in Yemen by October 17, 2026?"
+5218059,iran_israel,qp_v6/sweep_iran,"Saudi troops fighting in Yemen by October 31, 2026?"
+5234653,russia_ukraine,qp_v6/tapes_full,"Will Russia capture all of Kostyantynivka by June 30, 2027?"
+5234654,russia_ukraine,qp_v6/tapes_full,"Will Russia capture all of Kostyantynivka by March 31, 2027?"
+5234655,russia_ukraine,qp_v6/tapes_full,"Will Russia capture all of Kostyantynivka by November 30, 2026?"
+5234659,iran_israel,qp_v6/sweep_iran,US x Iran ceasefire continues through October 5?
+5234660,iran_israel,qp_v6/sweep_iran,US x Iran ceasefire continues through October 12?
+5234661,iran_israel,qp_v6/sweep_iran,US x Iran ceasefire continues through October 9?
+5234679,russia_ukraine,qp_v6/tapes_full,"Will Russia capture all of Donetsk Oblast by June 30, 2027?"
+5234719,russia_ukraine,qp_v6/tapes_full,"Will Russia capture the Royal Café Alex in Kostyantynivka by March 31, 2027?"
+5234720,russia_ukraine,qp_v6/tapes_full,"Will Russia capture the Royal Café Alex in Kostyantynivka by November 30, 2026?"
+5237293,iran_israel,qp_v6/sweep_iran,Netanyahu drops out before election?
+5237617,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 3, 2026?"
+5237621,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 7, 2026?"
+5237622,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 8, 2026?"
+5237623,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 9, 2026?"
+5237624,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 10, 2026?"
+5237625,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 11, 2026?"
+5237626,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 12, 2026?"
+5237627,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 13, 2026?"
+5237628,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 14, 2026?"
+5237629,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 15, 2026?"
+5237630,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 16, 2026?"
+5237631,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 17, 2026?"
+5237632,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 18, 2026?"
+5237633,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 19, 2026?"
+5237634,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 20, 2026?"
+5237635,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 21, 2026?"
+5237636,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 22, 2026?"
+5237637,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 23, 2026?"
+5237638,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 24, 2026?"
+5237639,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 25, 2026?"
+5237640,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 26, 2026?"
+5237641,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 27, 2026?"
+5237642,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 28, 2026?"
+5237643,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 29, 2026?"
+5237644,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 30, 2026?"
+5237645,russia_ukraine,qp_v6/tapes_full,"Will Ukraine target Moscow on October 31, 2026?"
+5238337,russia_ukraine,qp_v6/tapes_full,"Will Ukraine re-enter Terny by October 31, 2026?"
+5238338,russia_ukraine,qp_v6/tapes_full,"Will Ukraine re-enter Terny by December 31, 2026?"
+5238389,iran_israel,qp_v6/sweep_iran,Houthi x Saudi Arabia effective ceasefire by October 15?
+5238391,iran_israel,qp_v6/sweep_iran,Saudi-Houthi ceasefire agreement announced by December 31?
+5325719,iran_israel,qp_v6/sweep_iran,"Israel withdraws from Lebanon by December 31, 2027?"
+5325720,iran_israel,qp_v6/sweep_iran,"Israel withdraws from Lebanon by March 31, 2027?"
+5325721,iran_israel,qp_v6/sweep_iran,"Israel withdraws from Lebanon by June 30, 2027?"
+5327983,russia_ukraine,qp_v6/tapes_full,"Will Russia capture Oleksiievo-Druzhkivka by March 31, 2027?"
+5332463,iran_israel,qp_v6/sweep_iran,Will Likud win the second-most seats in the 2026 Israeli legislative election?
+5332464,iran_israel,qp_v6/sweep_iran,Will Together win the second-most seats in the 2026 Israeli legislative election?
+5332465,iran_israel,qp_v6/sweep_iran,Will Shas win the second-most seats in the 2026 Israeli legislative election?
+5332466,iran_israel,qp_v6/sweep_iran,Will Yashar win the second-most seats in the 2026 Israeli legislative election?
+5332467,iran_israel,qp_v6/sweep_iran,Will The Democrats win the second-most seats in the 2026 Israeli legislative election?
+5332468,iran_israel,qp_v6/sweep_iran,Will Otzma Yehudit win the second-most seats in the 2026 Israeli legislative election?
+5332469,iran_israel,qp_v6/sweep_iran,Will Blue and White win the second-most seats in the 2026 Israeli legislative election?
+5332470,iran_israel,qp_v6/sweep_iran,Will Yisrael Beiteinu win the second-most seats in the 2026 Israeli legislative election?
+5332471,iran_israel,qp_v6/sweep_iran,Will United Torah Judaism win the second-most seats in the 2026 Israeli legislative election?
+5332472,iran_israel,qp_v6/sweep_iran,Will RZP-Zehut win the second-most seats in the 2026 Israeli legislative election?
+5332473,iran_israel,qp_v6/sweep_iran,Will Joint List win the second-most seats in the 2026 Israeli legislative election?
+5332474,iran_israel,qp_v6/sweep_iran,Will Ra'am win the second-most seats in the 2026 Israeli legislative election?
+5332475,iran_israel,qp_v6/sweep_iran,Will Amcha Yisrael win the second-most seats in the 2026 Israeli legislative election?
+5332476,iran_israel,qp_v6/sweep_iran,Will Noam win the second-most seats in the 2026 Israeli legislative election?
+5332477,iran_israel,qp_v6/sweep_iran,Will The Reservists and the Economic Party win the second-most seats in the 2026 Israeli legislative election?
+5332478,iran_israel,qp_v6/sweep_iran,Will Party A win the second-most seats in the 2026 Israeli legislative election?
+5332479,iran_israel,qp_v6/sweep_iran,Will Party B win the second-most seats in the 2026 Israeli legislative election?
+5332480,iran_israel,qp_v6/sweep_iran,Will Party C win the second-most seats in the 2026 Israeli legislative election?
+5332481,iran_israel,qp_v6/sweep_iran,Will Party D win the second-most seats in the 2026 Israeli legislative election?
+5332482,iran_israel,qp_v6/sweep_iran,Will Party E win the second-most seats in the 2026 Israeli legislative election?
+5332483,iran_israel,qp_v6/sweep_iran,Will Party F win the second-most seats in the 2026 Israeli legislative election?
+5332484,iran_israel,qp_v6/sweep_iran,Will Party G win the second-most seats in the 2026 Israeli legislative election?
+5332485,iran_israel,qp_v6/sweep_iran,Will Party H win the second-most seats in the 2026 Israeli legislative election?
+5332486,iran_israel,qp_v6/sweep_iran,Will Party I win the second-most seats in the 2026 Israeli legislative election?
+5332487,iran_israel,qp_v6/sweep_iran,Will Party J win the second-most seats in the 2026 Israeli legislative election?
+5332488,iran_israel,qp_v6/sweep_iran,Will Party K win the second-most seats in the 2026 Israeli legislative election?
+5332489,iran_israel,qp_v6/sweep_iran,Will Party L win the second-most seats in the 2026 Israeli legislative election?
+5332490,iran_israel,qp_v6/sweep_iran,Will Party M win the second-most seats in the 2026 Israeli legislative election?
+5332491,iran_israel,qp_v6/sweep_iran,Will Party N win the second-most seats in the 2026 Israeli legislative election?
+5332492,iran_israel,qp_v6/sweep_iran,Will Party O win the second-most seats in the 2026 Israeli legislative election?
+5332493,iran_israel,qp_v6/sweep_iran,Will Party P win the second-most seats in the 2026 Israeli legislative election?
+5332494,iran_israel,qp_v6/sweep_iran,Will Party Q win the second-most seats in the 2026 Israeli legislative election?
+5332495,iran_israel,qp_v6/sweep_iran,Will Party R win the second-most seats in the 2026 Israeli legislative election?
+5332496,iran_israel,qp_v6/sweep_iran,Will Party S win the second-most seats in the 2026 Israeli legislative election?
+5332497,iran_israel,qp_v6/sweep_iran,Will Party T win the second-most seats in the 2026 Israeli legislative election?
+5332498,iran_israel,qp_v6/sweep_iran,Will Party U win the second-most seats in the 2026 Israeli legislative election?
+5332499,iran_israel,qp_v6/sweep_iran,Will Party V win the second-most seats in the 2026 Israeli legislative election?
+5332500,iran_israel,qp_v6/sweep_iran,Will Party W win the second-most seats in the 2026 Israeli legislative election?
+5332501,iran_israel,qp_v6/sweep_iran,Will Other win the second-most seats in the 2026 Israeli legislative election?
+5332538,iran_israel,qp_v6/sweep_iran,Will Likud win the third-most seats in the 2026 Israeli legislative election?
+5332539,iran_israel,qp_v6/sweep_iran,Will Together win the third-most seats in the 2026 Israeli legislative election?
+5332540,iran_israel,qp_v6/sweep_iran,Will Shas win the third-most seats in the 2026 Israeli legislative election?
+5332541,iran_israel,qp_v6/sweep_iran,Will Yashar win the third-most seats in the 2026 Israeli legislative election?
+5332542,iran_israel,qp_v6/sweep_iran,Will The Democrats win the third-most seats in the 2026 Israeli legislative election?
+5332543,iran_israel,qp_v6/sweep_iran,Will Otzma Yehudit win the third-most seats in the 2026 Israeli legislative election?
+5332544,iran_israel,qp_v6/sweep_iran,Will Blue and White win the third-most seats in the 2026 Israeli legislative election?
+5332545,iran_israel,qp_v6/sweep_iran,Will Yisrael Beiteinu win the third-most seats in the 2026 Israeli legislative election?
+5332546,iran_israel,qp_v6/sweep_iran,Will United Torah Judaism win the third-most seats in the 2026 Israeli legislative election?
+5332547,iran_israel,qp_v6/sweep_iran,Will RZP-Zehut win the third-most seats in the 2026 Israeli legislative election?
+5332548,iran_israel,qp_v6/sweep_iran,Will Joint List win the third-most seats in the 2026 Israeli legislative election?
+5332549,iran_israel,qp_v6/sweep_iran,Will Ra'am win the third-most seats in the 2026 Israeli legislative election?
+5332550,iran_israel,qp_v6/sweep_iran,Will Amcha Yisrael win the third-most seats in the 2026 Israeli legislative election?
+5332551,iran_israel,qp_v6/sweep_iran,Will Noam win the third-most seats in the 2026 Israeli legislative election?
+5332552,iran_israel,qp_v6/sweep_iran,Will The Reservists and the Economic Party win the third-most seats in the 2026 Israeli legislative election?
+5332553,iran_israel,qp_v6/sweep_iran,Will Party A win the third-most seats in the 2026 Israeli legislative election?
+5332554,iran_israel,qp_v6/sweep_iran,Will Party B win the third-most seats in the 2026 Israeli legislative election?
+5332555,iran_israel,qp_v6/sweep_iran,Will Party C win the third-most seats in the 2026 Israeli legislative election?
+5332557,iran_israel,qp_v6/sweep_iran,Will Party D win the third-most seats in the 2026 Israeli legislative election?
+5332558,iran_israel,qp_v6/sweep_iran,Will Party E win the third-most seats in the 2026 Israeli legislative election?
+5332559,iran_israel,qp_v6/sweep_iran,Will Party F win the third-most seats in the 2026 Israeli legislative election?
+5332560,iran_israel,qp_v6/sweep_iran,Will Party G win the third-most seats in the 2026 Israeli legislative election?
+5332562,iran_israel,qp_v6/sweep_iran,Will Party H win the third-most seats in the 2026 Israeli legislative election?
+5332564,iran_israel,qp_v6/sweep_iran,Will Party I win the third-most seats in the 2026 Israeli legislative election?
+5332565,iran_israel,qp_v6/sweep_iran,Will Party J win the third-most seats in the 2026 Israeli legislative election?
+5332566,iran_israel,qp_v6/sweep_iran,Will Party K win the third-most seats in the 2026 Israeli legislative election?
+5332567,iran_israel,qp_v6/sweep_iran,Will Party L win the third-most seats in the 2026 Israeli legislative election?
+5332568,iran_israel,qp_v6/sweep_iran,Will Party M win the third-most seats in the 2026 Israeli legislative election?
+5332569,iran_israel,qp_v6/sweep_iran,Will Party N win the third-most seats in the 2026 Israeli legislative election?
+5332570,iran_israel,qp_v6/sweep_iran,Will Party O win the third-most seats in the 2026 Israeli legislative election?
+5332571,iran_israel,qp_v6/sweep_iran,Will Party P win the third-most seats in the 2026 Israeli legislative election?
+5332572,iran_israel,qp_v6/sweep_iran,Will Party Q win the third-most seats in the 2026 Israeli legislative election?
+5332573,iran_israel,qp_v6/sweep_iran,Will Party R win the third-most seats in the 2026 Israeli legislative election?
+5332574,iran_israel,qp_v6/sweep_iran,Will Party S win the third-most seats in the 2026 Israeli legislative election?
+5332575,iran_israel,qp_v6/sweep_iran,Will Party T win the third-most seats in the 2026 Israeli legislative election?
+5332576,iran_israel,qp_v6/sweep_iran,Will Party U win the third-most seats in the 2026 Israeli legislative election?
+5332577,iran_israel,qp_v6/sweep_iran,Will Party V win the third-most seats in the 2026 Israeli legislative election?
+5332578,iran_israel,qp_v6/sweep_iran,Will Party W win the third-most seats in the 2026 Israeli legislative election?
+5332579,iran_israel,qp_v6/sweep_iran,Will Other win the third-most seats in the 2026 Israeli legislative election?
+5336143,iran_israel,qp_v6/sweep_iran,"Will Flávio Bolsonaro win Brazil, Gadi Eizenkot become Israeli PM, and Republicans win the US Senate?"
+5336146,iran_israel,qp_v6/sweep_iran,"Will Flávio Bolsonaro win Brazil, Gadi Eizenkot become Israeli PM, and Democrats win the US Senate?"
+5336149,iran_israel,qp_v6/sweep_iran,"Will Flávio Bolsonaro win Brazil, Benjamin Netanyahu become Israeli PM, and Republicans win the US Senate?"
+5336152,iran_israel,qp_v6/sweep_iran,"Will Flávio Bolsonaro win Brazil, Benjamin Netanyahu become Israeli PM, and Democrats win the US Senate?"
+5336156,iran_israel,qp_v6/sweep_iran,"Will Flávio Bolsonaro win Brazil, Naftali Bennett become Israeli PM, and Republicans win the US Senate?"
+5336158,iran_israel,qp_v6/sweep_iran,"Will Flávio Bolsonaro win Brazil, Naftali Bennett become Israeli PM, and Democrats win the US Senate?"
+5336160,iran_israel,qp_v6/sweep_iran,"Will Luiz Inácio Lula da Silva win Brazil, Gadi Eizenkot become Israeli PM, and Republicans win the US Senate?"
+5336164,iran_israel,qp_v6/sweep_iran,"Will Luiz Inácio Lula da Silva win Brazil, Gadi Eizenkot become Israeli PM, and Democrats win the US Senate?"
+5336167,iran_israel,qp_v6/sweep_iran,"Will Luiz Inácio Lula da Silva win Brazil, Benjamin Netanyahu become Israeli PM, and Republicans win the US Senate?"
+5336170,iran_israel,qp_v6/sweep_iran,"Will Luiz Inácio Lula da Silva win Brazil, Benjamin Netanyahu become Israeli PM, and Democrats win the US Senate?"
+5336173,iran_israel,qp_v6/sweep_iran,"Will Luiz Inácio Lula da Silva win Brazil, Naftali Bennett become Israeli PM, and Republicans win the US Senate?"
+5336176,iran_israel,qp_v6/sweep_iran,"Will Luiz Inácio Lula da Silva win Brazil, Naftali Bennett become Israeli PM, and Democrats win the US Senate?"
+5336248,iran_israel,qp_v6/sweep_iran,"Will another outcome occur in the Brazilian, Israeli, and American elections?"
+5339986,iran_israel,qp_v6/sweep_iran,Israel x Iran ceasefire continues through November 15?
+5339988,iran_israel,qp_v6/sweep_iran,Israel x Iran ceasefire continues through October 15?
+5339991,iran_israel,qp_v6/sweep_iran,Israel x Iran ceasefire continues through October 9?
+5371617,iran_israel,qp_v6/sweep_iran,Israel Election: Likud or Yashar in Government?
+5375147,iran_israel,qp_v6/sweep_iran,Iran-Oman Hormuz Agreement by November 30?
+5375148,iran_israel,qp_v6/sweep_iran,Iran-Oman Hormuz Agreement by December 31?
+5377048,iran_israel,qp_v6/sweep_iran,Will Yemeni forces enter Sanaa by October 31?
+5377049,iran_israel,qp_v6/sweep_iran,Will Yemeni forces enter Sanaa by November 30?

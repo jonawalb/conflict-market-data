@@ -19,8 +19,11 @@ jobs:
         run: python3 test_classify.py
       - name: Round-trip test (export to increment, rebuild, compare)
         run: python3 test_roundtrip.py
+      - name: Registry include-list test
+        run: python3 test_include.py
       - name: Import check
         run: |
           python3 -c "import bow, bow.api, bow.db, bow.collect, bow.discover; print('imports OK')"
           python3 scripts/ci_collect.py --help > /dev/null
           python3 scripts/rebuild_db.py --help > /dev/null
+          python3 scripts/import_qp_v6.py --help > /dev/null
