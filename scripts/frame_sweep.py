@@ -27,7 +27,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from backfill_tapes import GAMMA, ClientError, get, q  # noqa: E402
 
 logger = logging.getLogger("frame_sweep")
-PAGE = 500
+PAGE = 100  # Gamma serves at most 100 events per page whatever limit is asked
 
 THEATERS = {
     # Pre-registered 2026-10-07 (v6/plan/PREREG_v6_confirmatory_48h.txt).
@@ -56,9 +56,7 @@ def events_on(day: dt.date, closed: Optional[bool]) -> Iterator[Dict[str, Any]]:
         if not page:
             return
         yield from page
-        if len(page) < PAGE:
-            return
-        offset += len(page)
+        offset += len(page)  # page until empty: a short page is not proof of the end
 
 
 def label(m: Dict[str, Any]) -> str:
@@ -97,7 +95,9 @@ def cmd_probe(args: argparse.Namespace) -> None:
     for closed in (None, True, False):
         evs = list(events_on(day, closed))
         starts = sorted({(e.get("startDate") or "")[:10] for e in evs})
-        logger.info("closed=%s: %d events, start dates seen %s", closed, len(evs), starts[:5])
+        ids = [e.get("id") for e in evs]
+        logger.info("closed=%s: %d events (%d unique ids), start dates seen %s", closed, len(evs), len(set(ids)),
+                    starts[:5])
 
 
 def cmd_sweep(args: argparse.Namespace) -> None:
