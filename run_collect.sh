@@ -39,6 +39,14 @@ if [ "${BOW_AUTO_UPDATE:-1}" = "1" ] && [ -d "$HERE/.git" ]; then
     fi
 fi
 
+# Merge the increments GitHub Actions has committed since the last run, so the
+# local database holds the CI collection as well as whatever this machine gathers.
+if [ "${BOW_SYNC_INCREMENTS:-1}" = "1" ]; then
+    "$PYTHON" "$HERE/scripts/rebuild_db.py" --incremental \
+        --out "$DATA_DIR/bow_market_data.sqlite" >> "$DATA_DIR/scheduler.log" 2>&1 || \
+        echo "$(date -u +%FT%TZ) increment sync failed" >> "$DATA_DIR/scheduler.log"
+fi
+
 echo "$(date -u +%FT%TZ) start mode=$MODE" >> "$DATA_DIR/scheduler.log"
 "$PYTHON" "$HERE/bow_collect.py" "$MODE" >> "$DATA_DIR/scheduler.log" 2>&1
 STATUS=$?

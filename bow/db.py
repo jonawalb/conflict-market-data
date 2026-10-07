@@ -102,6 +102,67 @@ CREATE TABLE IF NOT EXISTS runs (
     errors     INTEGER,
     note       TEXT
 );
+
+-- Local-only tables below. ci_collect.py exports only the five tables above, so
+-- nothing here reaches the committed increments.
+
+-- Increments already replayed into this database (rebuild_db.py --incremental).
+CREATE TABLE IF NOT EXISTS replayed_increments (
+    path        TEXT PRIMARY KEY,   -- relative to data/increments
+    replayed_at TEXT
+);
+
+-- Fills recovered from Polygon event logs (scripts/backfill_chain.py). Kept apart
+-- from `trades`, which holds data-api taker records only: a chain tape records
+-- maker fills (or FPMM trades) of the same matches, so mixing the two in one table
+-- would double count volume.
+CREATE TABLE IF NOT EXISTS chain_trades (
+    trade_key    TEXT PRIMARY KEY,  -- tx_hash:log_index
+    market_id    TEXT,
+    ts           INTEGER,
+    price        REAL,
+    size         REAL,
+    side         TEXT,
+    outcome      TEXT,
+    wallet       TEXT,
+    counterparty TEXT,
+    tx_hash      TEXT,
+    block        INTEGER,
+    log_index    INTEGER,
+    source       TEXT,              -- fpmm | orderfilled | orderfilled_v2
+    usdc         REAL,
+    fee          REAL
+) WITHOUT ROWID;
+CREATE INDEX IF NOT EXISTS idx_chain_trades_market_ts ON chain_trades(market_id, ts);
+
+-- Contract lists from research frames and RA spreadsheets, one row per source row,
+-- with the source's own resolution label and the full row as JSON.
+CREATE TABLE IF NOT EXISTS market_frames (
+    frame      TEXT NOT NULL,       -- file (and sheet) the row came from
+    frame_row  TEXT NOT NULL,       -- row id within it
+    source     TEXT,                -- qp_v6 | qp_v6_sweep | RA
+    theater    TEXT,
+    market_id  TEXT NOT NULL DEFAULT '',  -- '' when unmatched; an event row expands to several
+    slug       TEXT,
+    question   TEXT,
+    resolution TEXT,
+    data       TEXT,
+    PRIMARY KEY (frame, frame_row, market_id)
+) WITHOUT ROWID;
+CREATE INDEX IF NOT EXISTS idx_market_frames_market ON market_frames(market_id);
+
+-- One row per imported tape or price file: provenance and an idempotence check.
+CREATE TABLE IF NOT EXISTS tape_imports (
+    path        TEXT PRIMARY KEY,
+    sha256      TEXT,
+    kind        TEXT,               -- trades | chain | prices
+    source      TEXT,               -- data-api | chain | clob
+    theater     TEXT,
+    market_id   TEXT,
+    n_rows      INTEGER,
+    n_inserted  INTEGER,
+    imported_at TEXT
+);
 """
 
 
