@@ -96,6 +96,32 @@ def classify(ev: Dict[str, Any], m: Dict[str, Any], th: Dict[str, str]) -> Optio
     return None
 
 
+def cmd_keyset_probe(args: argparse.Namespace) -> None:
+    """Log the /events/keyset response shape and which cursor parameter advances it."""
+    day = dt.date.fromisoformat(args.day)
+    a, b = day.isoformat() + "T00:00:00Z", (day + dt.timedelta(days=1)).isoformat() + "T00:00:00Z"
+    base = dict(limit=PAGE, start_date_min=a, start_date_max=b)
+    first = get(q(GAMMA, "events/keyset", **base))
+    logger.info("keyset type=%s keys=%s", type(first).__name__,
+                sorted(first.keys()) if isinstance(first, dict) else len(first))
+    if isinstance(first, dict):
+        for k, v in first.items():
+            if not isinstance(v, list):
+                logger.info("  %s = %s", k, str(v)[:200])
+            else:
+                logger.info("  %s: list of %d; first ids %s", k, len(v), [e.get("id") for e in v[:3]])
+        rows = next((v for v in first.values() if isinstance(v, list)), [])
+        cur = first.get("next_cursor") or first.get("nextCursor") or first.get("cursor")
+        for name in ("next_cursor", "cursor", "after_cursor", "after"):
+            try:
+                nxt = get(q(GAMMA, "events/keyset", **base, **{name: cur}))
+                nrows = next((v for v in nxt.values() if isinstance(v, list)), []) if isinstance(nxt, dict) else nxt
+                logger.info("param %s -> %d rows, first id %s (page-1 first id %s)", name, len(nrows),
+                            nrows[0].get("id") if nrows else None, rows[0].get("id") if rows else None)
+            except ClientError as exc:
+                logger.info("param %s -> %s", name, str(exc)[:150])
+
+
 def cmd_probe(args: argparse.Namespace) -> None:
     day = dt.date.fromisoformat(args.day)
     for closed in (None, True, False):
@@ -157,6 +183,8 @@ def main() -> None:
     sub = ap.add_subparsers(dest="cmd", required=True)
     p = sub.add_parser("probe")
     p.add_argument("--day", required=True)
+    k = sub.add_parser("keyset-probe")
+    k.add_argument("--day", required=True)
     s = sub.add_parser("sweep")
     s.add_argument("--theater", required=True, choices=sorted(THEATERS))
     s.add_argument("--from", dest="from_", required=True)
@@ -165,7 +193,7 @@ def main() -> None:
     s.add_argument("--shard", type=int, default=0)
     s.add_argument("--shards", type=int, default=1)
     args = ap.parse_args()
-    {"probe": cmd_probe, "sweep": cmd_sweep}[args.cmd](args)
+    {"probe": cmd_probe, "keyset-probe": cmd_keyset_probe, "sweep": cmd_sweep}[args.cmd](args)
 
 
 if __name__ == "__main__":
