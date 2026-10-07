@@ -38,6 +38,13 @@ THEATERS = {
         "gaza": r"\b(hamas|gaza)",
     },
 }
+# Validation only: the research assistant's 20 Russia-Ukraine terms, to check the sweep's recall
+# against the RA's hand-built frame. Its exclusions are not the RA's, so compare before exclusions.
+THEATERS["russia_ukraine_validation"] = {
+    "include": r"\b(ukrain|russia|zelensk|putin|kyiv|moscow|donbas|crimea|kursk|donetsk|luhansk|kharkiv|minsk|belarus)"
+               r"|\b(nato|icc|g20|unsc)\b",
+    "partner": r"(?!)", "gaza": r"(?!)",
+}
 EXCLUDE_TAGS = {"sports", "esports", "games", "culture", "weather", "crypto", "soccer", "basketball", "football",
                 "nba", "nfl", "mlb", "nhl", "tennis", "cricket", "ufc", "boxing", "f1", "golf", "entertainment",
                 "movies", "music", "awards", "pop-culture"}
