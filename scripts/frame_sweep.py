@@ -38,6 +38,14 @@ THEATERS = {
         "gaza": r"\b(hamas|gaza)",
     },
 }
+# Pre-registered 2026-10-07 (v6/plan/PREREG_v6b_confirmatory_gaza.txt). Questions naming an Iran-theater
+# actor are excluded (they belong to iran_israel); classify() applies 'exclude' as its own rule.
+THEATERS["israel_gaza"] = {
+    "include": r"\b(hamas|gaza|hostage|rafah|khan younis|west bank|sinwar|deif)",
+    "exclude": r"\b(iran|tehran|hezbollah|lebanon|houthi|yemen|syria)",
+    "partner": r"(?!)", "gaza": r"(?!)",
+}
+
 # Validation only: the research assistant's 20 Russia-Ukraine terms, to check the sweep's recall
 # against the RA's hand-built frame. Its exclusions are not the RA's, so compare before exclusions.
 THEATERS["russia_ukraine_validation"] = {
@@ -103,6 +111,8 @@ def classify(ev: Dict[str, Any], m: Dict[str, Any], th: Dict[str, str]) -> Optio
     tags = {(t.get("slug") or "").lower() for t in ev.get("tags") or []}
     if tags & EXCLUDE_TAGS:
         return "tag:" + ",".join(sorted(tags & EXCLUDE_TAGS))
+    if th.get("exclude") and re.search(th["exclude"], qtext, re.I):
+        return "other_theater_actor"
     if re.search(th["gaza"], qtext, re.I) and not re.search(th["partner"], qtext, re.I):
         return "gaza_without_partner"
     if SPEECH.search(qtext):
