@@ -47,7 +47,7 @@ META = re.compile(r"polymarket|odds of|% chance|probability", re.I)
 
 def events_on(day: dt.date, closed: Optional[bool]) -> Iterator[Dict[str, Any]]:
     a, b = day.isoformat() + "T00:00:00Z", (day + dt.timedelta(days=1)).isoformat() + "T00:00:00Z"
-    offset = 0
+    offset, seen = 0, set()
     while True:
         params = dict(limit=PAGE, offset=offset, start_date_min=a, start_date_max=b, order="id", ascending="true")
         if closed is not None:
@@ -55,8 +55,14 @@ def events_on(day: dt.date, closed: Optional[bool]) -> Iterator[Dict[str, Any]]:
         page = get(q(GAMMA, "events", **params))
         if not page:
             return
+        ids = {e.get("id") for e in page}
+        if ids <= seen:  # the API ignored the offset: stop rather than loop forever
+            raise RuntimeError(f"offset {offset} returned only already-seen events on {day}")
+        seen |= ids
         yield from page
         offset += len(page)  # page until empty: a short page is not proof of the end
+        if offset > 50000:
+            raise RuntimeError(f"more than 50,000 events listed for {day}; refusing to continue")
 
 
 def label(m: Dict[str, Any]) -> str:
