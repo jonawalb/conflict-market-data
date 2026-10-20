@@ -100,7 +100,8 @@ def market_record(m: Dict[str, Any]) -> Dict[str, Any]:
 def resolve_row(row: Dict[str, str]) -> List[Dict[str, Any]]:
     expand = row.get("expand", "0") == "1"
     if not expand:
-        hits = get(q(GAMMA, "markets", slug=row["slug"]))
+        # Gamma omits closed markets from a slug lookup unless asked for them.
+        hits = get(q(GAMMA, "markets", slug=row["slug"])) or get(q(GAMMA, "markets", slug=row["slug"], closed="true"))
         if hits:
             return [market_record(hits[0])]
     events = get(q(GAMMA, "events", slug=row["event_slug"]))
