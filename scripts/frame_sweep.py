@@ -65,7 +65,7 @@ for _name, _inc in {
 # Case studies 2026-10-20 (QP positive controls): markets on the 2025 Nobel Peace Prize and Google's
 # 2025 Year in Search. Tag exclusions still apply; excluded rows are written with their reason.
 THEATERS["nobel_2025"] = {"include": r"nobel peace", "partner": r"(?!)", "gaza": r"(?!)"}
-THEATERS["google_yis_2025"] = {"include": r"year in search|most searched|google search", "partner": r"(?!)",
+THEATERS["google_yis_2025"] = {"include": r"year in search|most searched|google search|searched", "partner": r"(?!)",
                                "gaza": r"(?!)"}
 
 # Validation only: the research assistant's 20 Russia-Ukraine terms, to check the sweep's recall
