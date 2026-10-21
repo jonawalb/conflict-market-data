@@ -68,6 +68,15 @@ THEATERS["nobel_2025"] = {"include": r"nobel peace", "partner": r"(?!)", "gaza":
 THEATERS["google_yis_2025"] = {"include": r"year in search|most searched|google search|searched", "partner": r"(?!)",
                                "gaza": r"(?!)"}
 
+# Non-security comparison set 2026-10-20 (QP "Who Knew"): economic-policy deadline markets with no
+# adversary to signal to. Disjoint from every conflict theater via 'exclude'.
+THEATERS["econ_policy"] = {
+    "include": r"\b(fed|fomc|federal reserve|interest rates?|rate cuts?|rate hikes?|cpi|inflation|recession|gdp"
+               r"|unemployment|jobs report|government shutdown|shutdown|tariffs?|debt ceiling|powell)",
+    "exclude": _PRIOR + r"|\b(venezuela|maduro|pakistan|kashmir|north korea|taiwan|china|cartel)",
+    "partner": r"(?!)", "gaza": r"(?!)",
+}
+
 # Validation only: the research assistant's 20 Russia-Ukraine terms, to check the sweep's recall
 # against the RA's hand-built frame. Its exclusions are not the RA's, so compare before exclusions.
 THEATERS["russia_ukraine_validation"] = {
