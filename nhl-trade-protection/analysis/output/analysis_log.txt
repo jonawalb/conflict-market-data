@@ -1,0 +1,78 @@
+== Prevalence ==
+2009-10 protected 76 NMC 34 cap$ share 0.229 star share 0.489 per team 2.5
+2013-14 protected 158 NMC 68 cap$ share 0.314 star share 0.617 per team 5.3
+2019-20 protected 182 NMC 68 cap$ share 0.340 star share 0.622 per team 5.9
+2022-23 protected 220 NMC 82 cap$ share 0.390 star share 0.634 per team 6.9
+2025-26 protected 291 NMC 107 cap$ share 0.490 star share 0.774 per team 9.1
+2026-27 protected 306 NMC 119 cap$ share 0.488 star share 0.773 per team 9.6
+
+== Validation: CapWages-derived vs official deadline-day trades ==
+r = 0.96 (p=0.000), N=17, mean abs diff = 1.1
+
+== Season-level correlations (2009-10..2025-26, N=17) ==
+corr(share cap$ protected, trades) = 0.50 (p=0.039)
+corr(share cap$ protected, star_trades) = 0.14 (p=0.582)
+corr(share cap$ protected, deadline_day_trades) = 0.28 (p=0.282)
+corr(share cap$ protected, share_trades_with_protected) = 0.91 (p=0.000)
+season OLS trades: b(protected share)=-40.14 se=173.80 p=0.817
+season OLS star_trades: b(protected share)=42.45 se=34.24 p=0.215
+season OLS deadline_day_trades: b(protected share)=-40.95 se=91.33 p=0.654
+season OLS share_trades_with_protected: b(protected share)=1.34 se=0.45 p=0.003
+
+== Player-season LPM: P(traded) (seasons 2013-14..2025-26, age>=26, cap>=3%) ==
+base rate traded: 0.195 (none) vs 0.107 (any protection); N=3947
+m1 {'Modified NTC': (np.float64(-0.03), np.float64(0.054)), 'Full NTC': (np.float64(-0.071), np.float64(0.0)), 'NMC': (np.float64(-0.081), np.float64(0.0))} N 3947
+m2 {'Modified NTC': (np.float64(-0.026), np.float64(0.097)), 'Full NTC': (np.float64(-0.073), np.float64(0.0)), 'NMC': (np.float64(-0.082), np.float64(0.0))} N 3791
+m3 stars {'Modified NTC': (np.float64(-0.05), np.float64(0.138)), 'Full NTC': (np.float64(-0.025), np.float64(0.558)), 'NMC': (np.float64(-0.082), np.float64(0.004))} N 1049
+m4 logit {'Modified NTC': (np.float64(-0.173), np.float64(0.151)), 'Full NTC': (np.float64(-0.645), np.float64(0.004)), 'NMC': (np.float64(-0.855), np.float64(0.0))} N 3791
+
+== Signing cohorts (age>=25.5 at signing, term>=3, cap>=5%) ==
+sign_year  n  any_protection  full_ntc_or_nmc   nmc  mean_term
+  2009-10 38           0.605            0.447 0.211      5.237
+  2010-11 34           0.588            0.353 0.235      5.000
+  2011-12 28           0.607            0.464 0.321      4.893
+  2012-13 33           0.697            0.455 0.303      5.667
+  2013-14 46           0.848            0.652 0.522      5.196
+  2014-15 42           0.762            0.571 0.357      4.929
+  2015-16 28           0.821            0.679 0.429      5.286
+  2016-17 28           0.929            0.571 0.393      5.643
+  2017-18 29           0.793            0.448 0.310      5.241
+  2018-19 30           0.833            0.467 0.333      5.700
+  2019-20 19           0.895            0.842 0.579      5.789
+  2020-21 18           0.833            0.500 0.389      5.278
+  2021-22 43           0.837            0.628 0.442      5.512
+  2022-23 41           0.951            0.585 0.415      5.707
+  2023-24 23           0.870            0.522 0.391      5.783
+  2024-25 49           0.918            0.735 0.612      6.163
+  2025-26 28           0.857            0.821 0.607      6.107
+  2026-27 12           1.000            0.833 0.500      5.667
+2026-27 signings pre/post new CBA: {False: {'n': 10, 'prot': 1.0, 'full': 0.8, 'nmc': 0.5, 'term': 5.5}, True: {'n': 2, 'prot': 1.0, 'full': 1.0, 'nmc': 0.5, 'term': 6.5}}
+median parsed list size (M-NTC first season) by sign year: {'2011-12': 3.0, '2012-13': 5.0, '2013-14': 7.0, '2014-15': 10.0, '2015-16': 10.0, '2016-17': 10.0, '2017-18': 6.0, '2018-19': 10.0, '2019-20': 16.0, '2020-21': 10.0, '2021-22': 10.0, '2022-23': 10.0, '2023-24': 11.0, '2024-25': 11.0, '2026-27': 15.0}
+
+== Hedonic: log(cap share) on protection, new skater contracts (N=496) ==
+any {'any_prot': (np.float64(0.086), np.float64(0.02), np.float64(0.0))} R2 0.60
+full {'any_full': (np.float64(0.097), np.float64(0.021), np.float64(0.0)), 'any_prot': (np.float64(0.027), np.float64(0.024), np.float64(0.255))} R2 0.62
+2026 interaction {'any_prot': (np.float64(0.086), np.float64(0.02), np.float64(0.0)), 'any_prot:post2026': (np.float64(0.008), np.float64(0.043), np.float64(0.857))} R2 0.60
+
+== Forward commitments (contracts signed as of 2026-10-30) ==
+ season  contracts  protected   nmc  full  committed_musd  protected_musd  protected_share_of_committed
+2026-27     1503.0      306.0 120.0 170.0        3833.687        1871.328                         0.488
+2027-28      853.0      250.0  97.0 124.0        2971.597        1646.328                         0.554
+2028-29      469.0      220.0  73.0  91.0        2242.493        1504.491                         0.671
+2029-30      249.0      182.0  52.0  64.0        1749.524        1319.535                         0.754
+2030-31      175.0      138.0  36.0  38.0        1337.789        1071.646                         0.801
+2031-32      100.0       82.0  23.0  22.0         830.501         706.725                         0.851
+
+== Case dataset ==
+N demand cases: 20 | resolved: 19 | censored: 1
+pick_value: protected mean=0.84 (n=15) | no-clause mean=1.27 (n=4)
+realized_gp_3yr: protected mean=263.20 (n=10) | no-clause mean=354.33 (n=3)
+days_to_trade: protected mean=141.73 (n=15) | no-clause mean=169.50 (n=4)
+n_first_round_picks: protected mean=0.67 (n=15) | no-clause mean=0.75 (n=4)
+Spearman(approved m, pick_value) = 0.07 (p=0.84, n=11)
+Spearman(approved m, realized_gp_3yr) = 0.63 (p=0.10, n=8)
+Spearman(approved m, days_to_trade) = -0.00 (p=0.99, n=11)
+pick_value: public-from-start mean=0.44 (n=10) | private-first mean=1.48 (n=9)
+realized_gp_3yr: public-from-start mean=308.57 (n=7) | private-first mean=255.83 (n=6)
+days_to_trade: public-from-start mean=119.90 (n=10) | private-first mean=178.33 (n=9)
+Spearman(years left, days to trade) = 0.21 (p=0.39, n=19)

@@ -1,0 +1,26 @@
+player,team,season,clause,request_type,public,approved_m,destination,days_to_trade,n_first_round_picks,pick_value,realized_gp_3yr,verification
+Mats Sundin,TOR,2007-08,NMC,none (refused to waive),public,,stayed; signed with VAN as UFA,,0,,,VERIFIED
+Dany Heatley,OTT,2009-10,NTC (full vs partial disputed),formal,public,,SJS,95.0,0,0.463,270.0,VERIFIED
+Rick Nash,CBJ,2011-12,NMC,formal,private then public,4,NYR,185.0,1,1.0,395.0,PARTIAL
+Jarome Iginla,CGY,2012-13,NTC,"none (team-initiated, pending UFA)",,,PIT,,1,0.698,24.0,VERIFIED
+Martin St. Louis,TBL,2013-14,NMC,formal,private then public,1,NYR,49.0,2,2.0,215.0,VERIFIED
+Roberto Luongo,VAN,2013-14,NTC,ambiguous (willing to waive; denied 'demanding'),public,1,FLA,678.0,0,0.0,278.0,PARTIAL
+Ryan Kesler,VAN,2013-14,NTC,formal (private),private (leaked),2,ANA,132.0,1,1.068,362.0,VERIFIED
+Jason Spezza,OTT,2014-15,M-NTC (10-team no-trade list),formal,public,19,DAL,26.0,0,0.463,259.0,VERIFIED
+Matt Duchene,COL,2017-18,none (unverified),formal (private),private (leaked),30,OTT (3-team with NSH),315.0,1,2.597,290.0,VERIFIED
+Phil Kessel,PIT,2018-19,M-NTC (approved-team list),disputed (GM says yes; player says no),public,,ARI,45.0,0,0.0,181.0,PARTIAL
+Pierre-Luc Dubois,CBJ,2020-21,none,formal (reported),public (reported),30,WPG,21.0,0,0.0,363.0,VERIFIED
+Duncan Keith,CHI,2021-22,NMC,formal (private; family reasons),private,,EDM,27.0,0,0.292,149.0,VERIFIED
+Jack Eichel,BUF,2021-22,none in effect (NMC due later),informal (public rift; no formal request reported),public,31,VGK,178.0,1,1.463,410.0,VERIFIED
+Vladimir Tarasenko,STL,2022-23,NTC,"formal (private, via agent)",private then public,,NYR,625.0,1,1.205,124.0,VERIFIED
+Patrick Kane,CHI,2022-23,NMC,"none (team-initiated, pending UFA)",,2,NYR,,0,0.668,0.0,VERIFIED
+Erik Karlsson,SJS,2023-24,NMC,mutual (both sides agreed to pursue trade),public,,PIT (3-team with MTL),52.0,1,1.0,399.0,PARTIAL
+Patrik Laine,CBJ,2024-25,M-NTC (10-team no-trade list),formal,public,21,MTL,65.0,0,0.0,,VERIFIED
+Seth Jones,CHI,2024-25,NTC,formal,public,,FLA,19.0,1,1.0,,VERIFIED
+Mitch Marner,TOR,2024-25,NMC,none (refused to waive at deadline),reported,,VGK (sign-and-trade),,0,0.0,,PARTIAL
+Quinn Hughes,VAN,2025-26,none,anticipated exit (refused to extend; no formal request per agent),private then public,,MIN,164.0,1,1.0,,VERIFIED
+Brady Tkachuk,OTT,2025-26,NMC,formal (disputed timing; earlier reports: refusal to extend),private then public,4,FLA,51.0,3,3.57,,VERIFIED
+Dylan Larkin,DET,2026-27,NTC,formal,public (reported by Friedman),3 -> 10,UNRESOLVED (suspended without pay 2026-10-29),148.0,0,,,VERIFIED
+Darnell Nurse,EDM,2026-27,NMC,formal,public (reported),3 -> 4,SJS,20.0,0,0.0,,VERIFIED
+Zach Werenski,CBJ,2026-27,NMC,none (signalled reluctance to extend; team-initiated),reported,,stayed,,0,,,PARTIAL
+Connor Hellebuyck,WPG,2026-27,NMC,formal,private then public,,NJD,57.0,0,0.547,,VERIFIED

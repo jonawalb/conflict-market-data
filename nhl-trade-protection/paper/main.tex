@@ -1,0 +1,40 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx,booktabs,enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[authoryear,round]{natbib}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage{setspace}
+\setstretch{1.15}
+\newtheorem{proposition}{Proposition}
+\bibliographystyle{plainnat}
+
+\title{Tied Hands, Turned Around:\\[2pt] \large Trade Protection, Trade Demands, and Credible Commitment in NHL Contracts}
+\author{Dubya\thanks{Data, code and replication files: \texttt{nhl-trade-protection/} in the accompanying repository. All data were collected from public sources on 30 October 2026. Comments welcome.}}
+\date{30 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}\noindent
+No-trade and no-movement clauses are meant to protect NHL players from their teams. This paper shows how, once a protected player asks to leave, the clause is turned against the team that granted it. Drawing on international-relations bargaining theory (commitment problems, tying hands, veto players and audience costs), I model the exit of a protected player as a sale in which the player chooses the set of eligible buyers. The incumbent's return rises with the number of approved destinations but with sharply diminishing returns: in a calibrated example, a ten-team no-trade list costs the seller about 3 per cent of the competitive price, and a three-team approved list nearly half. Publicity and narrow lists are complements. Going public destroys the seller's outside option only when few buyers are approved. Using a new dataset of every NHL contract-season and trade from 2005--06 to 2026--27, assembled from the records of 7,965 players, I document that protected contracts in force nearly doubled after 2013--14, to 306, and now account for 49 per cent of cap dollars and 77 per cent of star contracts. On deals already signed, 45 per cent of the projected 2027--28 league-wide cap is committed to players holding a veto. Protection roughly halves a player's annual probability of being traded, but carries no detectable wage discount. A coded set of 25 star exits from 2008 to 2026, including the 2026 wave of Tkachuk, Larkin, Hellebuyck and Nurse, is consistent with the model: public-from-the-start demands returned about a third of the draft capital of those that began privately. I conclude with contract-design implications, chief among them minimum approved-list sizes and clauses that decay over time.
+
+\medskip\noindent\textbf{Keywords:} no-trade clause; credible commitment; audience costs; veto players; bargaining; NHL; contract design
+\end{abstract}
+
+\input{sections/01_intro}
+\input{sections/02_background}
+\input{sections/03_theory}
+\input{sections/04_model}
+\input{sections/05_empirics}
+\input{sections/06_cases}
+\input{sections/07_implications}
+\input{sections/08_conclusion}
+
+\bibliography{references}
+\input{sections/appendix}
+\end{document}

@@ -1,0 +1,524 @@
+\begin{thebibliography}{69}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Arkes and Blumer(1985)]{arkesblumer1985}
+Hal~R. Arkes and Catherine Blumer.
+\newblock The psychology of sunk cost.
+\newblock \emph{Organizational Behavior and Human Decision Processes},
+  35\penalty0 (1):\penalty0 124--140, 1985.
+\newblock \doi{10.1016/0749-5978(85)90049-4}.
+
+\bibitem[{Associated Press}(2021)]{eichel_ap}
+{Associated Press}.
+\newblock Sabres end 8-month stalemate by trading jack eichel to vegas.
+\newblock
+  \url{https://www.news4jax.com/sports/2021/11/04/sabres-end-8-month-stalemate-by-trading-jack-eichel-to-vegas/},
+  2021.
+
+\bibitem[Binmore et~al.(1989)Binmore, Shaked, and Sutton]{bss1989}
+Ken Binmore, Avner Shaked, and John Sutton.
+\newblock An outside option experiment.
+\newblock \emph{Quarterly Journal of Economics}, 104\penalty0 (4):\penalty0
+  753--770, 1989.
+\newblock \doi{10.2307/2937866}.
+
+\bibitem[{Bleacher Report}(2026)]{br_hellebuyck}
+{Bleacher Report}.
+\newblock Connor hellebuyck addresses nhl trade rumors amid sabres buzz ahead
+  of 2026-27 season.
+\newblock
+  \url{https://bleacherreport.com/articles/25493449-connor-hellebuyck-addresses-nhl-trade-rumors-amid-sabres-buzz-ahead-2026-27-season},
+  2026.
+
+\bibitem[Bulow and Klemperer(1996)]{bulowklemperer1996}
+Jeremy Bulow and Paul Klemperer.
+\newblock Auctions versus negotiations.
+\newblock \emph{American Economic Review}, 86\penalty0 (1):\penalty0 180--194,
+  1996.
+
+\bibitem[Camerer and Weber(1999)]{camererweber1999}
+Colin~F. Camerer and Roberto~A. Weber.
+\newblock The econometrics and behavioral economics of escalation of
+  commitment: A re-examination of staw and hoang's nba data.
+\newblock \emph{Journal of Economic Behavior \& Organization}, 39\penalty0
+  (1):\penalty0 59--82, 1999.
+\newblock \doi{10.1016/S0167-2681(99)00026-8}.
+
+\bibitem[{CapWages}(2026)]{capwages}
+{CapWages}.
+\newblock Nhl player contract and transaction pages.
+\newblock \url{https://capwages.com}, 2026.
+\newblock Accessed 30 October 2026.
+
+\bibitem[{CBS News Minnesota}(2025)]{cbs_hughes}
+{CBS News Minnesota}.
+\newblock Minnesota wild acquire quinn hughes from vancouver.
+\newblock
+  \url{https://www.cbsnews.com/amp/minnesota/news/minnesota-wild-quinn-hughes-vancouver-canucks-nhl},
+  2025.
+\newblock 12 December 2025.
+
+\bibitem[{CBS Sports}(2014)]{stlouis_cbs}
+{CBS Sports}.
+\newblock Martin st. louis asked for trade from lightning last month.
+\newblock
+  \url{https://www.cbssports.com/nhl/news/nhl-rumors-martin-st-louis-asked-for-trade-from-lightning-last-month/},
+  2014.
+
+\bibitem[{ClickOnDetroit (WDIV)}(2026)]{cod_larkin_suspended}
+{ClickOnDetroit (WDIV)}.
+\newblock Dylan larkin suspended without pay as detroit red wings trade dispute
+  takes ugly turn.
+\newblock
+  \url{https://www.clickondetroit.com/sports/2026/10/29/dylan-larkin-suspended-without-pay-as-detroit-red-wings-trade-dispute-takes-ugly-turn/},
+  2026.
+\newblock 29 October 2026.
+
+\bibitem[{CP24 / The Canadian Press}(2026{\natexlab{a}})]{cp24_nurse}
+{CP24 / The Canadian Press}.
+\newblock Nurse asks oilers to trade him: reports.
+\newblock
+  \url{https://www.cp24.com/news/sports/2026/06/11/nurse-asks-oilers-to-trade-him-reports},
+  2026{\natexlab{a}}.
+\newblock 11 June 2026.
+
+\bibitem[{CP24 / The Canadian Press}(2026{\natexlab{b}})]{cp24_tkachuk}
+{CP24 / The Canadian Press}.
+\newblock Brady tkachuk requested trade from ottawa senators, gm says.
+\newblock
+  \url{https://www.cp24.com/news/sports/2026/06/22/brady-tkachuk-requested-trade-from-ottawa-senators-gm-says/},
+  June 2026{\natexlab{b}}.
+\newblock 22 June 2026.
+
+\bibitem[Cyrenne(2013)]{cyrenne2013}
+Philippe Cyrenne.
+\newblock Player salaries, player mobility and the invariance principle:
+  Evidence from the national hockey league.
+\newblock Working Paper 2013-04, University of Winnipeg, Department of
+  Economics, 2013.
+
+\bibitem[{Daily Faceoff}(2026{\natexlab{a}})]{dfo_larkin_list}
+{Daily Faceoff}.
+\newblock Dylan larkin expands trade list to 10 nhl teams.
+\newblock
+  \url{https://www.dailyfaceoff.com/news/detroit-red-wings-dylan-larkin-expands-trade-list-10-nhl-teams-vegas-florida-utah-minnesota-dallas-washington-carolina-utah-tampa-bay-new-jersey-colorado},
+  2026{\natexlab{a}}.
+\newblock 20 October 2026.
+
+\bibitem[{Daily Faceoff}(2026{\natexlab{b}})]{dfo_trend}
+{Daily Faceoff}.
+\newblock Will zach werenski join the trend of usa nhl trade requests?
+\newblock
+  \url{https://www.dailyfaceoff.com/news/will-columbus-blue-jackets-zach-werenski-join-the-trend-usa-nhl-trade-requests-larkin-tkachuk},
+  2026{\natexlab{b}}.
+\newblock 23 June 2026.
+
+\bibitem[{Daily Hive}(2025)]{dailyhive_hughes}
+{Daily Hive}.
+\newblock Hughes' agent says canucks treated captain as if he had a no-trade
+  clause.
+\newblock
+  \url{https://dailyhive.com/vancouver/hughes-agent-canucks-treated-captain-no-trade-clause},
+  2025.
+\newblock December 2025.
+
+\bibitem[{Deseret News}(2026)]{deseret_ntc}
+{Deseret News}.
+\newblock Nhl no-trade clauses.
+\newblock
+  \url{https://www.deseret.com/sports/2026/08/16/nhl-no-trade-clauses/}, 2026.
+\newblock 16 August 2026.
+
+\bibitem[{ESPN}(2025)]{espn_hughes}
+{ESPN}.
+\newblock Quinn hughes trade: Wild, canucks, devils details and next moves.
+\newblock
+  \url{https://www.espn.com/nhl/story/_/id/47315397/nhl-2025-26-quinn-hughes-trade-wild-canucks-devils-details-next-moves},
+  2025.
+\newblock December 2025.
+
+\bibitem[{ESPN}(2026)]{espn_larkin_ir}
+{ESPN}.
+\newblock Amid trade request, red wings move larkin to injured reserve.
+\newblock
+  \url{https://www.espn.com/nhl/story/_/id/50087005/amid-trade-request-red-wings-move-larkin-injured-reserve},
+  2026.
+\newblock October 2026.
+
+\bibitem[Fearon(1994)]{fearon1994}
+James~D. Fearon.
+\newblock Domestic political audiences and the escalation of international
+  disputes.
+\newblock \emph{American Political Science Review}, 88\penalty0 (3):\penalty0
+  577--592, 1994.
+\newblock \doi{10.2307/2944796}.
+
+\bibitem[Fearon(1995)]{fearon1995}
+James~D. Fearon.
+\newblock Rationalist explanations for war.
+\newblock \emph{International Organization}, 49\penalty0 (3):\penalty0
+  379--414, 1995.
+\newblock \doi{10.1017/S0020818300033324}.
+
+\bibitem[Fearon(1997)]{fearon1997}
+James~D. Fearon.
+\newblock Signaling foreign policy interests: Tying hands versus sinking costs.
+\newblock \emph{Journal of Conflict Resolution}, 41\penalty0 (1):\penalty0
+  68--90, 1997.
+\newblock \doi{10.1177/0022002797041001004}.
+
+\bibitem[Fort and Quirk(1995)]{fortquirk1995}
+Rodney Fort and James Quirk.
+\newblock Cross-subsidization, incentives, and outcomes in professional team
+  sports leagues.
+\newblock \emph{Journal of Economic Literature}, 33\penalty0 (3):\penalty0
+  1265--1299, 1995.
+
+\bibitem[Fumarco et~al.(2024)Fumarco, Longley, Palermo, and Rossi]{fumarco2024}
+Luca Fumarco, Neil Longley, Alberto Palermo, and Giambattista Rossi.
+\newblock Strategic behaviours in a labour market with mobility-restricting
+  contractual provisions: Evidence from the national hockey league.
+\newblock \emph{Oxford Economic Papers}, 76\penalty0 (4):\penalty0 1189--1203,
+  2024.
+\newblock \doi{10.1093/oep/gpae010}.
+
+\bibitem[Gerstle(2025)]{gerstle2025}
+Paul Gerstle.
+\newblock A unicorn no more? the no-trade clause and its potential to reshape
+  nba contractual negotiations.
+\newblock \emph{Vanderbilt Journal of Entertainment \& Technology Law},
+  27\penalty0 (3):\penalty0 523, 2025.
+\newblock Student note.
+
+\bibitem[Hart and Moore(1988)]{hartmoore1988}
+Oliver Hart and John Moore.
+\newblock Incomplete contracts and renegotiation.
+\newblock \emph{Econometrica}, 56\penalty0 (4):\penalty0 755--785, 1988.
+\newblock \doi{10.2307/1912698}.
+
+\bibitem[Hart and Moore(1990)]{hartmoore1990}
+Oliver Hart and John Moore.
+\newblock Property rights and the nature of the firm.
+\newblock \emph{Journal of Political Economy}, 98\penalty0 (6):\penalty0
+  1119--1158, 1990.
+\newblock \doi{10.1086/261729}.
+
+\bibitem[{Hockey-Graphs}(2021)]{hockeygraphs2021}
+{Hockey-Graphs}.
+\newblock Quantifying the influence of no-trade clauses, signing bonuses and
+  ltir on nhl cap tables.
+\newblock
+  \url{https://hockey-graphs.com/2021/01/14/quantifying-the-influence-of-no-trade-clauses-signing-bonuses-and-ltir-on-nhl-cap-tables/},
+  2021.
+
+\bibitem[Idson and Kahane(2000)]{idsonkahane2000}
+Todd~L. Idson and Leo~H. Kahane.
+\newblock Team effects on compensation: An application to salary determination
+  in the national hockey league.
+\newblock \emph{Economic Inquiry}, 38\penalty0 (2):\penalty0 345--357, 2000.
+\newblock \doi{10.1111/j.1465-7295.2000.tb00022.x}.
+
+\bibitem[Kahane(2024)]{kahane2024}
+Leo~H. Kahane.
+\newblock Compensating wage differentials: Evidence from the national hockey
+  league.
+\newblock \emph{Economics Letters}, 241:\penalty0 111831, 2024.
+\newblock \doi{10.1016/j.econlet.2024.111831}.
+
+\bibitem[Kahn(2000)]{kahn2000}
+Lawrence~M. Kahn.
+\newblock The sports business as a labor market laboratory.
+\newblock \emph{Journal of Economic Perspectives}, 14\penalty0 (3):\penalty0
+  75--94, 2000.
+\newblock \doi{10.1257/jep.14.3.75}.
+
+\bibitem[Klein et~al.(1978)Klein, Crawford, and Alchian]{kca1978}
+Benjamin Klein, Robert~G. Crawford, and Armen~A. Alchian.
+\newblock Vertical integration, appropriable rents, and the competitive
+  contracting process.
+\newblock \emph{Journal of Law and Economics}, 21\penalty0 (2):\penalty0
+  297--326, 1978.
+\newblock \doi{10.1086/466922}.
+
+\bibitem[Larkin(2026)]{dfo_dfo_cba}
+Matt Larkin.
+\newblock New nhl/nhlpa cba: rule changes take effect.
+\newblock
+  \url{https://www.dailyfaceoff.com/news/new-nhl-nhlpa-cba-collective-bargaining-agreement-rule-changes-ebug-dress-code-contract-term-neck-protection},
+  2026.
+\newblock Daily Faceoff, 16 September 2026.
+
+\bibitem[Marburger(2009)]{marburger2009}
+Daniel~R. Marburger.
+\newblock Why do player trades dominate sales?
+\newblock \emph{Journal of Sports Economics}, 10\penalty0 (4):\penalty0
+  335--350, 2009.
+\newblock \doi{10.1177/1527002508329865}.
+
+\bibitem[Maxwell(2026)]{dfo_bettman}
+Scott Maxwell.
+\newblock Gary bettman: no-trade clauses have `gotten past' original intent.
+\newblock
+  \url{https://www.dailyfaceoff.com/news/gary-bettman-no-trade-clauses-request-gotten-past-intended-tkachuk-larkin-hellebuyck},
+  2026.
+\newblock Daily Faceoff, 1 October 2026.
+
+\bibitem[{National Hockey League}(2026)]{nhl_statspack}
+{National Hockey League}.
+\newblock \#nhlstatspack: 2026 nhl trade deadline.
+\newblock
+  \url{https://media.nhl.com/site/vasset/public/attachments/2026/02/19549/NHLStatsPack-2026NHLTradeDeadline.pdf},
+  2026.
+
+\bibitem[{National Hockey League and National Hockey League Players'
+  Association}(2013)]{cba2013}
+{National Hockey League and National Hockey League Players' Association}.
+\newblock Collective bargaining agreement between national hockey league and
+  national hockey league players' association, september 16, 2012 -- september
+  15, 2022.
+\newblock \url{https://media.nhl.com/site/asset/public/ext/CBA.pdf}, 2013.
+
+\bibitem[{NESN}(2012)]{luongo_nesn}
+{NESN}.
+\newblock Roberto luongo confirms it's time to move on from canucks.
+\newblock
+  \url{https://nesn.com/2012/07/roberto-luongo-confirms-its-time-to-move-on-from-canucks-potential-trade-to-florida-makes-sense},
+  2012.
+
+\bibitem[{NHL.com}(2017)]{nhl_expansion_rules}
+{NHL.com}.
+\newblock Nhl expansion draft rules.
+\newblock \url{https://www.nhl.com/news/nhl-expansion-draft-rules-281010592},
+  2017.
+\newblock 16 June 2017.
+
+\bibitem[{NHL.com}(2026{\natexlab{a}})]{nhl_hellebuyck_suspended}
+{NHL.com}.
+\newblock Connor hellebuyck does not report to camp, suspended by winnipeg
+  jets.
+\newblock
+  \url{https://www.nhl.com/news/connor-hellebuyck-does-not-report-to-camp-suspended-by-winnipeg-jets},
+  2026{\natexlab{a}}.
+\newblock 16 September 2026.
+
+\bibitem[{NHL.com}(2026{\natexlab{b}})]{nhl_hellebuyck_trade}
+{NHL.com}.
+\newblock Connor hellebuyck traded to new jersey devils from winnipeg jets.
+\newblock
+  \url{https://www.nhl.com/news/connor-hellebuyck-traded-to-new-jersey-devils-from-winnipeg-jets},
+  2026{\natexlab{b}}.
+\newblock 23 October 2026.
+
+\bibitem[{NHL.com}(2026{\natexlab{c}})]{nhl_horcoff}
+{NHL.com}.
+\newblock Detroit red wings name shawn horcoff interim general manager.
+\newblock
+  \url{https://www.nhl.com/news/detroit-red-wings-name-shawn-horcoff-interim-general-manager},
+  2026{\natexlab{c}}.
+\newblock 15 September 2026.
+
+\bibitem[{NHL.com}(2026{\natexlab{d}})]{nhl_larkin}
+{NHL.com}.
+\newblock Dylan larkin talks trade request and future with detroit red wings.
+\newblock
+  \url{https://www.nhl.com/news/dylan-larkin-talks-trade-request-and-future-with-detroit-red-wings},
+  2026{\natexlab{d}}.
+\newblock September 2026.
+
+\bibitem[{NHL.com}(2026{\natexlab{e}})]{nhl_olympics}
+{NHL.com}.
+\newblock United states defeats canada in overtime for olympic gold.
+\newblock
+  \url{https://www.nhl.com/news/united-states-canada-2026-olympics-gold-medal-game-recap-february-22-2026},
+  2026{\natexlab{e}}.
+\newblock 22 February 2026.
+
+\bibitem[Pedace and Hall(2012)]{pedacehall2012}
+Roberto Pedace and Curtis~M. Hall.
+\newblock Home safe: No-trade clauses and player salaries in major league
+  baseball.
+\newblock \emph{Industrial Relations: A Journal of Economy and Society},
+  51\penalty0 (3):\penalty0 627--644, 2012.
+\newblock \doi{10.1111/j.1468-232X.2012.00693.x}.
+
+\bibitem[Powell(2006)]{powell2006}
+Robert Powell.
+\newblock War as a commitment problem.
+\newblock \emph{International Organization}, 60\penalty0 (1):\penalty0
+  169--203, 2006.
+\newblock \doi{10.1017/S0020818306060061}.
+
+\bibitem[Rottenberg(1956)]{rottenberg1956}
+Simon Rottenberg.
+\newblock The baseball players' labor market.
+\newblock \emph{Journal of Political Economy}, 64\penalty0 (3):\penalty0
+  242--258, 1956.
+\newblock \doi{10.1086/257790}.
+
+\bibitem[Rubinstein(1982)]{rubinstein1982}
+Ariel Rubinstein.
+\newblock Perfect equilibrium in a bargaining model.
+\newblock \emph{Econometrica}, 50\penalty0 (1):\penalty0 97--109, 1982.
+\newblock \doi{10.2307/1912531}.
+
+\bibitem[{Russian Machine Never Breaks}(2026)]{rmnb_hughes}
+{Russian Machine Never Breaks}.
+\newblock Quinn hughes: nearby options in nhl free agency.
+\newblock
+  \url{https://russianmachineneverbreaks.com/2026/10/26/quinn-hughes-nearby-options-nhl-free-agency-devils-wild-rumor/},
+  2026.
+\newblock 26 October 2026.
+
+\bibitem[Schelling(1960)]{schelling1960}
+Thomas~C. Schelling.
+\newblock \emph{The Strategy of Conflict}.
+\newblock Harvard University Press, Cambridge, MA, 1960.
+
+\bibitem[Snyder and Borghard(2011)]{snyderborghard2011}
+Jack Snyder and Erica~D. Borghard.
+\newblock The cost of empty threats: A penny, not a pound.
+\newblock \emph{American Political Science Review}, 105\penalty0 (3):\penalty0
+  437--456, 2011.
+\newblock \doi{10.1017/S000305541100027X}.
+
+\bibitem[Staw(1976)]{staw1976}
+Barry~M. Staw.
+\newblock Knee-deep in the big muddy: A study of escalating commitment to a
+  chosen course of action.
+\newblock \emph{Organizational Behavior and Human Performance}, 16\penalty0
+  (1):\penalty0 27--44, 1976.
+\newblock \doi{10.1016/0030-5073(76)90005-2}.
+
+\bibitem[Staw and Hoang(1995)]{stawhoang1995}
+Barry~M. Staw and Ha~Hoang.
+\newblock Sunk costs in the nba: Why draft order affects playing time and
+  survival in professional basketball.
+\newblock \emph{Administrative Science Quarterly}, 40\penalty0 (3):\penalty0
+  474--494, 1995.
+\newblock \doi{10.2307/2393794}.
+
+\bibitem[{The Fourth Period}(2026)]{fourthperiod_tkachuk}
+{The Fourth Period}.
+\newblock Panthers acquire brady tkachuk from senators.
+\newblock
+  \url{https://www.thefourthperiod.com/jun-2026/panthers-acquire-brady-tkachuk-from-senators},
+  2026.
+\newblock 21 June 2026.
+
+\bibitem[{The Hockey News}(2009)]{heatley_thn}
+{The Hockey News}.
+\newblock Senators ship unhappy winger dany heatley to the sharks for jonathan
+  cheechoo and milan michalek.
+\newblock
+  \url{https://thehockeynews.com/news/senators-ship-unhappy-winger-dany-heatley-to-the-sharks-for-jonathan-cheechoo-and-milan-michalek},
+  2009.
+
+\bibitem[{The Hockey Writers}(2026)]{thw_larkin_hellebuyck}
+{The Hockey Writers}.
+\newblock 5 key differences between the dylan larkin and connor hellebuyck
+  trade requests.
+\newblock
+  \url{https://thehockeywriters.com/5-key-differences-between-the-dylan-larkin-and-connor-hellebuyck-trade-requests/},
+  2026.
+
+\bibitem[{theScore}(2026{\natexlab{a}})]{score_nurse}
+{theScore}.
+\newblock Oilers trade nurse to sharks, won't retain any salary.
+\newblock \url{https://thescore.com/nhl/news/3555691}, 2026{\natexlab{a}}.
+\newblock 1 July 2026.
+
+\bibitem[{theScore}(2026{\natexlab{b}})]{thescore_tkachuk}
+{theScore}.
+\newblock Tkachuk: Requesting trade from senators `wasn't an easy decision'.
+\newblock \url{https://www.thescore.com/nhl/news/3557252}, 2026{\natexlab{b}}.
+\newblock 23 June 2026.
+
+\bibitem[Tomz(2007)]{tomz2007}
+Michael Tomz.
+\newblock Domestic audience costs in international relations: An experimental
+  approach.
+\newblock \emph{International Organization}, 61\penalty0 (4):\penalty0
+  821--840, 2007.
+\newblock \doi{10.1017/S0020818307070282}.
+
+\bibitem[Tsebelis(2002)]{tsebelis2002}
+George Tsebelis.
+\newblock \emph{Veto Players: How Political Institutions Work}.
+\newblock Princeton University Press, Princeton, NJ, 2002.
+
+\bibitem[{TSN}(2026{\natexlab{a}})]{tsn_deadline2026}
+{TSN}.
+\newblock New cba rules, nhl parity contributed to fewer big trades at the
+  deadline.
+\newblock
+  \url{https://www.tsn.ca/nhl/article/new-cba-rules-nhl-parity-contributed-to-fewer-big-trades-at-the-deadline/},
+  2026{\natexlab{a}}.
+\newblock March 2026.
+
+\bibitem[{TSN}(2026{\natexlab{b}})]{tsn_hainsey}
+{TSN}.
+\newblock Nhlpa's hainsey blasts bettman's ntc comments: `an attack on players'
+  cba-negotiated rights'.
+\newblock
+  \url{https://www.tsn.ca/nhl/article/nhlpas-hainsey-blasts-bettmans-ntc-comments-an-attack-on-players-cba-negotiated-rights/},
+  2026{\natexlab{b}}.
+
+\bibitem[{TSN}(2026{\natexlab{c}})]{tsn_hellebuyck_open}
+{TSN}.
+\newblock Hellebuyck open to a variety of teams as he becomes the latest team
+  usa gold medallist to request trade.
+\newblock
+  \url{https://www.tsn.ca/nhl/article/hellebuyck-open-to-a-variety-of-teams-as-he-becomes-the-latest-team-usa-gold-medallist-to-request-trade/},
+  2026{\natexlab{c}}.
+
+\bibitem[{TSN}(2026{\natexlab{d}})]{tsn_hellebuyck_trade}
+{TSN}.
+\newblock Jets trading hellebuyck to devils as saga comes to an end at last.
+\newblock
+  \url{https://www.tsn.ca/nhl/article/jets-trading-hellebuyck-to-devils-as-saga-comes-to-an-end-at-last/},
+  2026{\natexlab{d}}.
+\newblock 23 October 2026.
+
+\bibitem[{TSN}(2026{\natexlab{e}})]{tsn_staios}
+{TSN}.
+\newblock Staios says tkachuk asked for trade, sens not planning on taking a
+  step back.
+\newblock
+  \url{https://www.tsn.ca/nhl/article/staios-says-tkachuk-asked-for-trade-sens-not-planning-on-taking-a-step-back/},
+  2026{\natexlab{e}}.
+\newblock June 2026.
+
+\bibitem[Williamson(1979)]{williamson1979}
+Oliver~E. Williamson.
+\newblock Transaction-cost economics: The governance of contractual relations.
+\newblock \emph{Journal of Law and Economics}, 22\penalty0 (2):\penalty0
+  233--261, 1979.
+\newblock \doi{10.1086/466942}.
+
+\bibitem[Williamson(1985)]{williamson1985}
+Oliver~E. Williamson.
+\newblock \emph{The Economic Institutions of Capitalism: Firms, Markets,
+  Relational Contracting}.
+\newblock Free Press, New York, 1985.
+
+\bibitem[{WILX}(2026)]{wilx_larkin}
+{WILX}.
+\newblock Red wings star dylan larkin requests trade: reports.
+\newblock
+  \url{https://www.wilx.com/2026/06/04/red-wings-star-dylan-larkin-requests-trade-reports/},
+  2026.
+\newblock 4 June 2026.
+
+\bibitem[{Yahoo Sports / The Hockey News}(2026)]{yahoo_staios}
+{Yahoo Sports / The Hockey News}.
+\newblock Steve staios confirms brady tkachuk requested trade.
+\newblock
+  \url{https://sports.yahoo.com/articles/steve-staios-confirms-brady-tkachuk-194755941.html},
+  2026.
+\newblock 22 June 2026.
+
+\end{thebibliography}

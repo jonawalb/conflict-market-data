@@ -1,0 +1,95 @@
+\section{A Model of Protected Exit}\label{sec:model}
+
+The model is deliberately simple. Its job is to make the four mechanisms precise, show how they interact, and generate propositions that can be compared with the cases and the data. Intuition comes first in each step; proofs are in Appendix~\ref{app:proofs}.
+
+\subsection{Setup}
+
+\paragraph{Players.} An incumbent team $T$ holds the contract of a protected player $P$. There are $N$ other teams, the potential acquirers $A_1,\dots,A_N$ ($N=31$ in today's league). Acquirer $i$ values $P$ at $v_i$, drawn independently from a distribution $F$ on $[0,\bar v]$ with positive density. $T$ does not observe the $v_i$.
+
+\paragraph{Stage 1: contract.} $T$ and $P$ agree on a wage $w$ and a protection scope $k\in\{0,1,\dots,N\}$, the number of teams $P$ may block. A full NTC or NMC is $k=N$, a modified clause with a ten-team no-trade list is $k=10$, and no clause is $k=0$.
+
+\paragraph{Stage 2: shock.} $P$'s value of staying, $u_{\text{stay}}$, is hit by a shock: the team enters a rebuild, the coach changes, family circumstances change. If $u_{\text{stay}}$ falls below the value of leaving, $u_{\text{out}}$, $P$ demands a trade. This happens with probability $q$, which is common knowledge at Stage 1.
+
+\paragraph{Stage 3: signal.} $P$ chooses whether to make the demand privately or publicly, $s\in\{\text{priv},\text{pub}\}$. Going public costs $P$ an audience cost $c_P$ if he later reconciles with $T$, and it makes the demand common knowledge among acquirers.
+
+\paragraph{Stage 4: sale.} $P$ approves a set of destinations of size $m$. Under a clause of scope $k$, $m\ge N-k$; with a full clause, $P$ chooses $m\ge 1$ freely. $T$ either sells $P$ to an approved acquirer or keeps him. If $T$ keeps $P$, it receives the \emph{retention value}
+\begin{equation}\label{eq:R}
+R_s \;=\; \lambda_s V + (1-\lambda_s)\,V_d,
+\end{equation}
+where $V$ is the value of a recommitted player, $V_d<V$ is the value of a disgruntled one (lower effort, locker-room friction, the certainty of losing him at the next opportunity), and $\lambda_s$ is the probability that the relationship is repaired. Because a public demand raises $P$'s own cost of backing down, $\lambda_{\text{pub}}<\lambda_{\text{priv}}$, and therefore $R_{\text{pub}}<R_{\text{priv}}$. The audience cost works by tying the \emph{player's} hands, which in turn lowers the \emph{team's} outside option.
+
+\paragraph{The sale mechanism.} If $m\ge2$, $T$ runs a competitive process among approved acquirers with reserve $R_s$. This is equivalent to an English auction in which $T$ keeps $P$ if no bid exceeds $R_s$. If $m=1$, competition is impossible, and $T$ and the single acquirer split the gains from trade by Nash bargaining, with $T$'s bargaining weight $\beta\in[0,1]$ and disagreement point $R_s$. Writing $v_{(j:m)}$ for the $j$-th highest of $m$ valuations, $T$'s expected return is
+\begin{equation}\label{eq:Pi}
+\Pi(m,R) \;=\;
+\begin{cases}
+R + \beta\,\mathbb{E}\big[(v-R)^+\big] & m=1,\\[3pt]
+\mathbb{E}\big[\max\{v_{(2:m)},\,R\}\big] & m\ge2.
+\end{cases}
+\end{equation}
+For $m\ge2$, the second-highest approved valuation sets the price unless the reserve binds. If the highest valuation falls below $R$, $T$ keeps $P$ and receives $R$. These cases combine into the single expression $\mathbb{E}[\max\{v_{(2:m)},R\}]$.
+
+\subsection{How the veto transfers surplus}
+
+\begin{proposition}[Veto scope]\label{prop:veto}
+(i) For $m\ge 2$, $\Pi(m,R)$ is strictly increasing in $m$, and therefore strictly decreasing in clause scope $k$ whenever the clause binds ($m=N-k$). (ii) The marginal value of an additional approved destination vanishes as $m$ grows and, for uniform $F$, is strictly decreasing in $m$: the first few names on a list are worth far more than the last. (iii) Moving from a competitive sale to bilateral bargaining ($m=2\to1$) lowers $T$'s return unless $T$ is an unusually strong bargainer. Under $F=U[0,1]$ and $R=0$, $\Pi(2)>\Pi(1)$ if and only if $\beta<2/3$.
+\end{proposition}
+
+\noindent\emph{Intuition.} With more approved bidders, the second-highest valuation is stochastically larger, so the price rises. Order statistics flatten out quickly, so most of this effect comes from the first handful of buyers. Table~\ref{tab:model} gives the numbers for the uniform case with $N=31$. A ten-team no-trade list ($m=21$) costs the incumbent about three per cent of the competitive price ($0.909$ against $0.937$). A three-team list of the kind Larkin reportedly submitted ($m=3$) costs nearly half ($0.507$). A single-destination veto leaves $T$ with roughly what it can extract in a bilateral negotiation in which its threat to walk away is weak. The surplus $T$ loses is not captured by $P$, who gets only his choice of destination. It goes to the acquirer. This is the formal content of the intuition that ``the other team knows the player wants out so they can rip them off.''
+
+\subsection{Why going public hurts the incumbent}
+
+\begin{proposition}[Audience costs]\label{prop:audience}
+(i) $\Pi(m,R)$ is strictly increasing in $R$, with $\partial\Pi/\partial R = G_{(2:m)}(R)$ for $m\ge2$, where $G_{(2:m)}$ is the CDF of $v_{(2:m)}$, and $\partial\Pi/\partial R=1-\beta(1-F(R))$ for $m=1$. Hence a public demand, which lowers $R$ from $R_{\text{priv}}$ to $R_{\text{pub}}$, lowers $T$'s return. (ii) For $m\ge2$, the loss from going public is strictly decreasing in $m$, so veto scope and audience costs are complements. The loss is larger still at $m=1$ whenever $\beta\le 1-F(R_{\text{priv}})$.
+\end{proposition}
+
+\noindent\emph{Intuition.} The retention value matters only when it is the binding alternative to a sale, that is, when competition among buyers is weak. With many approved bidders, the second-highest bid almost always exceeds any plausible retention value, and the team's ability to bluff is irrelevant. With one or two approved bidders, the retention value is the team's main source of leverage, and a public demand destroys it. In the uniform example, a fall in $R$ from $0.20$ to $0.05$ costs $T$ $0.084$ when $m=1$, $0.035$ when $m=2$, $0.007$ when $m=3$, and nothing at all once $m\ge5$ (Table~\ref{tab:model}).
+
+A refinement sharpens this. If bilateral bargaining is modelled as Rubinstein alternating offers with an outside option, the \emph{outside-option principle} \citep{rubinstein1982,bss1989} implies that $T$'s payoff is $\max\{\beta^\ast v, R\}$, where $\beta^\ast$ is its Rubinstein share. A public demand then hurts only those teams whose threat to keep the player was binding, that is, contenders and teams whose identity is built around the player. Teams that would have sold anyway lose nothing from publicity.
+
+\paragraph{Why players go public.} Going public is costly for the player too, so why do it? Let $\tau_s$ be the probability that $T$ sells, which falls with $R_s$ because $T$ keeps $P$ when no approved bid exceeds the reserve. $P$ goes public if and only if
+\begin{equation}\label{eq:public}
+(\tau_{\text{pub}}-\tau_{\text{priv}})\,(u_{\text{out}}-u_{\text{stay}}) \;\ge\; c_P\,\lambda_{\text{pub}}.
+\end{equation}
+Publicity is a commitment device. It ties the player's hands so that the team's do not have to be tied for it. The condition is most likely to hold after a private request has stalled, when $\tau_{\text{priv}}$ is low because $T$ believes it can wait. This is the sequence observed in Winnipeg in 2026: a private request early in the offseason, then public confirmation in late August.
+
+\subsection{Delay and the sunk-cost temptation}
+
+Suppose $T$ can wait one period. With probability $\rho$ the shock reverses and $P$ recommits, worth $V$ (normalised to 1). Otherwise $T$ sells next period. At that point the clause may have loosened ($m'\ge m$; many contracts convert an NMC into a modified NTC on a fixed date), the player's value has decayed, and payoffs are discounted by $\delta$.
+
+\begin{proposition}[Delay]\label{prop:delay}
+$T$ prefers to wait if and only if $\rho + (1-\rho)\,\delta\,\Pi(m',R') > \Pi(m,R)$. Waiting is therefore more attractive (a) when the current approved set is small, because $\Pi(m,R)$ is low, (b) when the clause is scheduled to loosen, because $m'>m$, and (c) when the team believes reconciliation is likely (high $\rho$).
+\end{proposition}
+
+\noindent\emph{Intuition.} A narrow list does not just lower the price. It also lowers the opportunity cost of waiting, so the model predicts stalemates exactly where clauses are tightest. Part (c) is where behaviour enters. A team that has just signed the player to an eight-year deal and named him captain has every psychological reason to overestimate $\rho$ \citep{arkesblumer1985,stawhoang1995}. Overestimating $\rho$ produces delay that the fundamentals do not justify.
+
+\subsection{Pricing the clause ex ante}
+
+At Stage 1, the parties anticipate the possibility of a demand. Let $B(k)$ be $P$'s private value of protection, which is increasing in $k$, and let $C(k)=q\,[\Pi(N,R)-\Pi(N-k,R)] + C_0(k)$ be $T$'s expected cost. The second term, $C_0(k)$, captures costs unrelated to demands, such as lost roster flexibility and mandatory expansion-draft protection for NMCs. Suppose wage and scope are set by generalised Nash bargaining in which $P$ receives share $\alpha$ of the surplus.
+
+\begin{proposition}[The price of protection]\label{prop:price}
+The equilibrium wage satisfies $w(k)=w(0)-\big[(1-\alpha)B(k)+\alpha C(k)\big]$, so the clause is paid for by a wage discount that is a weighted average of what the player values and what the team expects to lose. The discount, $\partial w/\partial k$, rises in absolute value with $q$. If wages cannot fall, for example because the player is already at the market maximum, a higher $q$ instead lowers the scope teams will grant.
+\end{proposition}
+
+\noindent\emph{Intuition.} Protection has a price, and it should move with the perceived probability of demands. Each publicised request that turns a clause against its team raises the $q$ that general managers apply to new contracts, so the model predicts that the 2026 wave will show up as narrower lists, shorter protection windows, more scheduled conversions from NMC to modified NTC, and more resistance to full NMCs. The salary cap adds a twist. When the cap binds, money is scarce and protection is a non-cash currency teams can still offer, so prevalence should rise when cap growth is slow. Section~\ref{sec:empirics} tests both implications.
+
+\subsection{Informal protection without a clause}
+
+The final proposition explains why a team can behave as if a player has a clause when he does not. Suppose that an acquirer's valuation has two parts: the value of the remaining contract term, $x_i$, and the value of extending the player, $E$. The extension value is realised only if $P$ is willing to re-sign with that team. If $P$ makes clear that he will extend only with teams in a set $A$, then acquirers outside $A$ value him at $x_i$ and acquirers inside $A$ value him at $x_i+E$.
+
+\begin{proposition}[Informal protection]\label{prop:informal}
+If $E>\bar x$, where $\bar x$ is the maximum term value, and $|A|\ge2$, then the two highest valuations always belong to approved teams, and $T$'s expected return equals $\Pi(|A|,R)$ computed on approved valuations, exactly as if $P$ held a formal clause of scope $N-|A|$. The equivalence is stronger the less term remains on the contract.
+\end{proposition}
+
+\noindent\emph{Intuition.} Near the end of a contract, what an acquirer buys is mostly the right to negotiate an extension, and that right is worth something only if the player cooperates. A star with eighteen months left therefore carries informal veto power over his destination, which is what Quinn Hughes's agent meant when he said Vancouver acted ``as if we had a no-trade clause'' \citep{dailyhive_hughes}. The corollary matters for interpretation. The formal clause has most bite precisely when many years remain, which is when the implicit commitment of the long-term deal is supposed to hold.
+
+\subsection{Contagion}
+
+Finally, let the player's private cost of demanding a trade fall with the number of recent successful demands by peers, $c_P = c(n)$ with $c'(n)<0$. Successful demands lower the stigma of being seen as a quitter and reveal how teams and markets respond. The probability that a given shock produces a demand is then increasing in $n$, so demands should \emph{cluster} in time and within networks of players who share information. The 2026 cluster among members of the same Olympic roster fits this prediction, although four cases cannot distinguish contagion from common shocks.
+
+\begin{table}[t]\centering\small
+\caption{Incumbent's expected return by number of approved destinations ($F=U[0,1]$, $N=31$, $\beta=0.5$)}\label{tab:model}
+\input{../analysis/output/model_table.tex}
+\begin{minipage}{0.92\linewidth}\footnotesize\vspace{4pt}
+\emph{Notes:} Returns are expressed as a share of the maximum possible valuation. $R=0.20$ represents a private demand and $R=0.05$ a public one. The final column is the loss from going public. Computed by \texttt{analysis/05\_model\_numerics.py}.
+\end{minipage}
+\end{table}
