@@ -1,0 +1,6 @@
+[first-reached, 1-goal leads] effect of each extra goal already scored on P(leader loses): logit +0.002 (se 0.008, p=0.815), N=59008
+[first-reached, 2-goal leads] effect of each extra goal already scored on P(leader loses): logit +0.002 (se 0.016, p=0.922), N=32316
+[entering 3rd, regular season, 1-goal lead] each extra goal in first 40 min: logit +0.025 (se 0.013, p=0.054); N=9444; loss rate low-scoring(total<=2 or 3)=0.244 high-scoring(total>=5)=0.257
+[entering 3rd, regular season, 2-goal lead] each extra goal in first 40 min: logit +0.015 (se 0.027, p=0.572); N=5827; loss rate low-scoring(total<=2 or 3)=0.087 high-scoring(total>=5)=0.094
+[entering 3rd, playoffs, 1-goal lead] each extra goal in first 40 min: logit +0.024 (se 0.050, p=0.633); N=709; loss rate low-scoring(total<=2 or 3)=0.237 high-scoring(total>=5)=0.267
+[entering 3rd, playoffs, 2-goal lead] each extra goal in first 40 min: logit -0.004 (se 0.108, p=0.972); N=396; loss rate low-scoring(total<=2 or 3)=0.096 high-scoring(total>=5)=0.117

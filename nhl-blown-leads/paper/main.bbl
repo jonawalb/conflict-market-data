@@ -1,0 +1,28 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Gilovich et~al.(1985)Gilovich, Vallone, and Tversky]{gvt1985}
+Thomas Gilovich, Robert Vallone, and Amos Tversky.
+\newblock The hot hand in basketball: On the misperception of random sequences.
+\newblock \emph{Cognitive Psychology}, 17\penalty0 (3):\penalty0 295--314,
+  1985.
+
+\bibitem[Miller and Sanjurjo(2018)]{millersanjurjo2018}
+Joshua~B. Miller and Adam Sanjurjo.
+\newblock Surprised by the hot hand fallacy? {A} truth in the law of small
+  numbers.
+\newblock \emph{Econometrica}, 86\penalty0 (6):\penalty0 2019--2047, 2018.
+
+\bibitem[{National Hockey League}(2026)]{nhlapi}
+{National Hockey League}.
+\newblock Nhl public web and statistics apis: gamecenter landing and game
+  endpoints.
+\newblock \url{https://api-web.nhle.com/v1/gamecenter/} and
+  \url{https://api.nhle.com/stats/rest/en/game}, 2026.
+\newblock Accessed 31 October 2026.
+
+\end{thebibliography}
